@@ -1,0 +1,3 @@
+h1 {
+    @include font(var(--fwH1), var(--fsH1), var(--colorH1), 140%);
+}

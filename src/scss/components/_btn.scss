@@ -1,0 +1,470 @@
+.btn {
+    // font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp-px(15, 18);
+    line-height: 130%;
+    color: var(--white);
+    border-radius: 12px;
+    padding: clamp-px(12, 17) clamp-px(18, 28);
+    min-width: 120px;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    &[disabled] {
+        pointer-events: none;
+        color: var(--grey);
+        background: var(--bg-2);
+        transition: 0.3s;
+    }
+
+    &:hover {
+        transition: 0.3s;
+        background: var(--orange-hover);
+    }
+}
+
+.btn_second {
+    color: var(--orange);
+    background: var(--bg-4);
+
+    &:hover {
+        color: var(--orange-hover);
+        background: var(--bg-4);
+    }
+}
+
+.btn_thirt {
+    color: var(--black);
+    background: var(--white);
+
+    &:hover {
+        color: var(--orange-hover);
+        background: var(--white);
+    }
+}
+
+.btn-arrow {
+    border-radius: 12px;
+    padding: 17px 24px 17px 28px;
+    background: var(--bg-4);
+    font-weight: 500;
+    font-size: clamp-px(15, 18);
+    line-height: 130%;
+    color: var(--orange);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: 0.3s;
+
+    &>svg>path {
+        transition: 0.3s;
+    }
+
+    &[disabled] {
+        pointer-events: none;
+        color: var(--grey);
+        background: var(--bg-3);
+        transition: 0.3s;
+
+        &>svg>path {
+            stroke: #979797;
+            transition: 0.3s;
+        }
+    }
+
+    &:hover {
+        transition: 0.3s;
+        color: var(--orange-hover);
+
+        &>svg>path {
+            stroke: #DD592E;
+            transition: 0.3s;
+        }
+    }
+}
+
+.btn-arrow_second {
+    background: var(--white);
+}
+
+.btn_four {
+    color: var(--grey-2);
+    background: var(--bg-3);
+
+    &:hover {
+        color: var(--black);
+        background: var(--bg-2);
+    }
+}
+
+.btn-arrow_thirt {
+    color: var(--grey-2);
+    background: var(--bg-3);
+
+    &:hover {
+        color: var(--black);
+        background: var(--bg-2);
+
+        &>svg>path {
+            stroke: #101028;
+        }
+    }
+}
+
+.arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    width: 64px;
+    height: 56px;
+    background: var(--bg-3);
+    transition: 0.3s;
+
+    &>svg>path {
+        transition: 0.3s;
+    }
+
+    &:disabled {
+        transition: 0.3s;
+        pointer-events: none;
+        background: var(--bg-3);
+
+        &>svg>path {
+            stroke: #CDCDCD;
+        }
+    }
+
+    &:hover {
+        transition: 0.3s;
+        background: var(--bg-4);
+
+        &>svg>path {
+            stroke: #F46F43;
+        }
+    }
+}
+
+.arrow_second {
+    background: var(--white);
+
+    &:hover {
+        transition: 0.3s;
+        background: var(--white);
+
+        &>svg>path {
+            stroke: #F46F43;
+        }
+    }
+}
+
+.arrow_thirt {
+
+    backdrop-filter: blur(32px);
+    background: rgba(255, 255, 255, 0.2);
+
+    &:disabled {
+        transition: 0.3s;
+        backdrop-filter: blur(32px);
+        background: rgba(255, 255, 255, 0.1);
+
+        &>svg>path {
+            stroke: #CDCDCD;
+        }
+    }
+
+    &:hover {
+        transition: 0.3s;
+        backdrop-filter: blur(32px);
+        background: rgba(255, 255, 255, 0.25);
+
+        &>svg>path {
+            stroke: white;
+        }
+    }
+}
+
+.up {
+    border-radius: 12px;
+    padding: 12px 24px 12px 18px;
+    font-weight: 500;
+    font-size: clamp-px(15, 18);
+    line-height: 130%;
+    color: var(--white);
+    background: var(--black);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: 0.3s;
+
+    &:hover {
+        background: var(--orange);
+        transition: 0.3s;
+    }
+}
+
+.up-text {
+    @include respond-to("tab") {
+        display: none;
+    }
+}
+
+.close {
+    border-radius: 10px;
+    padding: 0px 12px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    &>svg>path {
+        transition: 0.3s;
+    }
+
+    &:hover {
+        transition: 0.3s;
+        background: var(--bg-3);
+
+        &>svg>path {
+            transition: 0.3s;
+            stroke: #101028;
+        }
+    }
+}
+
+.close_second {
+    padding: 0px 12px;
+
+    &:hover {
+        transition: 0.3s;
+        background: transparent;
+
+        &>svg>path {
+            transition: 0.3s;
+            stroke: #101028;
+        }
+    }
+}
+
+.more {
+    border-radius: 10px;
+    width: 48px;
+    height: 48px;
+    background: var(--white);
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+
+    &:hover {
+        background: var(--bg-4);
+        transition: 0.3s;
+    }
+
+    &.active {
+        transform: rotate(180deg);
+        transition: 0.3s;
+    }
+}
+
+.more_second {
+    background: var(--white);
+
+    &>svg>path {
+        transition: 0.3s;
+    }
+
+    &:hover {
+        background: var(--orange);
+        transition: 0.3s;
+
+        &>svg>path {
+            stroke: white;
+            transition: 0.3s;
+        }
+    }
+
+
+}
+
+.menu-open {
+    border-radius: 10px;
+    width: 56px;
+    height: 48px;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    &:hover {
+        background: var(--orange-hover);
+        transition: 0.3s;
+    }
+}
+
+.menu-close {
+    border-radius: 10px;
+    width: 56px;
+    height: 48px;
+    background: var(--orange);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    &:hover {
+        background: var(--orange-hover);
+        transition: 0.3s;
+    }
+}
+
+.img-link {
+    border-radius: 8px;
+    padding: 10px 20px;
+    background: var(--bg-3);
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-weight: 400;
+    font-size: clamp-px(15, 16);
+    line-height: 130%;
+    color: var(--black);
+    transition: 0.3s;
+
+    &>svg>path {
+        transition: 0.3s;
+    }
+
+    &:hover {
+        transition: 0.3s;
+        background: var(--bg-4);
+        color: var(--orange);
+
+        &>svg>path {
+            transition: 0.3s;
+            stroke: #F46F43;
+        }
+    }
+}
+
+.img-link_second {
+    background: transparent;
+    color: var(--orange);
+
+    &:hover {
+        background: transparent;
+        color: var(--black);
+
+        &>svg>path {
+            transition: 0.3s;
+            stroke: #101028;
+        }
+    }
+}
+
+.img-link_thirt {
+    color: var(--orange);
+    background: transparent;
+    padding: 0;
+
+    &:hover {
+        color: var(--black);
+        background: transparent;
+        padding: 0;
+    }
+}
+
+.link-more {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: 400;
+    font-size: clamp-px(15, 18);
+    line-height: 130%;
+    color: var(--orange);
+    transition: 0.3s;
+
+    &>svg>path {
+        transition: 0.3s;
+    }
+
+    &:hover {
+        transition: 0.3s;
+        color: var(--black);
+
+        &>svg>path {
+            transition: 0.3s;
+            stroke: #101028;
+        }
+    }
+}
+
+.link-more_thirt {
+    color: var(--grey-2);
+
+    &:hover {
+        transition: 0.3s;
+        color: var(--black);
+
+        &>svg>path {
+            transition: 0.3s;
+            stroke: #101028;
+        }
+    }
+}
+
+.link-more_four {
+    color: var(--grey-2);
+
+    &:hover {
+        transition: 0.3s;
+        color: var(--black);
+
+        &>svg>path {
+            transition: 0.3s;
+            stroke: #101028;
+        }
+    }
+}
+
+.link-resending {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: 400;
+    font-size: clamp-px(13, 16);
+    line-height: 130%;
+    color: var(--grey-2);
+    transition: 0.3s;
+
+    &>svg>path {
+        transition: 0.3s;
+    }
+
+    &.disabled {
+        pointer-events: none;
+        color: var(--grey);
+        transition: 0.3s;
+
+        &>svg>path {
+            transition: 0.3s;
+            stroke: #979797;
+        }
+    }
+
+    &:hover {
+        color: var(--black);
+        transition: 0.3s;
+
+        &>svg>path {
+            transition: 0.3s;
+            stroke: #101028;
+        }
+    }
+}
