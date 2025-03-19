@@ -468,3 +468,49 @@
         }
     }
 }
+
+.link-resending-time {
+    font-weight: 400;
+    font-size: clamp-px(13, 16);
+    line-height: 130%;
+    color: var(--grey-2);
+}
+
+.link-file {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-weight: 400;
+    font-size: clamp-px(14, 18);
+    line-height: 130%;
+    color: var(--black);
+
+    &:hover {
+        &>.link-file-svg-wrap {
+            transition: 0.3s;
+            background: var(--orange);
+
+            &>svg>path {
+                transition: 0.3s;
+                stroke: white;
+            }
+        }
+
+    }
+}
+
+.link-file-svg-wrap {
+    border-radius: 10px;
+    width: 48px;
+    height: 48px;
+    background: var(--bg-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    &>svg>path {
+        transition: 0.3s;
+    }
+
+}

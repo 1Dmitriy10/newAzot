@@ -82,7 +82,7 @@
             <div class="container">
                 <h2>Кнопки</h2>
 
-                <div>
+                <div class="ui">
                     <button class="btn">Кнопка</button>
                     <button disabled class="btn">Кнопка</button>
                     <button class="btn btn_second">Кнопка</button>
@@ -326,7 +326,79 @@
                                 stroke="#484848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
                         </svg>
                         Отправить заново
+                        <span class="link-resending-time">
+                            0:56
+                        </span>
                     </a>
+
+                    <a class="link-file" href="#">
+                        <div class="link-file-svg-wrap">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M4 17V19C4 19.5304 4.21071 20.0391 4.58579 20.4142C4.96086 20.7893 5.46957 21 6 21H18C18.5304 21 19.0391 20.7893 19.4142 20.4142C19.7893 20.0391 20 19.5304 20 19V17"
+                                    stroke="#F46F43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M7 11L12 16L17 11" stroke="#F46F43" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 4V16" stroke="#F46F43" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+                        </div>
+
+                        Системный каталог.pdf
+
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="container">
+                <h2>Формы</h2>
+                <div class="ui">
+                    <form class="form">
+                        <div class="form__row">
+                            <label for="name">Имя</label>
+                            <input type="text" name="name" placeholder="Имя">
+                        </div>
+
+                        <div class="form__row">
+                            <label for="tel">Телефон</label>
+                            <input type="text" name="tel" placeholder="+7 ___ ___ __ __">
+                        </div>
+
+                        <div class="form__row">
+                            <label for="email">Email</label>
+                            <input type="email" name="email" placeholder="Email">
+                        </div>
+
+                        <div class="form__row">
+                            <label for="password">Email</label>
+                            <input type="password" name="password" placeholder="Email">
+                        </div>
+
+                        <div class="form__row">
+                            <label for="password">Не активная</label>
+                            <input disabled type="password" name="password" placeholder="Email">
+                        </div>
+
+                        <div class="form__row">
+                            <label for="select">Города</label>
+                            <select name="select">
+                                <option value="">-- Выберите город --</option>
+                                <option value="petersburg">Санкт-Петербург</option>
+                                <option value="samara">Самара</option>
+                                <option value="perm">Пермь</option>
+                                <option value="novosibirsk">Новосибирск</option>
+                            </select>
+                        </div>
+
+                        <div class="form__row">
+                            <label for="text">Текст</label>
+                            <textarea name="text" id="" placeholder="Текст"></textarea>
+                        </div>
+
+                        <button type="submit">Отправить</button>
+                    </form>
                 </div>
             </div>
         </section>

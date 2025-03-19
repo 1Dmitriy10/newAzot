@@ -1,0 +1,82 @@
+.form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form__row {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+
+    &>input {
+        width: 100%;
+        border-radius: clamp-px(12, 10);
+        padding: clamp-px(12, 15) clamp-px(16, 18);
+        background: var(--bg-3);
+        transition: 0.3s;
+        border: 1.50px solid transparent;
+
+        &:hover {
+            transition: 0.3s;
+            background: var(--bg-2);
+        }
+
+        &:focus {
+            transition: 0.3s;
+            border: 1.50px solid var(--orange);
+        }
+    }
+
+    &>label {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp-px(14, 16);
+        line-height: 150%;
+        color: var(--black);
+    }
+
+    &>input {
+        width: 100%;
+        border-radius: clamp-px(12, 10);
+        padding: clamp-px(12, 15) clamp-px(16, 18);
+        background: var(--bg-3);
+        transition: 0.3s;
+        border: 1.50px solid transparent;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp-px(15, 18);
+        line-height: 156%;
+        color: var(--grey);
+
+        &:hover {
+            transition: 0.3s;
+            background: var(--bg-2);
+        }
+
+        &:focus {
+            transition: 0.3s;
+            border: 1.50px solid var(--orange);
+        }
+
+        &:disabled {
+            pointer-events: none;
+            color: var(--stroke);
+        }
+    }
+
+    &>textarea {
+        width: 100%;
+        min-height: 120px;
+        border-radius: clamp-px(12, 10);
+        padding: clamp-px(12, 15) clamp-px(16, 18);
+        background: var(--bg-3);
+        transition: 0.3s;
+        border: 1.50px solid transparent;
+
+        &:hover {
+            transition: 0.3s;
+            background: var(--bg-2);
+        }
+    }
+}

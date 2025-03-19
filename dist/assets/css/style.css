@@ -727,7 +727,7 @@ summary.active::after {
   align-self: flex-start;
   margin-bottom: 30px;
 }
-.ui-kit div {
+.ui-kit div.ui {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1265,4 +1265,148 @@ body {
   -webkit-transition: 0.3s;
   transition: 0.3s;
   stroke: #101028;
+}
+
+.link-resending-time {
+  font-weight: 400;
+  font-size: clamp(0.8125rem, 0.7543424318rem + 0.2481389578vw, 1rem);
+  line-height: 130%;
+  color: var(--grey-2);
+}
+
+.link-file {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 12px;
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.7974565757rem + 0.3308519438vw, 1.125rem);
+  line-height: 130%;
+  color: var(--black);
+}
+.link-file:hover > .link-file-svg-wrap {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: var(--orange);
+}
+.link-file:hover > .link-file-svg-wrap > svg > path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  stroke: white;
+}
+
+.link-file-svg-wrap {
+  border-radius: 10px;
+  width: 48px;
+  height: 48px;
+  background: var(--bg-4);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.link-file-svg-wrap > svg > path {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  gap: 8px;
+}
+.form__row > input {
+  width: 100%;
+  border-radius: clamp(0.75rem, 0.7887717122rem - 0.1654259719vw, 0.625rem);
+  padding: clamp(0.75rem, 0.6918424318rem + 0.2481389578vw, 0.9375rem) clamp(1rem, 0.9612282878rem + 0.1654259719vw, 1.125rem);
+  background: var(--bg-3);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1.5px solid transparent;
+}
+.form__row > input:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: var(--bg-2);
+}
+.form__row > input:focus {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1.5px solid var(--orange);
+}
+.form__row > label {
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: clamp(0.875rem, 0.8362282878rem + 0.1654259719vw, 1rem);
+  line-height: 150%;
+  color: var(--black);
+}
+.form__row > input {
+  width: 100%;
+  border-radius: clamp(0.75rem, 0.7887717122rem - 0.1654259719vw, 0.625rem);
+  padding: clamp(0.75rem, 0.6918424318rem + 0.2481389578vw, 0.9375rem) clamp(1rem, 0.9612282878rem + 0.1654259719vw, 1.125rem);
+  background: var(--bg-3);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1.5px solid transparent;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: clamp(0.9375rem, 0.8793424318rem + 0.2481389578vw, 1.125rem);
+  line-height: 156%;
+  color: var(--grey);
+}
+.form__row > input:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: var(--bg-2);
+}
+.form__row > input:focus {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1.5px solid var(--orange);
+}
+.form__row > input:disabled {
+  pointer-events: none;
+  color: var(--stroke);
+}
+.form__row > textarea {
+  width: 100%;
+  min-height: 120px;
+  border-radius: clamp(0.75rem, 0.7887717122rem - 0.1654259719vw, 0.625rem);
+  padding: clamp(0.75rem, 0.6918424318rem + 0.2481389578vw, 0.9375rem) clamp(1rem, 0.9612282878rem + 0.1654259719vw, 1.125rem);
+  background: var(--bg-3);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border: 1.5px solid transparent;
+}
+.form__row > textarea:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  background: var(--bg-2);
 }
