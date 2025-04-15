@@ -2,8 +2,8 @@ export class Menu {
     constructor(options) {
             this.mediaHidden = options.mediaHidden?options.mediaHidden:'';
             this.classMenu = document.querySelector(`.${options.class}`);
-            this.blockMenu = document.querySelector(".nav-list");
-            this.items = document.querySelectorAll(".nav>.nav-list>.nav-item");
+            this.blockMenu = document.querySelector(`.${options.class}`);
+            this.items = document.querySelectorAll(`.${options.class}>.nav-item`);
             this.menuItems = [...this.items];
             this.screenWidth = window.innerWidth;
             this.opacityMenuBlock = '';
@@ -73,7 +73,10 @@ export class Menu {
                 }
             }
         } else {
-            this.opacityMenuBlock.style.cssText = `display: none;`
+            if(this.opacityMenuBlock){
+this.opacityMenuBlock.style.cssText = `display: none;`
+            }
+            
         }
     }
 

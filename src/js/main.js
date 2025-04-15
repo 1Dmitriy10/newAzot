@@ -36,6 +36,12 @@ import { slidrer } from "./libs/slider.js";
 //---------------Сжатие изображений---------------
 //import { isWebp } from "./libs/isWebp.js";
 
+//---------------Меню липкого хедера---------------
+import { stickyHeader } from "./components/stickyHeader.js";
+
+//---------------Кастомные чекбоксы---------------
+import { customCheckbox } from "./components/customCheckbox.js";
+
 
 
 

@@ -99,7 +99,8 @@ summary {
 
 
 // ====================Меню===============================
-.nav-list {
+.nav-list,
+.top-nav-list {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;

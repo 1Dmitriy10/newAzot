@@ -1,0 +1,36 @@
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    align-items: center;
+}
+
+.pagination__item {}
+
+.pagination__link {
+    border-radius: 12px;
+    padding: 14px 23px;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-3);
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    text-align: center;
+    color: var(--black);
+    transition: 0.3s;
+
+    &.active {
+        transition: 0.3s;
+        background: var(--orange);
+        color: var(--white);
+    }
+
+    &:hover {
+        transition: 0.3s;
+        background: var(--bg-4);
+        color: var(--orange);
+    }
+}

@@ -9,13 +9,15 @@
     flex-direction: column;
     gap: 8px;
 
-    &>input {
+
+    & input {
         width: 100%;
         border-radius: clamp-px(12, 10);
         padding: clamp-px(12, 15) clamp-px(16, 18);
         background: var(--bg-3);
         transition: 0.3s;
         border: 1.50px solid transparent;
+        color: var(--grey);
 
         &:hover {
             transition: 0.3s;
@@ -26,9 +28,14 @@
             transition: 0.3s;
             border: 1.50px solid var(--orange);
         }
+
+        &:disabled {
+            pointer-events: none;
+            color: var(--stroke);
+        }
     }
 
-    &>label {
+    & label {
         font-family: var(--font-family);
         font-weight: 400;
         font-size: clamp-px(14, 16);
@@ -36,7 +43,7 @@
         color: var(--black);
     }
 
-    &>input {
+    & select {
         width: 100%;
         border-radius: clamp-px(12, 10);
         padding: clamp-px(12, 15) clamp-px(16, 18);
@@ -59,13 +66,9 @@
             border: 1.50px solid var(--orange);
         }
 
-        &:disabled {
-            pointer-events: none;
-            color: var(--stroke);
-        }
     }
 
-    &>textarea {
+    & textarea {
         width: 100%;
         min-height: 120px;
         border-radius: clamp-px(12, 10);
@@ -78,5 +81,98 @@
             transition: 0.3s;
             background: var(--bg-2);
         }
+    }
+}
+
+/* Для современных браузеров */
+::placeholder {
+    color: var(--grey);
+    /* Вкус клубники? Да, пожалуйста! 🍓 */
+}
+
+/* WebKit: Chrome, Safari, Opera 15+ */
+::-webkit-input-placeholder {
+    color: var(--grey);
+    /* В WebKit разбираются в делах! */
+}
+
+/* Firefox 19+ */
+::-moz-placeholder {
+    color: var(--grey);
+    opacity: 1;
+    /* Эй, Firefox, не делай моих детей прозрачными! */
+}
+
+/* IE 10+, Edge */
+:-ms-input-placeholder {
+    color: var(--grey);
+    /* Даже IE решил присоединиться к вечеринке */
+}
+
+:disabled::placeholder {
+    color: var(--stroke);
+    /* Вкус клубники? Да, пожалуйста! 🍓 */
+}
+
+/* WebKit: Chrome, Safari, Opera 15+ */
+:disabled::-webkit-input-placeholder {
+    color: var(--stroke);
+    /* В WebKit разбираются в делах! */
+}
+
+/* Firefox 19+ */
+:disabled::-moz-placeholder {
+    color: var(--stroke);
+    opacity: 1;
+    /* Эй, Firefox, не делай моих детей прозрачными! */
+}
+
+/* IE 10+, Edge */
+:disabled:-ms-input-placeholder {
+    color: var(--stroke);
+    /* Даже IE решил присоединиться к вечеринке */
+}
+
+.in-pas {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::after {
+        position: absolute;
+        content: url("../images/icons/Eye-1.png");
+        width: 24px;
+        height: 24px;
+        right: 18px;
+    }
+}
+
+select::-ms-expand {
+    display: none;
+    /* Удаляем ненужную стрелку */
+}
+
+select {
+    -webkit-appearance: none;
+    /* Для Chrome и Safari */
+    -moz-appearance: none;
+    /* Для Firefox */
+    appearance: none;
+    /* Для всех современных браузеров */
+    background-color: white;
+    /* Это очень важно */
+}
+
+.in-sel {
+    position: relative;
+    display: flex;
+    align-items: center;
+
+    &::after {
+        position: absolute;
+        content: url("../images/icons/arrow-chevrone.png");
+        width: 24px;
+        height: 24px;
+        right: 18px;
     }
 }

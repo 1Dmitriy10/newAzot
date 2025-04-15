@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="@@description" />
+
+    <!-- --------------------------------Стили-------------------------------- -->
+    <link rel="stylesheet" href="assets/css/style.css">
+
+    <!-- --------------------------------Плагины-------------------------------- -->
+    <link rel="stylesheet" href="./files/font-awesome/css/font-awesome.min.css">
+
+    <!-- --------------------------------фавикон-------------------------------- -->
+    <!-- <link rel="apple-touch-icon" sizes="180x180" href="files/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="files/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="files/favicon/favicon-16x16.png">
+    <link rel="manifest" href="files/favicon/site.webmanifest">
+    <link rel="mask-icon" href="files/favicon/safari-pinned-tab.svg" color="#5bbad5"> -->
+
+    <!-- --------------------------------скрипты-------------------------------- -->
+    <script defer type="module" src="assets/js/vendor.js"></script>
+    <script defer type="module" src="assets/js/main.js"></script>
+
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <title>Личный кабинет</title>
+</head>
+
+<body>
+    <header class="header">
+    <div class="container header__container">
+        <div class="header__top">
+            <div class="header__top-left-block">
+                <div class="address">
+                    Архангельск, Московский проспект, 25к2, офис 3
+                </div>
+
+                <div class="worck-time">
+                    Пн-Пт, 09:30 - 17:30
+                </div>
+            </div>
+
+            <nav class="header__top-nav">
+                <ul class="top-nav-list">
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Услуги</a>
+                        <ul class="sub-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Пункт меню 2 уровня</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Пункт меню 2 уровня</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Готовые проекты</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">О компании</a>
+                        <ul class="sub-menu">
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Пункт меню 2 уровня</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#" class="nav-link">Пункт меню 2 уровня</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#" class="nav-link">Контакты</a>
+                    </li>
+
+                    <!-- добавить скрытый пункт -->
+                </ul>
+            </nav>
+
+            <div class="social-box">
+                <a href="#" class="social-link whatsapp">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19.557 9.54925C19.4667 7.07738 18.4251 4.736 16.6496 3.01394C14.874 1.29187 12.5019 0.322278 10.0285 0.30762H9.98175C8.31607 0.306382 6.67885 0.738828 5.23102 1.5624C3.78323 2.38598 2.57479 3.5723 1.72463 5.00464C0.874472 6.43699 0.411879 8.06603 0.382366 9.73138C0.352853 11.3968 0.75744 13.0411 1.55632 14.5027L0.708033 19.5788C0.706653 19.5892 0.707504 19.5998 0.710537 19.6098C0.713562 19.6199 0.718704 19.6292 0.725608 19.6371C0.732511 19.6451 0.741021 19.6514 0.750569 19.6558C0.760117 19.6602 0.770492 19.6624 0.780995 19.6625H0.795588L5.81621 18.5457C7.11343 19.1685 8.53401 19.4916 9.97297 19.4913C10.0645 19.4913 10.1559 19.4913 10.2473 19.4913C11.5131 19.4551 12.7592 19.1687 13.9137 18.6484C15.0682 18.1282 16.1082 17.3844 16.9737 16.4601C17.8393 15.5358 18.5132 14.4492 18.9566 13.263C19.3999 12.0769 19.604 10.8147 19.557 9.54925ZM10.1996 17.8229C10.1237 17.8229 10.0479 17.8229 9.97297 17.8229C8.70123 17.8245 7.44768 17.5202 6.31818 16.9357L6.06136 16.8014L2.65656 17.606L3.28498 14.1613L3.13907 13.9142C2.44213 12.726 2.06674 11.3767 2.04987 9.99919C2.03299 8.62177 2.37522 7.26364 3.04284 6.05871C3.71047 4.85374 4.68045 3.84348 5.85726 3.12741C7.03407 2.41133 8.3771 2.01416 9.75414 1.975C9.83065 1.975 9.90749 1.975 9.98465 1.975C12.0637 1.98116 14.057 2.8038 15.5353 4.26567C17.0136 5.72753 17.8584 7.71164 17.8877 9.79042C17.917 11.8693 17.1286 13.8764 15.6922 15.3794C14.2557 16.8824 12.2864 17.761 10.2084 17.8258L10.1996 17.8229Z"
+                            fill="#25D366" />
+                        <path
+                            d="M6.63782 5.26821C6.5193 5.27052 6.40244 5.29659 6.29416 5.34488C6.18589 5.39317 6.0884 5.4627 6.00747 5.54935C5.77886 5.78379 5.13973 6.34802 5.10276 7.5329C5.0658 8.71773 5.89365 9.88999 6.00941 10.0544C6.12518 10.2188 7.59214 12.7783 10.0086 13.8162C11.4289 14.4281 12.0515 14.5332 12.4552 14.5332C12.6216 14.5332 12.747 14.5157 12.8783 14.5079C13.321 14.4806 14.3201 13.969 14.5379 13.4125C14.7559 12.8561 14.7705 12.3697 14.713 12.2724C14.6557 12.1751 14.4981 12.105 14.2607 11.9805C14.0234 11.856 12.8589 11.2334 12.64 11.1459C12.5589 11.1081 12.4715 11.0853 12.3822 11.0788C12.3241 11.0818 12.2676 11.099 12.2176 11.1288C12.1676 11.1586 12.1256 11.2002 12.0952 11.2499C11.9007 11.4922 11.4542 12.0184 11.3043 12.1702C11.2716 12.2079 11.2313 12.2383 11.1861 12.2595C11.1409 12.2806 11.0916 12.2919 11.0417 12.2928C10.9497 12.2888 10.8597 12.2645 10.7781 12.2218C10.0727 11.9223 9.42963 11.4933 8.88208 10.9572C8.37047 10.4529 7.9364 9.87561 7.59408 9.24406C7.46182 8.9989 7.59408 8.87244 7.71472 8.75767C7.83537 8.64283 7.96472 8.48431 8.08924 8.34709C8.19143 8.22993 8.2766 8.09896 8.34221 7.95799C8.37614 7.89257 8.3933 7.81973 8.39208 7.74606C8.39092 7.67232 8.37143 7.60012 8.33537 7.5358C8.27801 7.41322 7.84898 6.20793 7.64763 5.72445C7.48421 5.31101 7.28963 5.29739 7.11937 5.28475C6.9793 5.27502 6.81879 5.27015 6.65827 5.26529H6.63782"
+                            fill="#25D366" />
+                    </svg>
+                </a>
+                <a href="#" class="social-link telegram">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.3749 9.63525C6.74359 7.2962 10.3236 5.75415 12.1148 5.0091C17.2292 2.88186 18.2919 2.51233 18.9846 2.50013C19.1369 2.49745 19.4776 2.5352 19.6982 2.71424C19.8845 2.86542 19.9358 3.06964 19.9603 3.21298C19.9848 3.35631 20.0154 3.68283 19.9911 3.93796C19.714 6.85 18.5147 13.9167 17.9046 17.1783C17.6465 18.5584 17.1382 19.0211 16.6461 19.0664C15.5766 19.1648 14.7645 18.3596 13.7287 17.6806C12.1078 16.6181 11.1921 15.9567 9.61879 14.9199C7.80053 13.7217 8.97923 13.0631 10.0154 11.9869C10.2866 11.7052 14.9987 7.41921 15.0899 7.0304C15.1013 6.98177 15.1119 6.80052 15.0042 6.7048C14.8965 6.60909 14.7376 6.64182 14.6229 6.66785C14.4604 6.70475 11.871 8.41622 6.85486 11.8023C6.11988 12.3069 5.45416 12.5529 4.8577 12.54C4.20015 12.5258 2.93528 12.1682 1.99498 11.8625C0.84166 11.4876 -0.074973 11.2894 0.00484519 10.6527C0.0464194 10.3211 0.503103 9.98194 1.3749 9.63525Z"
+                            fill="#209FE1" />
+                    </svg>
+                </a>
+            </div>
+        </div>
+    </div>
+</header>
+<hr class="hr">
+<header class="header">
+    <div class="container header__container">
+
+        <div class="header__midle">
+            <a class="logo header__logo" href="/">
+                <img src="assets/images/icons/logo.png" alt="" class="logo-img">
+                <span class="logo-text">
+                    Архангельский Завод Оконных Технологий
+                </span>
+            </a>
+
+            <form class="search header__search">
+                <input type="search" name="search" placeholder="Поиск по сайту">
+                <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M14.4655 15.0396L17.9387 18.3996M16.8187 9.43961C16.8187 13.7695 13.3086 17.2796 8.97867 17.2796C4.64876 17.2796 1.13867 13.7695 1.13867 9.43961C1.13867 5.1097 4.64876 1.59961 8.97867 1.59961C13.3086 1.59961 16.8187 5.1097 16.8187 9.43961Z"
+                        stroke="#979797" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+            </form>
+
+            <div class="header__tel-box">
+                <a class="tel" href="tel:+79022866622">
+                    +7 (902) 286-66-22
+                </a>
+                <a class="link" href="#">
+                    Заказать звонок
+                </a>
+            </div>
+
+            <button class="btn header__btn">
+                <span>Бесплатный замер</span>
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M19.875 12C20.496 12 21 12.512 21 13.143V18.857C21 19.488 20.496 20 19.875 20H4C3.73478 20 3.48043 19.8946 3.29289 19.7071C3.10536 19.5196 3 19.2652 3 19V13.143C3 12.512 3.504 12 4.125 12H19.875Z"
+                        stroke="#F46F43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M9 12V14" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M6 12V15" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M12 12V15" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M18 12V15" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M15 12V14" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M3 3V7" stroke="#F46F43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                    <path d="M3 5H21" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                    <path d="M21 3V7" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round" />
+                </svg>
+            </button>
+
+            <div class="lk-box header__lk-box">
+                <a class="lk" href="#">
+                    <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="4.66667" cy="4.66667" r="4.66667" transform="matrix(-1 0 0 1 13.666 1.5)"
+                            fill="#CDCDCD" stroke="#CDCDCD" stroke-width="1.5" />
+                        <path
+                            d="M0.833008 17.7571C0.833008 16.7534 1.464 15.858 2.40928 15.5204C6.67106 13.9983 11.3283 13.9983 15.5901 15.5204C16.5353 15.858 17.1663 16.7534 17.1663 17.7571V19.6107C17.1663 20.8277 16.0884 21.7627 14.8835 21.5906L12.8181 21.2955C10.2853 20.9337 7.71403 20.9337 5.1813 21.2955L3.11585 21.5906C1.91099 21.7627 0.833008 20.8278 0.833008 19.6107V17.7571Z"
+                            fill="#CDCDCD" stroke="#CDCDCD" stroke-width="1.5" />
+                    </svg>
+                </a>
+
+                <a class="cart" href="#">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M0.475168 1.3284C0.569941 0.854534 1.03091 0.54722 1.50478 0.641993L2.72903 0.886844C4.11182 1.1634 5.15192 2.31046 5.29224 3.71363L5.39171 4.70833H21.2298C23.5447 4.70833 25.2433 6.88386 24.6819 9.12969L23.372 14.3692C22.8201 16.5765 20.8369 18.125 18.5617 18.125H8.06992C6.44586 18.125 5.07794 16.9114 4.88444 15.2989L3.73005 5.679L3.55092 3.88776C3.48714 3.24996 3.01437 2.72857 2.38583 2.60286L1.16157 2.35801C0.68771 2.26324 0.380395 1.80226 0.475168 1.3284ZM9.49967 12.9998C9.08546 12.9998 8.74967 13.3356 8.74967 13.7498C8.74967 14.164 9.08546 14.4998 9.49967 14.4998H14.1663C14.5806 14.4998 14.9163 14.164 14.9163 13.7498C14.9163 13.3356 14.5806 12.9998 14.1663 12.9998H9.49967Z"
+                            fill="#CDCDCD" />
+                        <circle cx="8.91699" cy="21.3333" r="1.75" fill="#CDCDCD" />
+                        <circle cx="19.417" cy="21.3333" r="1.75" fill="#CDCDCD" />
+                    </svg>
+                </a>
+            </div>
+
+            <!-- кнопка мобильного меню -->
+<button class="mob-nav-btn menu-open menu-open_second">
+    <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M1 1H17M1 6H17M1 11H17" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+    </svg>
+</button>
+
+        </div>
+    </div>
+    <div>
+        <div class="header__bottom">
+            <nav class="nav">
+    <ul class="nav-list">
+        <li class="nav-item">
+            <a href="#" class="nav-link">Окна</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Двери</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Входные группы</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Перегородки ПВХ</a>
+        </li>
+
+        <li class="nav-item">
+            <a href="#" class="nav-link">Алюминиевые перегородки</a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Комплектующие материалы
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Сопутствующие товары
+            </a>
+        </li>
+        <li class="nav-item">
+            <a href="#" class="nav-link">Акции</a>
+        </li>
+
+        <!-- добавить скрытый пункт -->
+    </ul>
+</nav>
+        </div>
+
+    </div>
+</header>
+
+<div class="sticky-header">
+    <div class="container sticky-header__container">
+
+        <a class="logo header__logo" href="/">
+            <img src="assets/images/icons/logo.png" alt="" class="logo-img">
+            <span class="logo-text">
+                Архангельский Завод Оконных Технологий
+            </span>
+        </a>
+
+        <div class="sticky-header__menu-box">
+            <button class="menu-open" id="sticky-menu-open">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 7H20M4 12H20M4 17H20" stroke="white" stroke-width="1.5" stroke-linecap="round"
+                        stroke-linejoin="round"></path>
+                </svg>
+
+            </button>
+
+            <ul class="sticky__nav-list">
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Окна
+                    </a>
+
+                    <ul class="sub-menu">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Стандартные окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Глухие окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Панорамные окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Раздвижные окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Мансардные окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Цветные окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Арочные окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Готовые окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Эркерные окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Окна для детской</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Французские окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Окна для кухни</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Угловые окна</a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="#" class="nav-link">Окна для частного дома</a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Двери
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Входные группы
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Перегородки ПВХ
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Алюминиевые перегородки
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Комплектующие материалы
+                    </a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="#">
+                        Сопутствующие товары
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <form class="search sticky-header__search">
+            <input type="search" name="search" placeholder="Поиск по сайту">
+            <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.4655 15.0396L17.9387 18.3996M16.8187 9.43961C16.8187 13.7695 13.3086 17.2796 8.97867 17.2796C4.64876 17.2796 1.13867 13.7695 1.13867 9.43961C1.13867 5.1097 4.64876 1.59961 8.97867 1.59961C13.3086 1.59961 16.8187 5.1097 16.8187 9.43961Z"
+                    stroke="#979797" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </form>
+
+        <div class="header__tel-box">
+            <a class="tel" href="tel:+79022866622">
+                +7 (902) 286-66-22
+            </a>
+            <a class="link" href="#">
+                Заказать звонок
+            </a>
+        </div>
+
+        <button class="btn header__btn">
+            <span>Бесплатный замер</span>
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M19.875 12C20.496 12 21 12.512 21 13.143V18.857C21 19.488 20.496 20 19.875 20H4C3.73478 20 3.48043 19.8946 3.29289 19.7071C3.10536 19.5196 3 19.2652 3 19V13.143C3 12.512 3.504 12 4.125 12H19.875Z"
+                    stroke="#F46F43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M9 12V14" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path d="M6 12V15" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path d="M12 12V15" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path d="M18 12V15" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path d="M15 12V14" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path d="M3 3V7" stroke="#F46F43" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path d="M3 5H21" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+                <path d="M21 3V7" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                </path>
+            </svg>
+        </button>
+
+        <div class="lk-box header__lk-box">
+            <a class="lk" href="#">
+                <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="4.66667" cy="4.66667" r="4.66667" transform="matrix(-1 0 0 1 13.666 1.5)" fill="#CDCDCD"
+                        stroke="#CDCDCD" stroke-width="1.5"></circle>
+                    <path
+                        d="M0.833008 17.7571C0.833008 16.7534 1.464 15.858 2.40928 15.5204C6.67106 13.9983 11.3283 13.9983 15.5901 15.5204C16.5353 15.858 17.1663 16.7534 17.1663 17.7571V19.6107C17.1663 20.8277 16.0884 21.7627 14.8835 21.5906L12.8181 21.2955C10.2853 20.9337 7.71403 20.9337 5.1813 21.2955L3.11585 21.5906C1.91099 21.7627 0.833008 20.8278 0.833008 19.6107V17.7571Z"
+                        fill="#CDCDCD" stroke="#CDCDCD" stroke-width="1.5"></path>
+                </svg>
+            </a>
+
+            <a class="cart" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M0.475168 1.3284C0.569941 0.854534 1.03091 0.54722 1.50478 0.641993L2.72903 0.886844C4.11182 1.1634 5.15192 2.31046 5.29224 3.71363L5.39171 4.70833H21.2298C23.5447 4.70833 25.2433 6.88386 24.6819 9.12969L23.372 14.3692C22.8201 16.5765 20.8369 18.125 18.5617 18.125H8.06992C6.44586 18.125 5.07794 16.9114 4.88444 15.2989L3.73005 5.679L3.55092 3.88776C3.48714 3.24996 3.01437 2.72857 2.38583 2.60286L1.16157 2.35801C0.68771 2.26324 0.380395 1.80226 0.475168 1.3284ZM9.49967 12.9998C9.08546 12.9998 8.74967 13.3356 8.74967 13.7498C8.74967 14.164 9.08546 14.4998 9.49967 14.4998H14.1663C14.5806 14.4998 14.9163 14.164 14.9163 13.7498C14.9163 13.3356 14.5806 12.9998 14.1663 12.9998H9.49967Z"
+                        fill="#CDCDCD"></path>
+                    <circle cx="8.91699" cy="21.3333" r="1.75" fill="#CDCDCD"></circle>
+                    <circle cx="19.417" cy="21.3333" r="1.75" fill="#CDCDCD"></circle>
+                </svg>
+            </a>
+        </div>
+
+        <button class="mob-nav-btn menu-open menu-open_second">
+            <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 1H17M1 6H17M1 11H17" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+                    stroke-linejoin="round" />
+            </svg>
+        </button>
+
+    </div>
+
+
+</div>
+
+<!-- ===========мобильное меню ===============-->
+
+<!-- выезжающее меню -->
+<nav class="mob-nav">
+
+    <div class="mob-nav__search-box">
+
+        <form class="search mob__search">
+            <input type="search" name="search" placeholder="Поиск по сайту">
+            <svg width="19" height="20" viewBox="0 0 19 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M14.4655 15.0396L17.9387 18.3996M16.8187 9.43961C16.8187 13.7695 13.3086 17.2796 8.97867 17.2796C4.64876 17.2796 1.13867 13.7695 1.13867 9.43961C1.13867 5.1097 4.64876 1.59961 8.97867 1.59961C13.3086 1.59961 16.8187 5.1097 16.8187 9.43961Z"
+                    stroke="#979797" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+        </form>
+
+        <button class="close close_second mob-menu-close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M5 5L19 19M19 5L5 19" stroke="#979797" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round"></path>
+            </svg>
+        </button>
+
+    </div>
+
+    <button class="btn btn_second mob-nav-catalog__btn">
+        <svg width="18" height="12" viewBox="0 0 18 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M17 1L1 1M17 6L1 6M17 11L1 11" stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+                stroke-linejoin="round" />
+        </svg>
+        Каталог продукции
+    </button>
+
+    <div class="lk-box mob__lk-box">
+        <a class="lk" href="#">
+            <svg width="18" height="23" viewBox="0 0 18 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="4.66667" cy="4.66667" r="4.66667" transform="matrix(-1 0 0 1 13.666 1.5)" fill="#CDCDCD"
+                    stroke="#CDCDCD" stroke-width="1.5"></circle>
+                <path
+                    d="M0.833008 17.7571C0.833008 16.7534 1.464 15.858 2.40928 15.5204C6.67106 13.9983 11.3283 13.9983 15.5901 15.5204C16.5353 15.858 17.1663 16.7534 17.1663 17.7571V19.6107C17.1663 20.8277 16.0884 21.7627 14.8835 21.5906L12.8181 21.2955C10.2853 20.9337 7.71403 20.9337 5.1813 21.2955L3.11585 21.5906C1.91099 21.7627 0.833008 20.8278 0.833008 19.6107V17.7571Z"
+                    fill="#CDCDCD" stroke="#CDCDCD" stroke-width="1.5"></path>
+            </svg>
+            Профиль
+        </a>
+
+        <a class="cart" href="#">
+            <svg xmlns="http://www.w3.org/2000/svg" width="25" height="24" viewBox="0 0 25 24" fill="none">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M0.475168 1.3284C0.569941 0.854534 1.03091 0.54722 1.50478 0.641993L2.72903 0.886844C4.11182 1.1634 5.15192 2.31046 5.29224 3.71363L5.39171 4.70833H21.2298C23.5447 4.70833 25.2433 6.88386 24.6819 9.12969L23.372 14.3692C22.8201 16.5765 20.8369 18.125 18.5617 18.125H8.06992C6.44586 18.125 5.07794 16.9114 4.88444 15.2989L3.73005 5.679L3.55092 3.88776C3.48714 3.24996 3.01437 2.72857 2.38583 2.60286L1.16157 2.35801C0.68771 2.26324 0.380395 1.80226 0.475168 1.3284ZM9.49967 12.9998C9.08546 12.9998 8.74967 13.3356 8.74967 13.7498C8.74967 14.164 9.08546 14.4998 9.49967 14.4998H14.1663C14.5806 14.4998 14.9163 14.164 14.9163 13.7498C14.9163 13.3356 14.5806 12.9998 14.1663 12.9998H9.49967Z"
+                    fill="#CDCDCD"></path>
+                <circle cx="8.91699" cy="21.3333" r="1.75" fill="#CDCDCD"></circle>
+                <circle cx="19.417" cy="21.3333" r="1.75" fill="#CDCDCD"></circle>
+            </svg>
+            Корзина
+        </a>
+    </div>
+
+    <ul class="mob-nav-list">
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">Услуги</a>
+
+        </li>
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">Дилерам</a>
+
+        </li>
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">Готовые проекты</a>
+        </li>
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">Доставка и оплата</a>
+
+        </li>
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">О компании</a>
+        </li>
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">Ремонт окон и дверей</a>
+
+        </li>
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">Контакты</a>
+        </li>
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">Блог</a>
+
+        </li>
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">Гарантия и сервис</a>
+        </li>
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">новости</a>
+
+        </li>
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">Отзывы</a>
+        </li>
+        <li class="mob-nav-item">
+            <a href="#" class="mob-nav-link">Политика конф-сти</a>
+        </li>
+    </ul>
+
+    <div class="mob-nav__contact-box">
+        <a class="email" href="">
+            email@yandex.ru
+        </a>
+
+        <div class="mob-nav__contact-box-inner">
+            <a class="tel" href="">
+                +7 (902) 286-66-22
+            </a>
+
+            <div class="social-box">
+                <a href="#" class="social-link whatsapp">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M19.557 9.54925C19.4667 7.07738 18.4251 4.736 16.6496 3.01394C14.874 1.29187 12.5019 0.322278 10.0285 0.30762H9.98175C8.31607 0.306382 6.67885 0.738828 5.23102 1.5624C3.78323 2.38598 2.57479 3.5723 1.72463 5.00464C0.874472 6.43699 0.411879 8.06603 0.382366 9.73138C0.352853 11.3968 0.75744 13.0411 1.55632 14.5027L0.708033 19.5788C0.706653 19.5892 0.707504 19.5998 0.710537 19.6098C0.713562 19.6199 0.718704 19.6292 0.725608 19.6371C0.732511 19.6451 0.741021 19.6514 0.750569 19.6558C0.760117 19.6602 0.770492 19.6624 0.780995 19.6625H0.795588L5.81621 18.5457C7.11343 19.1685 8.53401 19.4916 9.97297 19.4913C10.0645 19.4913 10.1559 19.4913 10.2473 19.4913C11.5131 19.4551 12.7592 19.1687 13.9137 18.6484C15.0682 18.1282 16.1082 17.3844 16.9737 16.4601C17.8393 15.5358 18.5132 14.4492 18.9566 13.263C19.3999 12.0769 19.604 10.8147 19.557 9.54925ZM10.1996 17.8229C10.1237 17.8229 10.0479 17.8229 9.97297 17.8229C8.70123 17.8245 7.44768 17.5202 6.31818 16.9357L6.06136 16.8014L2.65656 17.606L3.28498 14.1613L3.13907 13.9142C2.44213 12.726 2.06674 11.3767 2.04987 9.99919C2.03299 8.62177 2.37522 7.26364 3.04284 6.05871C3.71047 4.85374 4.68045 3.84348 5.85726 3.12741C7.03407 2.41133 8.3771 2.01416 9.75414 1.975C9.83065 1.975 9.90749 1.975 9.98465 1.975C12.0637 1.98116 14.057 2.8038 15.5353 4.26567C17.0136 5.72753 17.8584 7.71164 17.8877 9.79042C17.917 11.8693 17.1286 13.8764 15.6922 15.3794C14.2557 16.8824 12.2864 17.761 10.2084 17.8258L10.1996 17.8229Z"
+                            fill="#25D366"></path>
+                        <path
+                            d="M6.63782 5.26821C6.5193 5.27052 6.40244 5.29659 6.29416 5.34488C6.18589 5.39317 6.0884 5.4627 6.00747 5.54935C5.77886 5.78379 5.13973 6.34802 5.10276 7.5329C5.0658 8.71773 5.89365 9.88999 6.00941 10.0544C6.12518 10.2188 7.59214 12.7783 10.0086 13.8162C11.4289 14.4281 12.0515 14.5332 12.4552 14.5332C12.6216 14.5332 12.747 14.5157 12.8783 14.5079C13.321 14.4806 14.3201 13.969 14.5379 13.4125C14.7559 12.8561 14.7705 12.3697 14.713 12.2724C14.6557 12.1751 14.4981 12.105 14.2607 11.9805C14.0234 11.856 12.8589 11.2334 12.64 11.1459C12.5589 11.1081 12.4715 11.0853 12.3822 11.0788C12.3241 11.0818 12.2676 11.099 12.2176 11.1288C12.1676 11.1586 12.1256 11.2002 12.0952 11.2499C11.9007 11.4922 11.4542 12.0184 11.3043 12.1702C11.2716 12.2079 11.2313 12.2383 11.1861 12.2595C11.1409 12.2806 11.0916 12.2919 11.0417 12.2928C10.9497 12.2888 10.8597 12.2645 10.7781 12.2218C10.0727 11.9223 9.42963 11.4933 8.88208 10.9572C8.37047 10.4529 7.9364 9.87561 7.59408 9.24406C7.46182 8.9989 7.59408 8.87244 7.71472 8.75767C7.83537 8.64283 7.96472 8.48431 8.08924 8.34709C8.19143 8.22993 8.2766 8.09896 8.34221 7.95799C8.37614 7.89257 8.3933 7.81973 8.39208 7.74606C8.39092 7.67232 8.37143 7.60012 8.33537 7.5358C8.27801 7.41322 7.84898 6.20793 7.64763 5.72445C7.48421 5.31101 7.28963 5.29739 7.11937 5.28475C6.9793 5.27502 6.81879 5.27015 6.65827 5.26529H6.63782"
+                            fill="#25D366"></path>
+                    </svg>
+                </a>
+                <a href="#" class="social-link telegram">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M1.3749 9.63525C6.74359 7.2962 10.3236 5.75415 12.1148 5.0091C17.2292 2.88186 18.2919 2.51233 18.9846 2.50013C19.1369 2.49745 19.4776 2.5352 19.6982 2.71424C19.8845 2.86542 19.9358 3.06964 19.9603 3.21298C19.9848 3.35631 20.0154 3.68283 19.9911 3.93796C19.714 6.85 18.5147 13.9167 17.9046 17.1783C17.6465 18.5584 17.1382 19.0211 16.6461 19.0664C15.5766 19.1648 14.7645 18.3596 13.7287 17.6806C12.1078 16.6181 11.1921 15.9567 9.61879 14.9199C7.80053 13.7217 8.97923 13.0631 10.0154 11.9869C10.2866 11.7052 14.9987 7.41921 15.0899 7.0304C15.1013 6.98177 15.1119 6.80052 15.0042 6.7048C14.8965 6.60909 14.7376 6.64182 14.6229 6.66785C14.4604 6.70475 11.871 8.41622 6.85486 11.8023C6.11988 12.3069 5.45416 12.5529 4.8577 12.54C4.20015 12.5258 2.93528 12.1682 1.99498 11.8625C0.84166 11.4876 -0.074973 11.2894 0.00484519 10.6527C0.0464194 10.3211 0.503103 9.98194 1.3749 9.63525Z"
+                            fill="#209FE1"></path>
+                    </svg>
+                </a>
+            </div>
+        </div>
+
+        <a class="link" href="#">
+            Заказать звонок
+        </a>
+
+        <div class="header__top-left-block">
+            <div class="address">
+                Архангельск, Московский проспект, 25к2, офис 3
+            </div>
+
+            <div class="worck-time">
+                Пн-Пт, 09:30 - 17:30
+            </div>
+        </div>
+    </div>
+
+    <!-- <ul class="mob-nav-list">
+            <li class="mob-nav-item">
+                <a href="#" class="mob-nav-link">Главная</a>
+                <ul class="spoiler-content-menu">
+                    <li class="mob-nav-item">
+                        <a class="mob-nav-link" href="#">
+                            второй уровень
+                        </a>
+                        <ul class="spoiler-content-menu">
+                            <li class="mob-nav-item">
+                                <a class="mob-nav-link" href="#">
+                                    третий уровень
+                                </a>
+                            </li>
+
+                        </ul>
+
+                    </li>
+                    <li class="mob-nav-item">
+                        <a class="mob-nav-link" href="#">
+                            второй уровень
+                        </a>
+                    </li>
+                </ul>
+            </li>
+            <li class="mob-nav-item">
+                <a href="#" class="mob-nav-link">Контакты</a>
+            </li>
+        </ul> -->
+
+</nav>
+    <main>
+
+        <section class='grid-aside'>
+            <div class='container grid-aside__container'>
+
+                <aside class="aside">
+                    <div class="aside-block">
+                        <div class="personal-row">
+                            <div class="personal-name">
+                                Александр
+                            </div>
+
+                            <a href="#" class="personal-link">
+                                +7 950 335 49 16
+                            </a>
+                        </div>
+
+                        <div class="my-orders">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 3C8.134 3 5 6.272 5 10V20C5 20.2652 5.10536 20.5196 5.29289 20.7071C5.48043 20.8946 5.73478 21 6 21H18C18.2652 21 18.5196 20.8946 18.7071 20.7071C18.8946 20.5196 19 20.2652 19 20V10C19 6.272 15.866 3 12 3Z"
+                                    stroke="#979797" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 13H19" stroke="#979797" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 3V21" stroke="#979797" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                            <span>
+                                Мои заказы
+                            </span>
+                        </div>
+
+                        <div class="my-reviews">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.2896 17.9984C18.0965 17.9343 21 15.9189 21 11C21 6 18 4 12 4C6 4 3 6 3 11C3 14.0771 4.13623 16.018 6.40868 17.0557L5 21L12.2896 17.9984Z"
+                                    stroke="#979797" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <span>
+                                Отзывы
+                            </span>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="main-col">
+
+                    <div class="personal-main-up-row">
+
+                        <div class="personal-main-up-row__name-box">
+                            <div class="personal-main-up-row__name">
+                                Федосенко А. А.
+                            </div>
+
+                            <button class="btn-arrow btn-arrow_thirt btn-arrow_exit-lk">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M11.1098 4.16667L16.6654 10M16.6654 10L11.1098 15.8333M16.6654 10L3.33203 10"
+                                        stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                                Выйти
+                            </button>
+                        </div>
+
+                        <div class="personal-main-up-row__contact-box">
+                            <div class="personal-main-up-row__contact-box__item">
+                                <a href="tel:+79953342231">
+                                    +7 995 334 2231
+                                </a>
+                                <button class="change-data">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2032_55444)">
+                                            <path
+                                                d="M4 20.0003H8L18.5 9.5003C19.0304 8.96987 19.3284 8.25045 19.3284 7.5003C19.3284 6.75016 19.0304 6.03074 18.5 5.5003C17.9696 4.96987 17.2501 4.67188 16.5 4.67188C15.7499 4.67187 15.0304 4.96987 14.5 5.5003L4 16.0003L4 20.0003Z"
+                                                stroke="#484848" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M13.5 6.5L17.5 10.5" stroke="#484848" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2032_55444">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+
+                            <div class="personal-main-up-row__contact-box__item">
+                                <a href="mailto:gosuslugi@gmail.com">
+                                    gosuslugi@gmail.com
+                                </a>
+                                <button class="change-data">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <g clip-path="url(#clip0_2032_55444)">
+                                            <path
+                                                d="M4 20.0003H8L18.5 9.5003C19.0304 8.96987 19.3284 8.25045 19.3284 7.5003C19.3284 6.75016 19.0304 6.03074 18.5 5.5003C17.9696 4.96987 17.2501 4.67188 16.5 4.67188C15.7499 4.67187 15.0304 4.96987 14.5 5.5003L4 16.0003L4 20.0003Z"
+                                                stroke="#484848" stroke-width="1.5" stroke-linecap="round"
+                                                stroke-linejoin="round" />
+                                            <path d="M13.5 6.5L17.5 10.5" stroke="#484848" stroke-width="1.5"
+                                                stroke-linecap="round" stroke-linejoin="round" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_2032_55444">
+                                                <rect width="24" height="24" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="personal-main-down-row">
+                        <div class="personal-main-down-row-title">
+                            Настройки уведомлений
+                        </div>
+
+                        <div class="personal-main-down-row-box">
+
+                            <div class="personal-main-down-row-list">
+                                <div class="personal-main-down-row-list-title">
+                                    Информация о заказе
+                                </div>
+
+                                <div class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <div class="check-box"></div>
+                                    <span>
+                                        E-mail
+                                    </span>
+                                </div>
+
+                                <div class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <div class="check-box"></div>
+                                    <span>
+                                        Telegram
+                                    </span>
+                                </div>
+
+                                <div class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <div class="check-box"></div>
+                                    <span>
+                                        SMS
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="personal-main-down-row-list">
+                                <div class="personal-main-down-row-list-title">
+                                    Электронные чеки
+                                </div>
+
+                                <div class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <div class="check-box"></div>
+                                    <span>
+                                        E-mail
+                                    </span>
+                                </div>
+
+                                <div class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <div class="check-box"></div>
+                                    <span>
+                                        Telegram
+                                    </span>
+                                </div>
+
+                                <div class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <div class="check-box"></div>
+                                    <span>
+                                        SMS
+                                    </span>
+                                </div>
+                            </div>
+
+                            <div class="personal-main-down-row-list">
+                                <div class="personal-main-down-row-list-title">
+                                    Скидки и акции
+                                </div>
+
+                                <div class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <div class="check-box"></div>
+                                    <span>
+                                        E-mail
+                                    </span>
+                                </div>
+
+                                <div class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <div class="check-box"></div>
+                                    <span>
+                                        Telegram
+                                    </span>
+                                </div>
+
+                                <div class="custom-checkbox">
+                                    <input type="checkbox">
+                                    <div class="check-box"></div>
+                                    <span>
+                                        SMS
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="personal-del-account">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M3.33203 5.83331L16.6654 5.83331" stroke="#484848" stroke-width="1.5"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M4.16797 5.83331L5.0013 15.8333C5.0013 16.2753 5.1769 16.6993 5.48946 17.0118C5.80202 17.3244 6.22594 17.5 6.66797 17.5H13.3346C13.7767 17.5 14.2006 17.3244 14.5131 17.0118C14.8257 16.6993 15.0013 16.2753 15.0013 15.8333L15.8346 5.83331"
+                                stroke="#484848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path
+                                d="M7.5 5.83333L7.5 3.33333C7.5 3.11232 7.5878 2.90036 7.74408 2.74408C7.90036 2.5878 8.11232 2.5 8.33333 2.5L11.6667 2.5C11.8877 2.5 12.0996 2.5878 12.2559 2.74408C12.4122 2.90036 12.5 3.11232 12.5 3.33333V5.83333"
+                                stroke="#484848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                            <path d="M8.33203 10L11.6654 13.3333M11.6654 10L8.33203 13.3333" stroke="#484848"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        <span>
+                            Удалить аккаунт
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    <footer class='footer'>
+    <div class='container footer__container'>
+    </div>
+</footer>
+</body>
+
+</html>
