@@ -1,0 +1,101 @@
+.guarantees-prev {
+    margin-bottom: clamp(3.5rem, 2.2447698745rem + 5.3556485356vw, 7.5rem);
+}
+
+.guarantees-prev__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.guarantees-prev__title {
+    margin-top: clamp(0.5rem, 0.3430962343rem + 0.6694560669vw, 1rem);
+    margin-bottom: clamp(1.5rem, 1.0292887029rem + 2.0083682008vw, 3rem);
+}
+
+.guarantees-prev__card-box-up {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+    margin-bottom: 20px;
+}
+
+.guarantees-prev__card {
+    @include cols(2, $gap);
+    border-radius: 24px;
+    padding: 32px;
+    min-height: 284px;
+    border: 2px solid var(--bg);
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+        border: none;
+        background: linear-gradient(135deg, #ff8259 0%, #f46f43 100%);
+
+        & .guarantees-prev__card-text {
+            color: var(--white);
+        }
+
+        & .guarantees-prev__card-title {
+            color: var(--white);
+        }
+    }
+
+    @include respond-to("tab") {
+        min-height: auto;
+    }
+}
+
+.guarantees-prev__card-up-row {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    @include respond-to("tab") {
+        &>svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.guarantees-prev__card-title {
+    font-weight: 500;
+    font-size: clamp-px(20, 32);
+    line-height: 130%;
+    color: var(--grey-2);
+    margin-bottom: 20px;
+    max-width: 460px;
+}
+
+.guarantees-prev__card-text {
+    margin-top: auto;
+    font-weight: 500;
+    font-size: clamp-px(15, 18);
+    line-height: 140%;
+    color: var(--grey-2);
+    max-width: 410px;
+}
+
+.guarantees-prev__card-box-down {
+    gap: $gap;
+
+    &>.guarantees-prev__card {
+        border: none;
+        background: var(--bg-3);
+        min-width: 257px;
+
+        &:first-child {
+            border: none;
+            background: var(--bg-3);
+
+            & .guarantees-prev__card-text {
+                color: var(--grey-2);
+            }
+
+            & .guarantees-prev__card-title {
+                color: var(--black);
+            }
+        }
+    }
+}

@@ -14,7 +14,7 @@ import { tabs } from "./libs/tabs.js";
 
 // ---------------------Слайдер-----------------
 
-import { slidrer } from "./libs/slider.js";
+import { slider } from "./libs/slider.js";
 
 
 //---------------------Модальные окна------------------

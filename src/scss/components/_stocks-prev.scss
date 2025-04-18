@@ -1,0 +1,107 @@
+.stocks-prev {
+    margin-bottom: clamp(3.5rem, 2.2447698745rem + 5.3556485356vw, 7.5rem);
+}
+
+
+.stocks-prev__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.title-nav-box {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-top: clamp(0.5rem, 0.3430962343rem + 0.6694560669vw, 1rem);
+    margin-bottom: clamp(1.5rem, 1.0292887029rem + 2.0083682008vw, 3rem);
+}
+
+
+.stocks-prev__title {}
+
+
+.stocks-prev__slider-btn-box {
+    position: relative;
+
+    @include respond-to("tab") {
+        display: none;
+    }
+}
+
+.stocks-prev__slider-wrap {
+    margin: 0 -20px;
+}
+
+.stocks-prev__card {
+    display: flex;
+    height: 336px;
+    border-radius: clamp-px(16, 24);
+    padding: clamp-px(20, 32);
+    position: relative;
+
+    @include respond-to("tab") {
+        height: 298px;
+    }
+}
+
+.stocks-prev__card-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: clamp-px(16, 24);
+}
+
+.stocks-prev__card-content-box {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+    z-index: 2;
+    max-width: 480px;
+}
+
+.stocks-prev__card-title {
+    font-weight: 500;
+    font-size: clamp-px(20, 32);
+    line-height: 130%;
+    color: var(--white);
+    margin-bottom: clamp-px(8, 16);
+}
+
+.stocks-prev__card-text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp-px(15, 18);
+    line-height: 140%;
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.link-border {
+    border-radius: 10px;
+    padding: clamp-px(5, 12) 24px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: center;
+    color: var(--orange);
+    transition: 0.3s;
+
+    &:hover {
+        transition: 0.3s;
+        background-color: var(--orange);
+        color: var(--white);
+    }
+}
+
+.stocks-prev__card-link {
+    margin-top: auto;
+    align-self: flex-start;
+}

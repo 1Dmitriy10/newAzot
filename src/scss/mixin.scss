@@ -81,3 +81,79 @@
 }
 
 // ============
+//============колонки==============
+@mixin cols($cols, $gap) {
+    @if $cols==1 {
+        flex: 0 1 100%;
+    }
+
+    @else if $cols==2 {
+        flex: 0 1 calc((100% - 1 * $gap) / 2);
+
+        @include respond-to("tab") {
+            flex: 0 1 100%;
+        }
+    }
+
+    @else if $cols==3 {
+
+        flex: 0 1 calc((100% - 2 * $gap) / 3);
+
+        @include respond-to("tab") {
+            flex: 0 1 calc((100% - 1 * $gap) / 2);
+        }
+
+        @include respond-to("tel") {
+            flex: 0 1 100%;
+        }
+
+    }
+
+    @else if $cols==4 {
+        flex: 0 1 calc((100% - 3 * $gap) / 4);
+
+        @include respond-to("pc-old") {
+            flex: 0 1 calc((100% - 2 * $gap) / 3);
+        }
+
+        @include respond-to("tab") {
+            flex: 0 1 calc((100% - 1 * $gap) / 2);
+        }
+
+        @include respond-to("tel") {
+            flex: 0 1 100%;
+        }
+    }
+}
+
+// =========================================Стилизация плейсхолдеров=====================================================
+
+@mixin placeholder($color, $size, $weight, $family) {
+    &::-webkit-input-placeholder {
+        color: $color;
+        font-size: $size;
+        font-weight: $weight;
+        font-family: $family;
+    }
+
+    &:-moz-placeholder {
+        color: $color;
+        font-size: $size;
+        font-weight: $weight;
+        font-family: $family;
+    }
+
+    &::-moz-placeholder {
+        color: $color;
+        font-size: $size;
+        font-weight: $weight;
+        font-family: $family;
+    }
+
+    &:-ms-input-placeholder {
+        color: $color;
+        font-size: $size;
+        font-weight: $weight;
+        font-family: $family;
+    }
+}

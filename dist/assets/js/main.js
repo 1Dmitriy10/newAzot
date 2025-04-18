@@ -15238,17 +15238,22 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.swiper', {
+const mainBannerSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.main-banner__slider', {
     // Стрелки
     navigation: {
-        nextEl: '',
-        prevEl: '',
+        nextEl: '.main-banner__slider-next',
+        prevEl: '.main-banner__slider-prev',
     },
+    pagination: {
+        el: '.swiper-pagination',
+      },
+
+    
 
     /*Отступ у карточек*/
-    // spaceBetween: 22,
+    spaceBetween: 20,
     /*Показывать по n карточек*/
-    // slidesPerView: 1,
+    slidesPerView: 1,
     /* При достижении конца, перепрыгнуть в начало */
     // rewind: true,
     /*Увеличение при наведении курсора мыши */
@@ -15282,6 +15287,106 @@ const slider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.swipe
     //         spaceBetween: 15,
     //     }
     // },
+
+});
+
+const stocksPrevSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.stocks-prev__slider', {
+    // Стрелки
+    navigation: {
+        nextEl: '.stocks-prev__slider-next',
+        prevEl: '.stocks-prev__slider-prev',
+    },
+
+    
+
+    /*Отступ у карточек*/
+    spaceBetween: 20,
+    /*Показывать по n карточек*/
+    slidesPerView: 1.2,
+    centeredSlides: true,
+    initialSlide: 1,
+    /* При достижении конца, перепрыгнуть в начало */
+    // rewind: true,
+    /*Увеличение при наведении курсора мыши */
+    // zoom: true,
+    /*Ленивая подгрузка */
+    // lazy: true,
+    /*Бесконечная прокрутка */
+    // loop: true,
+    /*Ориентация */
+    // direction: 'vertical',
+    /*Авто высота*/
+    // autoHeight: true,
+    /*иконка захвата при наведении на слайд*/
+    grabCursor: true,
+    /*Автоматическое перелистывание*/
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    /*Брек-поинты*/
+    breakpoints: {
+        992: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        768: {
+            slidesPerView: 1.5,
+            spaceBetween: 15,
+        }
+    },
+
+});
+
+const pricesPrevSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.prices-prev__slider', {
+    // Стрелки
+    navigation: {
+        nextEl: '.prices-prev__slider-next',
+        prevEl: '.prices-prev__slider-prev',
+    },
+
+    
+
+    /*Отступ у карточек*/
+    spaceBetween: 12,
+    /*Показывать по n карточек*/
+    slidesPerView: 1.5,
+    /* При достижении конца, перепрыгнуть в начало */
+    // rewind: true,
+    /*Увеличение при наведении курсора мыши */
+    // zoom: true,
+    /*Ленивая подгрузка */
+    // lazy: true,
+    /*Бесконечная прокрутка */
+    // loop: true,
+    /*Ориентация */
+    // direction: 'vertical',
+    /*Авто высота*/
+    // autoHeight: true,
+    /*иконка захвата при наведении на слайд*/
+    grabCursor: true,
+    /*Автоматическое перелистывание*/
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    /*Брек-поинты*/
+    breakpoints: {
+        1400: {
+            slidesPerView: 4.5,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 3.5,
+            spaceBetween: 15,
+        },
+        900: {
+            slidesPerView: 2.5,
+            spaceBetween: 15,
+        },
+        700: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        }
+    },
 
 });
 

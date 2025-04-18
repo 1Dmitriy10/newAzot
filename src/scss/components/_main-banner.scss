@@ -1,0 +1,148 @@
+.main-banner {
+    margin-bottom: clamp-px(56, 80);
+}
+
+.main-banner__container {
+    position: relative;
+}
+
+.main-banner__sider-wrap {
+    position: relative;
+}
+
+.main-banner__slider {}
+
+.main-banner__slide {}
+
+.main-banner__item {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #ff8259 0%, #f46f43 71.79%);
+    border-radius: 32px;
+    height: 480px;
+    position: relative;
+    overflow: hidden;
+
+    @include respond-to('tab') {
+        flex-direction: column;
+        gap: 17px;
+        height: 476px;
+    }
+
+}
+
+.main-banner__content-box {
+    flex: 0 1 50%;
+    max-width: 512px;
+    display: flex;
+    flex-direction: column;
+    padding: clamp-px(20, 37) 0 clamp-px(20, 37) clamp-px(20, 40);
+    height: 100%;
+    position: relative;
+    z-index: 2;
+
+    @include respond-to("tab") {
+        padding: clamp-px(20, 37) clamp-px(20, 40) clamp-px(20, 37) clamp-px(20, 40);
+    }
+}
+
+.main-banner__title {
+    font-weight: 500;
+    font-size: clamp-px(24, 56);
+    line-height: 100%;
+    color: var(--white);
+    max-width: 404px;
+    margin-bottom: 24px;
+}
+
+.main-banner__subtitle {
+    font-weight: 400;
+    font-size: clamp-px(15, 18);
+    line-height: 140%;
+    color: var(--white);
+    max-width: 560px;
+    margin-bottom: 20px;
+}
+
+.main-banner__btn {
+    margin-top: auto;
+    align-self: start;
+
+    @include respond-to('tel') {
+        width: 100%;
+    }
+}
+
+.main-banner__img-wrap {
+    // flex: 0 1 70%;
+    // max-width: 780px;
+    // position: relative;
+    // height: 100%;
+    position: absolute;
+    width: 748px;
+    right: 6px;
+    height: 82%;
+    top: 87px;
+
+    @include respond-to('tab') {
+        width: 100%;
+        right: auto;
+        height: 70%;
+        top: auto;
+        bottom: -13%;
+    }
+
+    @include respond-to('tel') {
+
+        height: 58%;
+
+    }
+}
+
+.main-banner__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+
+}
+
+.swiper-pagination {}
+
+.swiper-button-prev {}
+
+.swiper-button-next {}
+
+.slider-btn-box {
+    position: absolute;
+    z-index: 2;
+    display: flex;
+    gap: 8px;
+}
+
+.main-banner__slider-btn-box {
+    bottom: 32px;
+    right: 32px;
+
+    @include respond-to("tab") {
+        display: none;
+    }
+}
+
+.swiper-pagination_custom {
+    bottom: -5% !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--orange) !important;
+    width: 20px !important;
+}
+
+.swiper-pagination-bullet {
+    border-radius: 8px !important;
+    width: 8px !important;
+    height: 4px !important;
+}
