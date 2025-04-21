@@ -1,0 +1,132 @@
+.footer {
+    background: var(--bg-3);
+    border-radius: 40px;
+    margin: 0 12px;
+}
+
+.footer__container {
+    padding: clamp-px(32, 64) clamp-px(20, 36);
+    display: flex;
+    flex-direction: column;
+}
+
+.footer__contact-col {
+    display: flex;
+    flex-direction: column;
+    max-width: 375px;
+}
+
+.footer__logo {
+    margin-bottom: clamp-px(20, 48);
+}
+
+.footer__address {
+    font-weight: 500;
+    font-size: clamp-px(16, 20);
+    line-height: 140%;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.footer__work-time {
+    font-weight: 400;
+    font-size: clamp-px(15, 18);
+    line-height: 156%;
+    color: var(--grey-2);
+    margin-bottom: 24px;
+}
+
+.footer__tel {
+    font-weight: 500;
+    font-size: clamp-px(18, 24);
+    line-height: 133%;
+    color: var(--black);
+    margin-bottom: clamp-px(8, 24);
+}
+
+.footer__mail {
+    font-weight: 400;
+    font-size: clamp-px(15, 18);
+    line-height: 156%;
+    color: var(--grey-2);
+    margin-bottom: clamp-px(24, 40);
+}
+
+.social-box {
+    display: flex;
+    gap: 6px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    background-color: var(--black);
+    width: 48px;
+    height: 48px;
+}
+
+.footer__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 32px;
+    padding-bottom: clamp-px(32, 80);
+    border-bottom: 1px solid var(--stroke);
+}
+
+.footer__menu {
+    display: flex;
+    flex-direction: column;
+    gap: clamp-px(12, 24);
+}
+
+.footer__menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: clamp-px(12, 24);
+
+    &>li {
+        &>a {
+            font-weight: 400;
+            font-size: clamp-px(16, 18);
+            line-height: 156%;
+            color: var(--grey-2);
+        }
+    }
+}
+
+.footer__form {
+    display: flex;
+    flex-direction: column;
+    gap: clamp-px(12, 24);
+    max-width: 360px;
+    flex: 1 1 100%;
+
+    & input {
+        background: var(--white);
+    }
+}
+
+.footer__bottom {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+    padding: clamp-px(32, 40) 0 0 0;
+}
+
+.copy {
+    font-weight: 400;
+    font-size: clamp-px(14, 16);
+    line-height: 150%;
+    color: var(--grey);
+}
+
+.polyt {
+    font-weight: 400;
+    font-size: clamp-px(14, 16);
+    line-height: 150%;
+    color: var(--grey);
+}

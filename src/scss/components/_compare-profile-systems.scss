@@ -1,0 +1,36 @@
+.blok-title_color {
+    color: var(--orange);
+}
+
+.prices-prev__params-list {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+
+    &>li {
+        border-radius: 8px;
+        padding: 10px 16px;
+        display: flex;
+        gap: 10px;
+        justify-content: space-between;
+
+        &:nth-child(odd) {
+            background: var(--blue-theme-bg-1);
+        }
+    }
+}
+
+.prices-prev__params_name {
+    font-weight: 400;
+    font-size: clamp-px(14, 16);
+    line-height: 150%;
+    color: var(--grey-2);
+}
+
+.prices-prev__params_val {
+    font-weight: 400;
+    font-size: clamp-px(14, 16);
+    line-height: 150%;
+    text-align: right;
+    color: var(--black);
+}

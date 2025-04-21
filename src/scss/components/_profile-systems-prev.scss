@@ -1,0 +1,22 @@
+.prices-prev__card_profile {
+    & .prices-prev__card-img-wrap {
+        height: 280px;
+    }
+}
+
+.prices-prev__card_profile-text {
+    font-weight: 400;
+    font-size: clamp-px(14, 16);
+    line-height: 150%;
+    color: var(--grey-1);
+    margin-bottom: clamp-px(16, 24);
+}
+
+.prof-prev {
+    background: var(--bg-4);
+    padding: 17px 24px 17px 28px;
+    border-radius: 12px;
+    width: fit-content;
+    margin: 0 auto;
+    margin-top: clamp-px(20, 40);
+}

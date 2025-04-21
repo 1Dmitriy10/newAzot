@@ -1,0 +1,140 @@
+.services-prev {
+    margin-bottom: clamp(3.5rem, 2.2447698745rem + 5.3556485356vw, 7.5rem);
+    background: var(--bg-2);
+    border-radius: clamp-px(24, 48) clamp-px(24, 48) 0 0;
+
+
+}
+
+.services-prev__container {
+    display: flex;
+    flex-direction: column;
+    padding: clamp-px(56, 120) 0;
+}
+
+
+.services-prev__title {
+    margin-top: clamp(0.5rem, 0.3430962343rem + 0.6694560669vw, 1rem);
+    margin-bottom: clamp(1.5rem, 1.0292887029rem + 2.0083682008vw, 3rem);
+}
+
+.services-prev__card-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+    margin-bottom: clamp-px(24, 32);
+}
+
+.services-prev__card {
+    @include cols(3, $gap);
+    display: flex;
+    flex-direction: column;
+    border-radius: 24px;
+    padding: clamp-px(16, 32);
+    min-height: 320px;
+    background: var(--white);
+    position: relative;
+    transition: 0.3s;
+
+    & svg>path {
+        transition: 0.3s;
+
+    }
+
+    &:hover {
+        transition: 0.3s;
+        background: linear-gradient(315deg, #ff8259 0%, #f46f43 100%);
+
+        & .services-prev__card-title {
+            transition: 0.3s;
+            color: var(--white);
+        }
+
+        & .services-prev__card-text {
+            transition: 0.3s;
+            color: var(--white);
+        }
+
+        & .services-prev__card-icon {
+            transition: 0.3s;
+            background: rgba(255, 248, 243, 0.1);
+
+            & svg>path {
+                transition: 0.3s;
+                stroke: white;
+            }
+
+            & svg>g>path {
+                transition: 0.3s;
+                stroke: white;
+            }
+        }
+
+    }
+
+    @include respond-to("tab") {
+        min-height: 234px;
+    }
+}
+
+.services-prev__card-header {
+    margin-bottom: auto;
+}
+
+.services-prev__card-icon {
+    border-radius: 16px;
+    width: 64px;
+    height: 64px;
+    background: var(--bg-4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    @include respond-to('tab') {
+        border-radius: 10px;
+        width: 48px;
+        height: 48px;
+
+        &>svg {
+            width: 26px;
+            height: 26px;
+        }
+    }
+}
+
+.services-prev__card-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.services-prev__card-content-box {}
+
+.services-prev__card-title {
+    transition: 0.3s;
+    font-weight: 500;
+    font-size: clamp-px(20, 28);
+    line-height: 121%;
+    color: var(--black);
+    margin-bottom: clamp-px(10, 16);
+}
+
+.services-prev__card-text {
+    transition: 0.3s;
+    font-weight: 400;
+    font-size: clamp-px(15, 18);
+    line-height: 156%;
+    color: var(--grey-1);
+}
+
+.services-prev_link {
+    background: var(--white);
+    border-radius: 12px;
+    padding: 17px 24px 17px 28px;
+    width: fit-content;
+    margin: 0 auto;
+}

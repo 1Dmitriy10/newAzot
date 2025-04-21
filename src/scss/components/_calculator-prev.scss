@@ -1,0 +1,22 @@
+.calculator-prev {
+    margin-bottom: clamp(3.5rem, 2.2447698745rem + 5.3556485356vw, 7.5rem);
+    background: var(--bg-2);
+}
+
+.calculator-prev__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.calculator-col {
+    flex: 0 1 50%;
+    border-radius: 32px;
+    padding: 40px;
+    max-width: 746px;
+    background: var(--white);
+}
+
+.calculator-col__title {}
+
+.calculator-col__subtitle {}
