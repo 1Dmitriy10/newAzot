@@ -2,47 +2,21 @@
     <div class='container calculator-prev__container'>
         <div class="calculator-col">
             <div class="calculator-col__title">
-                Рассчитайте стоимостьваших окон
+                Рассчитайте стоимость ваших окон
             </div>
 
             <div class="calculator-col__subtitle">
                 Заполните параметры, и мы свяжемся с вами с готовым предложением.
             </div>
 
-            <form class="calculator-form" action="">
-                <form class="form">
-                    <div class="form__row">
-                        <label for="name">Имя</label>
-                        <input type="text" name="name" placeholder="Имя">
-                    </div>
+            <form class="form calculator-form">
+                <div class="form__row-double">
 
                     <div class="form__row">
-                        <label for="tel">Телефон</label>
-                        <input type="text" name="tel" placeholder="+7 ___ ___ __ __">
-                    </div>
-
-                    <div class="form__row">
-                        <label for="email">Email</label>
-                        <input type="email" name="email" placeholder="Email">
-                    </div>
-
-                    <div class="form__row">
-                        <label for="password">Пароль</label>
-                        <div class="in-pas">
-                            <input type="password" name="password" placeholder="Пароль">
-                        </div>
-                    </div>
-
-                    <div class="form__row">
-                        <label for="password">Не активная</label>
-                        <input disabled="" type="password" name="password" placeholder="Email">
-                    </div>
-
-                    <div class="form__row">
-                        <label for="select">Селект</label>
+                        <label for="select">Тип окна</label>
                         <div class="in-sel">
-                            <select name="select">
-                                <option value="">Выберите город</option>
+                            <select name="select-window-type">
+                                <option value="">Выберите</option>
                                 <option value="petersburg">Санкт-Петербург</option>
                                 <option value="samara">Самара</option>
                                 <option value="perm">Пермь</option>
@@ -52,15 +26,71 @@
                     </div>
 
                     <div class="form__row">
-                        <label for="text">Текст</label>
-                        <textarea name="text" id="" placeholder="Текст"></textarea>
+                        <label for="select">Цвет окон</label>
+                        <div class="in-sel">
+                            <select name="select-window-color">
+                                <option value="">Выберите</option>
+                                <option value="petersburg">Белый</option>
+                                <option value="samara">Самара</option>
+                                <option value="perm">Пермь</option>
+                                <option value="novosibirsk">Новосибирск</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form__row-double">
+                    <div class="form__row">
+                        <label for="name">Длина, мм</label>
+                        <input type="text" name="length" placeholder="Имя">
                     </div>
 
-                    <button type="submit">Отправить</button>
-                </form>
+                    <div class="form__row">
+                        <label for="name">Ширина,мм</label>
+                        <input type="text" name="width" placeholder="600">
+                    </div>
+                </div>
+
+                <div class="form__row-triple">
+                    <div class="custom-checkbox">
+                        <input type="checkbox">
+                        <div class="check-box"></div>
+                        <span>
+                            Москитная сетка
+                        </span>
+                    </div>
+
+                    <div class="custom-checkbox">
+                        <input type="checkbox">
+                        <div class="check-box"></div>
+                        <span>
+                            Отливы
+                        </span>
+                    </div>
+
+                    <div class="custom-checkbox">
+                        <input type="checkbox">
+                        <div class="check-box"></div>
+                        <span>
+                            Утепление откосов
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-agree-box">
+                    Заполняя эту форму, Вы соглашаетесь с правилами <a href="#">
+                        Политики Конфиденциальности
+                    </a>
+                </div>
+
+                <button class="btn" type="submit">Рассчитать стоимость</button>
             </form>
+
         </div>
 
-        <div class="calculator-img-col"></div>
+        <div class="calculator-img-col">
+            <img src="@img/calculator-img.png" alt="" class="calculator-img">
+        </div>
     </div>
 </section>

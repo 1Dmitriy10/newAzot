@@ -1,12 +1,17 @@
 .calculator-prev {
-    margin-bottom: clamp(3.5rem, 2.2447698745rem + 5.3556485356vw, 7.5rem);
+
     background: var(--bg-2);
 }
 
 .calculator-prev__container {
     display: flex;
-    flex-wrap: wrap;
+    padding-bottom: clamp(3.5rem, 2.2447698745rem + 5.3556485356vw, 7.5rem);
     gap: 8px;
+
+    @include respond-to("pc-old") {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .calculator-col {
@@ -15,8 +20,98 @@
     padding: 40px;
     max-width: 746px;
     background: var(--white);
+
+    @include respond-to("pc-old") {
+        flex: 0 1 100%;
+        max-width: 100%;
+        width: 100%;
+    }
 }
 
-.calculator-col__title {}
+.calculator-col__title {
+    font-weight: 500;
+    font-size: clamp-px(28, 40);
+    line-height: 120%;
+    color: var(--black);
+    margin-bottom: clamp-px(10, 16);
+    max-width: 450px;
+}
 
-.calculator-col__subtitle {}
+.calculator-col__subtitle {
+    font-weight: 400;
+    font-size: clamp-px(16, 18);
+    line-height: 156%;
+    color: var(--black);
+    opacity: 0.8;
+    margin-bottom: clamp-px(24, 40);
+}
+
+.form__row-double {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 12px;
+
+    &>.form__row {
+        flex: 0 1 calc((100% - 12px * 1) / 2);
+
+        @include respond-to("tab") {
+            flex: 0 1 100%;
+        }
+    }
+
+
+}
+
+.form__row-triple {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp-px(20, 40);
+
+    @include respond-to("tab") {
+        &>.custom-checkbox {
+            flex: 0 1 100%;
+        }
+    }
+}
+
+.form-agree-box {
+    margin-top: clamp-px(24, 40);
+    margin-bottom: clamp-px(16, 20);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp-px(13, 15);
+    line-height: 160%;
+    color: var(--grey);
+
+    &>a {
+        color: var(--orange);
+    }
+}
+
+.calculator-img-col {
+    flex: 0 1 50%;
+    height: 668px;
+    position: relative;
+    max-width: 746px;
+    border-radius: 32px;
+
+    @include respond-to("pc-old") {
+        flex: 0 1 668px;
+        width: 100%;
+    }
+
+    @include respond-to("tab") {
+        flex: 0 1 300px;
+    }
+}
+
+.calculator-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 32px;
+}

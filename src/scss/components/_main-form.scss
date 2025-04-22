@@ -1,0 +1,97 @@
+.main-form-sec {
+    background: var(--bg-2);
+}
+
+.main-form__container {
+    padding-bottom: clamp(3.5rem, 2.2447698745rem + 5.3556485356vw, 7.5rem);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+
+    @include respond-to("pc-old") {
+        flex-direction: column;
+    }
+}
+
+.main-form__form-col {
+    flex: 0 1 calc((100% - 8px * 1) / 2);
+    display: flex;
+    flex-direction: column;
+    background: var(--black);
+    border-radius: clamp-px(16, 24);
+    padding: clamp-px(24, 40) clamp-px(20, 40);
+}
+
+.main-form__title {
+    font-weight: 500;
+    font-size: clamp-px(28, 48);
+    line-height: 117%;
+    color: var(--white);
+    max-width: 360px;
+    margin-bottom: clamp-px(10, 16);
+}
+
+.main-form__subtitle {
+    font-weight: 400;
+    font-size: clamp-px(16, 18);
+    line-height: 156%;
+    color: var(--white);
+    margin-bottom: clamp-px(24, 32);
+}
+
+.main-form {
+    & input {
+        background: rgba(255, 255, 255, 0.16);
+
+        &::placeholder {
+            color: var(--white);
+        }
+    }
+
+    & .form-agree-box {
+        margin-top: clamp-px(24, 32);
+        margin-bottom: clamp-px(16, 20);
+        color: rgba(255, 255, 255, 0.6);
+
+        & a {
+            color: var(--white);
+
+        }
+    }
+}
+
+.form__row-double {}
+
+.form__row {}
+
+.form-agree-box {}
+
+.btn {}
+
+.main-form__img-col {
+    flex: 0 1 calc((100% - 8px * 1) / 2);
+    position: relative;
+    height: 484px;
+    border-radius: 24px;
+
+    @include respond-to("pc-old") {
+        flex: 0 1 484px;
+        max-width: 746px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    @include respond-to("tab") {
+        flex: 0 1 220px;
+    }
+}
+
+.main-form__img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 24px;
+}
