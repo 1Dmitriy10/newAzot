@@ -156,5 +156,230 @@ const pricesPrevSlider = new Swiper('.prices-prev__slider', {
 
 });
 
+const previewsPrevSlider = new Swiper('.reviews-prev__slider', {
+    // Стрелки
+    navigation: {
+        nextEl: '.reviews-prev__slider-next',
+        prevEl: '.reviews-prev__slider-prev',
+    },
+
+    
+
+    /*Отступ у карточек*/
+    spaceBetween: 12,
+    /*Показывать по n карточек*/
+    slidesPerView: 1.3,
+    /* При достижении конца, перепрыгнуть в начало */
+    // rewind: true,
+    /*Увеличение при наведении курсора мыши */
+    // zoom: true,
+    /*Ленивая подгрузка */
+    // lazy: true,
+    /*Бесконечная прокрутка */
+    // loop: true,
+    /*Ориентация */
+    // direction: 'vertical',
+    /*Авто высота*/
+    // autoHeight: true,
+    /*иконка захвата при наведении на слайд*/
+    grabCursor: true,
+    /*Автоматическое перелистывание*/
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    /*Брек-поинты*/
+    breakpoints: {
+        1400: {
+            slidesPerView: 2.3,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 1.8,
+            spaceBetween: 15,
+        },
+        900: {
+            slidesPerView: 1.3,
+            spaceBetween: 15,
+        },
+       
+    },
+
+});
+
+const certificatesPrevSlider = new Swiper('.certificates-prev__slider', {
+    // Стрелки
+    navigation: {
+        nextEl: '.certificates-prev__slider-next',
+        prevEl: '.certificates-prev__slider-prev',
+    },
+
+    
+
+    /*Отступ у карточек*/
+    spaceBetween: 12,
+    /*Показывать по n карточек*/
+    slidesPerView: 1.5,
+    /* При достижении конца, перепрыгнуть в начало */
+    // rewind: true,
+    /*Увеличение при наведении курсора мыши */
+    // zoom: true,
+    /*Ленивая подгрузка */
+    // lazy: true,
+    /*Бесконечная прокрутка */
+    // loop: true,
+    /*Ориентация */
+    // direction: 'vertical',
+    /*Авто высота*/
+    // autoHeight: true,
+    /*иконка захвата при наведении на слайд*/
+    grabCursor: true,
+    /*Автоматическое перелистывание*/
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    /*Брек-поинты*/
+    breakpoints: {
+        1400: {
+            slidesPerView: 5,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 4,
+            spaceBetween: 15,
+        },
+        900: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        768: {
+            slidesPerView: 2.5,
+            spaceBetween: 15,
+        },
+        500: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+       
+    },
+
+});
+
+const newsPrevSlider = new Swiper('.news-prev__slider', {
+    // Стрелки
+    navigation: {
+        nextEl: '.news-prev__slider-next',
+        prevEl: '.news-prev__slider-prev',
+    },
+
+    
+
+    /*Отступ у карточек*/
+    spaceBetween: 12,
+    /*Показывать по n карточек*/
+    slidesPerView: 1.2,
+    /* При достижении конца, перепрыгнуть в начало */
+    // rewind: true,
+    /*Увеличение при наведении курсора мыши */
+    // zoom: true,
+    /*Ленивая подгрузка */
+    // lazy: true,
+    /*Бесконечная прокрутка */
+    // loop: true,
+    /*Ориентация */
+    // direction: 'vertical',
+    /*Авто высота*/
+    // autoHeight: true,
+    /*иконка захвата при наведении на слайд*/
+    grabCursor: true,
+    /*Автоматическое перелистывание*/
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    /*Брек-поинты*/
+    breakpoints: {
+        1400: {
+            slidesPerView: 3.5,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 3,
+            spaceBetween: 15,
+        },
+        900: {
+            slidesPerView: 2.5,
+            spaceBetween: 15,
+        },
+        768: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        500: {
+            slidesPerView: 1.5,
+            spaceBetween: 15,
+        },
+       
+    },
+
+});
+
+const portfolioPrevSlider = new Swiper('.portfolio-prev__slider', {
+    // Стрелки
+    navigation: {
+        nextEl: '.portfolio-prev__slider-next',
+        prevEl: '.portfolio-prev__slider-prev',
+    },
+
+    
+
+    /*Отступ у карточек*/
+    spaceBetween: 12,
+    /*Показывать по n карточек*/
+    slidesPerView: 1.2,
+    /* При достижении конца, перепрыгнуть в начало */
+    // rewind: true,
+    /*Увеличение при наведении курсора мыши */
+    // zoom: true,
+    /*Ленивая подгрузка */
+    // lazy: true,
+    /*Бесконечная прокрутка */
+    // loop: true,
+    /*Ориентация */
+    // direction: 'vertical',
+    /*Авто высота*/
+    // autoHeight: true,
+    /*иконка захвата при наведении на слайд*/
+    // grabCursor: true,
+    /*Автоматическое перелистывание*/
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    /*Брек-поинты*/
+    breakpoints: {
+        1400: {
+            slidesPerView: 2.8,
+            spaceBetween: 20,
+        },
+        1200: {
+            slidesPerView: 2.3,
+            spaceBetween: 15,
+        },
+        900: {
+            slidesPerView: 2,
+            spaceBetween: 15,
+        },
+        768: {
+            slidesPerView: 1.8,
+            spaceBetween: 15,
+        },
+        500: {
+            slidesPerView: 1.5,
+            spaceBetween: 15,
+        },
+       
+    },
+
+});
+
+
 
 

@@ -95,3 +95,77 @@
     object-fit: cover;
     border-radius: 24px;
 }
+
+.main-form-sec_bg {
+    border-radius: clamp-px(24, 48);
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+
+    & .main-form__container {
+        padding: 0;
+    }
+
+    @include respond-to("tel") {
+        border-radius: clamp-px(24, 48) clamp-px(24, 48) 0 0;
+    }
+}
+
+.main-form__inner-container {
+    padding: clamp-px(56, 120) 0;
+
+    @include respond-to("tel") {
+        padding-top: clamp-px(56, 120);
+        padding-bottom: 0;
+    }
+
+}
+
+.main-form__inner__title {}
+
+.main-form__inner__subtitle {
+    font-weight: 400;
+    font-size: clamp-px(16, 20);
+    line-height: 150%;
+    color: var(--grey-2);
+    margin-bottom: clamp-px(24, 40);
+    max-width: 700px;
+}
+
+.main-form__inner__statistics-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+    margin-bottom: 40px;
+}
+
+.main-form__inner__statistics-card {
+    @include cols(4, $gap);
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+    border-radius: clamp-px(12, 24);
+    padding: clamp-px(12, 24);
+    gap: 24px;
+
+    @include respond-to("tab") {
+        gap: 50px;
+    }
+
+    @media (width<576px) {
+        flex: 0 1 calc((100% - 23px * 1) / 2);
+    }
+}
+
+.main-form__inner__statistics-card-title {
+    font-weight: 500;
+    font-size: clamp-px(28, 48);
+    line-height: 117%;
+    color: var(--orange);
+    font-family: var(--second-family);
+}
+
+.main-form__inner__statistics-card-text {
+    font-weight: 400;
+    font-size: clamp-px(13, 18);
+    line-height: 156%;
+    color: var(--black);
+}

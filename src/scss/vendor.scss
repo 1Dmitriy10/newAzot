@@ -439,7 +439,7 @@ summary {
     flex-direction: column;
     gap: 50px;
 
-    &>section>.container {
+    &>section.ui-kit>.container {
         display: flex;
         flex-direction: column;
         gap: 30px;

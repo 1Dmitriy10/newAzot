@@ -18,7 +18,7 @@ import { slider } from "./libs/slider.js";
 
 
 //---------------------Модальные окна------------------
-// import { fancybox } from "./libs/fancybox.js";
+import { fancybox } from "./libs/fancybox.js";
 
 
 // ---------------------Маска для инпутов--------------
@@ -41,6 +41,9 @@ import { stickyHeader } from "./components/stickyHeader.js";
 
 //---------------Кастомные чекбоксы---------------
 import { customCheckbox } from "./components/customCheckbox.js";
+
+//---------------Слайдер keen---------------
+import { KeenSlid } from "./libs/keenSlider.js";
 
 
 
