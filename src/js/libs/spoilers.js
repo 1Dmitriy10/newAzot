@@ -11,8 +11,8 @@ import { Spoilers } from "../vendor.js";
 
 
 
-const spoilers = new Spoilers({
-    item: '_spoiler-js', /*класс споилера*/
+const faqSpoiler = new Spoilers({
+    item: 'faq-spoiler-js', /*класс споилера*/
     timeAnimation: 300, /*время анимации*/
     accordion: true,    /*Режим аккордиона*/
     firstOpen: true    /*Первый элемент всегда открыт*/

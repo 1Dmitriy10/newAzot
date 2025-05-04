@@ -1,0 +1,108 @@
+.product-tabs {
+    background: var(--bg-2);
+    border-radius: clamp(1.5rem, 1.0347394541rem + 1.9851116625vw, 3rem) clamp(1.5rem, 1.0347394541rem + 1.9851116625vw, 3rem) 0 0;
+}
+
+.product-tabs__container {
+    padding: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem) 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-tabs__title {
+    margin-bottom: clamp(1.5rem, 1.0347394541rem + 1.9851116625vw, 3rem);
+}
+
+.filter-box.bg_w {
+    &>.filter-item {
+        background: var(--white);
+
+        &.active {
+            background: var(--black);
+        }
+    }
+}
+
+.product-tabs__banner {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    border-radius: clamp-px(16, 32);
+    padding: clamp-px(0, 40);
+    height: 576px;
+    margin-top: 40px;
+
+    @include respond-to("tab") {
+        height: auto;
+    }
+}
+
+.product-tabs__banner-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: clamp-px(16, 32);
+
+    @include respond-to("tab") {
+        display: none;
+    }
+}
+
+.product-tabs__banner-text-box {
+    position: relative;
+    align-self: flex-end;
+    max-width: 710px;
+    border-radius: clamp-px(16, 24);
+    padding: clamp-px(20, 40);
+    background: var(--white);
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-tabs__banner-title {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp-px(20, 40);
+    line-height: 120%;
+    color: #111827;
+    margin-bottom: clamp-px(12, 16);
+}
+
+.product-tabs__banner-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp-px(15, 18);
+    line-height: 147%;
+    color: var(--grey-2);
+    margin-bottom: 16px;
+}
+
+.product-tabs__banner-price {
+    margin-top: auto;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp-px(20, 32);
+    line-height: 112%;
+    color: var(--black);
+    margin-bottom: clamp-px(16, 32);
+}
+
+.product-tabs__banner-btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp-px(10, 30);
+
+    @include respond-to("tab") {
+        flex-direction: column;
+    }
+}
+
+.product-tabs__banner-link-more {
+    @include respond-to("tab") {
+        align-self: center;
+    }
+}

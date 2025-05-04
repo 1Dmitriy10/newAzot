@@ -1,0 +1,21 @@
+.product-advantages__card-box.cols_4 {
+    gap: 20px;
+
+    &>.product-advantages__card {
+        flex: 0 1 calc((100% - 20px * 3) / 4);
+        min-height: 318px;
+
+        @media (width<1270px) {
+            flex: 0 1 calc((100% - 20px * 2) / 3);
+        }
+
+        @media (width<1000px) {
+            flex: 0 1 calc((100% - 20px * 1) / 2);
+        }
+
+        @media (width<600px) {
+            flex: 0 1 100%;
+            min-height: 190px;
+        }
+    }
+}

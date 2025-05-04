@@ -45,6 +45,13 @@ import { customCheckbox } from "./components/customCheckbox.js";
 //---------------Слайдер keen---------------
 import { KeenSlid } from "./libs/keenSlider.js";
 
+//---------------Поиск всплывающее окно---------------
+import { modalSearch } from "./components/modalSearch.js";
+
+//---------------Навигация для гита---------------
+import { gitNav } from "./components/gitNav.js";
+
+
 
 
 

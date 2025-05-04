@@ -1,0 +1,83 @@
+.second-form-box {
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.second-form__container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+
+    border-radius: clamp-px(24, 32);
+    padding: clamp-px(20, 40);
+
+    background: url('../images/form/second-form-bg.png') center/contain no-repeat, linear-gradient(135deg, #ff8259 0%, #f46f43 100%);
+
+    @include respond-to("nout") {
+        height: 648px;
+        flex-direction: column;
+        background: url('../images/form/second-form-bg.png') bottom/contain no-repeat, linear-gradient(135deg, #ff8259 0%, #f46f43 100%);
+    }
+}
+
+.second-form__text-box {
+    flex: 0 1 50%;
+    max-width: 480px;
+
+
+    @include respond-to("nout") {
+        flex: 0 1 fit-content;
+        max-width: 100%;
+    }
+}
+
+.second-form__title {
+    font-weight: 500;
+    font-size: clamp-px(32, 64);
+    line-height: 106%;
+    color: var(--white);
+    max-width: 350px;
+    margin-bottom: 20px;
+
+    @include respond-to("nout") {
+        max-width: 100%;
+    }
+}
+
+.second-form__text {
+    margin-top: auto;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp-px(16, 24);
+    line-height: 133%;
+    color: var(--white);
+}
+
+.second-form__form-box {
+    flex: 0 1 50%;
+    max-width: 560px;
+
+    @include respond-to("nout") {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+}
+
+.second-form {
+    display: flex;
+    flex-direction: column;
+    background: var(--white);
+    border-radius: clamp-px(16, 24);
+    padding: clamp-px(16, 40);
+
+    & .form__row {
+        &:not(:last-child) {
+            margin-bottom: 12px;
+        }
+    }
+}
+
+
+
+.form-agree-box {}
+
+.btn {}

@@ -20,8 +20,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const spoilers = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Spoilers({
-    item: '_spoiler-js', /*класс споилера*/
+const faqSpoiler = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Spoilers({
+    item: 'faq-spoiler-js', /*класс споилера*/
     timeAnimation: 300, /*время анимации*/
     accordion: true,    /*Режим аккордиона*/
     firstOpen: true    /*Первый элемент всегда открыт*/
@@ -28478,6 +28478,79 @@ ___CSS_LOADER_EXPORT___.push([module.id, `.keen-slider:not([data-keen-slider-dis
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (___CSS_LOADER_EXPORT___);
 
 
+/***/ }),
+/* 68 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   modalSearch: () => (/* binding */ modalSearch)
+/* harmony export */ });
+function modalSearch() {
+let search = document.querySelector(".header__search>input");
+let stickyHeader = document.querySelector(".sticky-header__search>input");
+
+search.addEventListener("focus", getModal)
+stickyHeader.addEventListener("focus", getStickyModal)
+
+
+function getModal() {
+    let modalSearch = document.querySelector(".modal-search");
+    let blackout = document.querySelector(".blackout");
+
+    modalSearch.classList.add("active");
+    blackout.classList.add("show");
+
+    let body = document.querySelector("body");
+    body.addEventListener("click",function() {
+        if(event.target.classList.contains("modal-search") || event.target == search) {
+
+        }else{
+            modalSearch.classList.remove("active")
+            blackout.classList.remove("show");
+        }
+    })
+}
+
+function getStickyModal() {
+    let modalSearch = document.querySelector(".sticky-modal-search");
+    let blackout = document.querySelector(".blackout");
+
+    modalSearch.classList.add("active");
+    blackout.classList.add("show");
+
+    let body = document.querySelector("body");
+    body.addEventListener("click",function() {
+        if(event.target.classList.contains("sticky-modal-search") || event.target == stickyHeader) {
+
+        }else{
+            modalSearch.classList.remove("active")
+            blackout.classList.remove("show");
+        }
+    })
+}
+};
+modalSearch();
+
+/***/ }),
+/* 69 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   gitNav: () => (/* binding */ gitNav)
+/* harmony export */ });
+function gitNav() {
+    let block = document.querySelector(".git-nav-box");
+    
+    block.addEventListener("click", function() {
+        block.classList.toggle("show");
+    })
+    };
+    gitNav();
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -28595,6 +28668,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_stickyHeader_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(62);
 /* harmony import */ var _components_customCheckbox_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(63);
 /* harmony import */ var _libs_keenSlider_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(64);
+/* harmony import */ var _components_modalSearch_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(68);
+/* harmony import */ var _components_gitNav_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(69);
 //------------------------Спойлеры-----------------------
 
 
@@ -28640,6 +28715,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //---------------Слайдер keen---------------
+
+
+//---------------Поиск всплывающее окно---------------
+
+
+//---------------Навигация для гита---------------
+
 
 
 

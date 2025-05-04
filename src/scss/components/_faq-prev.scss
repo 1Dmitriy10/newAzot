@@ -1,0 +1,106 @@
+.faq-prev {
+    // margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+    background: var(--bg-2);
+}
+
+.faq-prev__container {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    padding: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem) 0;
+
+    @include respond-to("nout") {
+        flex-direction: column;
+    }
+}
+
+.faq-prev__left-col {
+    flex: 0 1 50%;
+    max-width: 350px;
+
+    @include respond-to("nout") {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+}
+
+.faq-prev__title {
+    margin-top: clamp(0.5rem, 0.3430962343rem + 0.6694560669vw, 1rem);
+    margin-bottom: clamp(1.5rem, 1.0292887029rem + 2.0083682008vw, 3rem);
+}
+
+.faq-prev__btn {
+    @include respond-to("tel") {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+
+.faq-prev__right-col {
+    flex: 1 1 50%;
+    max-width: 900px;
+
+}
+
+.faq-prev__spoilers-box {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    & details {
+        border-radius: 16px;
+        padding: clamp-px(18, 24) 16px;
+        background: var(--white);
+
+        &:hover {
+            .faq-spoiler-js {
+                color: var(--orange);
+
+                &::after {
+                    background: var(--bg-4);
+                }
+
+            }
+        }
+    }
+}
+
+.faq-spoiler-js {
+    font-weight: 500;
+    font-size: clamp-px(17, 20);
+    line-height: 140%;
+    color: var(--black);
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+    &::after {
+        content: url('../images/icons/arrow-up.png');
+        border-radius: 10px;
+        width: clamp-px(26, 48);
+        min-width: clamp-px(26, 48);
+        height: clamp-px(26, 48);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transform: rotate(180deg);
+        margin-left: auto;
+    }
+
+    &.active {
+        &::after {
+            transform: rotate(0deg);
+        }
+    }
+
+
+}
+
+.spoiler-content {
+    margin-top: 16px;
+    font-weight: 400;
+    font-size: clamp-px(15, 18);
+    line-height: 156%;
+    color: var(--grey-2);
+}

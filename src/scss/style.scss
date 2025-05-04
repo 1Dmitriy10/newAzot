@@ -74,6 +74,23 @@ body {
     }
 }
 
+.mb_block {
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.portfolio-prev_bg {
+    border-radius: clamp(1.5rem, 1.0347394541rem + 1.9851116625vw, 3rem) !important;
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.steps_br {
+    border-radius: clamp(1.5rem, 1.0347394541rem + 1.9851116625vw, 3rem) clamp(1.5rem, 1.0347394541rem + 1.9851116625vw, 3rem) 0 0;
+
+    &>.steps__container {
+        padding: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem) 0;
+    }
+}
+
 
 //==================================
 
@@ -105,3 +122,19 @@ body {
 @import "./components/about-clients";
 @import "./components/news-prev";
 @import "./components/portfolio-prev";
+@import "./components/faq-prev";
+@import "./components/map";
+@import "./components/_second-form";
+@import "./components/brands-prev";
+
+
+@import "./components/plastic-windows";
+@import "./components/dors";
+@import "./components/entrance-groups";
+@import "./components/product-banner";
+@import "./components/windows-manufacturer";
+@import "./components/option-price";
+@import "./components/product-tabs";
+@import "./components/double-windows-advantages";
+@import "./components/color-solutions";
+@import "./components/git-nav";

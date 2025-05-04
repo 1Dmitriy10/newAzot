@@ -1,0 +1,9 @@
+.entrance-groups {
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.entrance-groups__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: $gap;
+}
