@@ -51,6 +51,12 @@ import { modalSearch } from "./components/modalSearch.js";
 //---------------Навигация для гита---------------
 import { gitNav } from "./components/gitNav.js";
 
+//---------------Подменю десктоп---------------
+import { getSubMenuDesk } from "./components/getSubMenuDesk.js";
+
+//---------------Слайдер мобильного меню---------------
+import { mobMenuSlider } from "./components/mobMenuSlider.js";
+
 
 
 

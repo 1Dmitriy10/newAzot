@@ -6,9 +6,15 @@ let stickyHeader = document.querySelector('.sticky-header');
 window.addEventListener("scroll", getStickyHeader)
 
 btnOpen.addEventListener("click", function() {
-    console.log("ok")
+let svgOpen = document.querySelector('.menu-open-svg-open')
+let svgClose = document.querySelector('.menu-open-svg-close')  
+
     event.target.classList.toggle("active");
     menu.classList.toggle("active");
+    svgOpen.classList.toggle("hidden");
+    svgClose.classList.toggle("show");
+
+
 })
 
 function getStickyHeader() {

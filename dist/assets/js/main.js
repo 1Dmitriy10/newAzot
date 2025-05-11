@@ -15153,25 +15153,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _vendor_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
 
 
-let menu = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Menu({
-    /*Класс меню */
-    class: 'nav-list',
-    /*Разрешение при котором меню исчезнет*/
-    mediaOff: "100px",
-    /*Добавление не помещающихся элементов меню в специальный контейнер*/
-    opacityItem: false,
-    /*Обертка для подменю скрытых элементов
-    Разместить в нужном месте <div class="sub-menu-wrap"></div>*/
-    solutionForSubmenu: false,
-    /*Когда скрыть меню*/
-    mediaHidden: "100px",
-    /*Стрелка для выпадающего меню (svg/i)*/
-    arrowSubmenu: `
-            <svg width="10" height="10" viewBox="0 0 52 27"         fill="none" xmlns="http://www.w3.org/2000/svg">
-                 <path d="M1.20711 1.70711L25.2929 25.7929C25.6834 26.1834 26.3166 26.1834 26.7071 25.7929L50.7929 1.70711C51.4229 1.07714 50.9767 1.57952e-06 50.0858 1.57952e-06H1.91422C1.02331 1.57952e-06 0.577144 1.07714 1.20711 1.70711Z" fill="black"/>
-             </svg>
-`
-})
+// let menu = new Menu({
+//     /*Класс меню */
+//     class: 'nav-list',
+//     /*Разрешение при котором меню исчезнет*/
+//     mediaOff: "100px",
+//     /*Добавление не помещающихся элементов меню в специальный контейнер*/
+//     opacityItem: false,
+//     /*Обертка для подменю скрытых элементов
+//     Разместить в нужном месте <div class="sub-menu-wrap"></div>*/
+//     solutionForSubmenu: false,
+//     /*Когда скрыть меню*/
+//     mediaHidden: "100px",
+//     /*Стрелка для выпадающего меню (svg/i)*/
+//     arrowSubmenu: `
+            
+// `
+// })
 
 let topMenu = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Menu({
     /*Класс меню */
@@ -15611,6 +15609,68 @@ const portfolioPrevSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["defa
         },
        
     },
+
+});
+
+const nestedSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.nested-slider-child', {
+    // Стрелки
+    // navigation: {
+    //     nextEl: '.portfolio-prev__slider-next',
+    //     prevEl: '.portfolio-prev__slider-prev',
+    // },
+    pagination:{
+        el: ".nested-slider-pagination"
+    },
+    nested: true,
+
+    
+
+    /*Отступ у карточек*/
+    spaceBetween: 12,
+    /*Показывать по n карточек*/
+    slidesPerView: 1,
+    /* При достижении конца, перепрыгнуть в начало */
+    // rewind: true,
+    /*Увеличение при наведении курсора мыши */
+    // zoom: true,
+    /*Ленивая подгрузка */
+    // lazy: true,
+    /*Бесконечная прокрутка */
+    // loop: true,
+    /*Ориентация */
+    // direction: 'vertical',
+    /*Авто высота*/
+    // autoHeight: true,
+    /*иконка захвата при наведении на слайд*/
+    // grabCursor: true,
+    /*Автоматическое перелистывание*/
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    /*Брек-поинты*/
+    // breakpoints: {
+    //     1400: {
+    //         slidesPerView: 2.8,
+    //         spaceBetween: 20,
+    //     },
+    //     1200: {
+    //         slidesPerView: 2.3,
+    //         spaceBetween: 15,
+    //     },
+    //     900: {
+    //         slidesPerView: 2,
+    //         spaceBetween: 15,
+    //     },
+    //     768: {
+    //         slidesPerView: 1.8,
+    //         spaceBetween: 15,
+    //     },
+    //     500: {
+    //         slidesPerView: 1.5,
+    //         spaceBetween: 15,
+    //     },
+       
+    // },
 
 });
 
@@ -28118,9 +28178,15 @@ let stickyHeader = document.querySelector('.sticky-header');
 window.addEventListener("scroll", getStickyHeader)
 
 btnOpen.addEventListener("click", function() {
-    console.log("ok")
+let svgOpen = document.querySelector('.menu-open-svg-open')
+let svgClose = document.querySelector('.menu-open-svg-close')  
+
     event.target.classList.toggle("active");
     menu.classList.toggle("active");
+    svgOpen.classList.toggle("hidden");
+    svgClose.classList.toggle("show");
+
+
 })
 
 function getStickyHeader() {
@@ -28190,176 +28256,178 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-let sliderInst = document.querySelector(".portfolio-prev__slider");
-if(sliderInst) {
-    let items = sliderInst.querySelectorAll(".keen-slider");
-    let count = 1;
+// let sliderInst = document.querySelector(".portfolio-prev__slider");
+// if(sliderInst) {
+//     let items = sliderInst.querySelectorAll(".keen-slider");
+//     let count = 1;
     
-    items.forEach(el=>{
-        el.classList.add(`keen-slider${count}`);
-        count++
+//     items.forEach(el=>{
+//         el.classList.add(`keen-slider${count}`);
+//         count++
     
-        getSlider(el.classList[1])
-    })
-}
+//         getSlider(el.classList[1])
+//     })
+// }
 
 
-function getSlider(el) {
-    const slider = new keen_slider__WEBPACK_IMPORTED_MODULE_0__["default"](`.${el}`, {
-        // кол-во слайдеров и отступ между ними [есть еще "auto"]
-        loop: true,
-        slides: {
-            // центрирование слайда
-            // origin: "center",
-            perView: 1,
-            spacing: 20,
-        },
-        // // Бесконечная прокрутка
+
+
+// function getSlider(el) {
+//     const slider = new KeenSlider(`.${el}`, {
+//         // кол-во слайдеров и отступ между ними [есть еще "auto"]
+//         loop: true,
+//         slides: {
+//             // центрирование слайда
+//             // origin: "center",
+//             perView: 1,
+//             spacing: 20,
+//         },
+//         // // Бесконечная прокрутка
     
-        // Брейкпоинты
-        breakpoints: {
-            '(min-width: 500px)': {
-                // loop: false,
-            },
+//         // Брейкпоинты
+//         breakpoints: {
+//             '(min-width: 500px)': {
+//                 // loop: false,
+//             },
     
-        },
-    },
-        [
-            // Автоплей
-            // (slider) => {
-            //     let timeout
-            //     let mouseOver = false
-            //     function clearNextTimeout() {
-            //         clearTimeout(timeout)
-            //     }
-            //     function nextTimeout() {
-            //         clearTimeout(timeout)
-            //         if (mouseOver) return
-            //         timeout = setTimeout(() => {
-            //             slider.next()
-            //         }, 1000)
-            //     }
-            //     slider.on("created", () => {
-            //         slider.container.addEventListener("mouseover", () => {
-            //             mouseOver = true
-            //             clearNextTimeout()
-            //         })
-            //         slider.container.addEventListener("mouseout", () => {
-            //             mouseOver = false
-            //             nextTimeout()
-            //         })
-            //         nextTimeout()
-            //     })
-            //     slider.on("dragStarted", clearNextTimeout)
-            //     slider.on("animationEnded", nextTimeout)
-            //     slider.on("updated", nextTimeout)
-            // },
-            // Навигация
-            (slider) => {
+//         },
+//     },
+//         [
+//             // Автоплей
+//             // (slider) => {
+//             //     let timeout
+//             //     let mouseOver = false
+//             //     function clearNextTimeout() {
+//             //         clearTimeout(timeout)
+//             //     }
+//             //     function nextTimeout() {
+//             //         clearTimeout(timeout)
+//             //         if (mouseOver) return
+//             //         timeout = setTimeout(() => {
+//             //             slider.next()
+//             //         }, 1000)
+//             //     }
+//             //     slider.on("created", () => {
+//             //         slider.container.addEventListener("mouseover", () => {
+//             //             mouseOver = true
+//             //             clearNextTimeout()
+//             //         })
+//             //         slider.container.addEventListener("mouseout", () => {
+//             //             mouseOver = false
+//             //             nextTimeout()
+//             //         })
+//             //         nextTimeout()
+//             //     })
+//             //     slider.on("dragStarted", clearNextTimeout)
+//             //     slider.on("animationEnded", nextTimeout)
+//             //     slider.on("updated", nextTimeout)
+//             // },
+//             // Навигация
+//             (slider) => {
     
-                let wrapper, dots, arrowLeft, arrowRight
+//                 let wrapper, dots, arrowLeft, arrowRight
     
-                function markup(remove) {
-                    wrapperMarkup(remove)
-                    dotMarkup(remove)
-                    arrowMarkup(remove)
-                }
+//                 function markup(remove) {
+//                     wrapperMarkup(remove)
+//                     dotMarkup(remove)
+//                     arrowMarkup(remove)
+//                 }
     
-                function removeElement(elment) {
-                    elment.parentNode.removeChild(elment)
-                }
-                function createDiv(className) {
-                    var div = document.createElement("div")
-                    var classNames = className.split(" ")
-                    classNames.forEach((name) => div.classList.add(name))
-                    return div
-                }
+//                 function removeElement(elment) {
+//                     elment.parentNode.removeChild(elment)
+//                 }
+//                 function createDiv(className) {
+//                     var div = document.createElement("div")
+//                     var classNames = className.split(" ")
+//                     classNames.forEach((name) => div.classList.add(name))
+//                     return div
+//                 }
     
-                function arrowMarkup(remove) {
-                    if (remove) {
-                        removeElement(arrowLeft)
-                        removeElement(arrowRight)
-                        return
-                    }
-                    arrowLeft = createDiv("arrow arrow--left")
-                    arrowLeft.addEventListener("click", () => slider.prev())
-                    arrowRight = createDiv("arrow arrow--right")
-                    arrowRight.addEventListener("click", () => slider.next())
+//                 function arrowMarkup(remove) {
+//                     if (remove) {
+//                         removeElement(arrowLeft)
+//                         removeElement(arrowRight)
+//                         return
+//                     }
+//                     arrowLeft = createDiv("arrow arrow--left")
+//                     arrowLeft.addEventListener("click", () => slider.prev())
+//                     arrowRight = createDiv("arrow arrow--right")
+//                     arrowRight.addEventListener("click", () => slider.next())
     
-                    wrapper.appendChild(arrowLeft)
-                    wrapper.appendChild(arrowRight)
-                }
+//                     wrapper.appendChild(arrowLeft)
+//                     wrapper.appendChild(arrowRight)
+//                 }
     
-                function wrapperMarkup(remove) {
-                    if (remove) {
-                        var parent = wrapper.parentNode
-                        while (wrapper.firstChild)
-                            parent.insertBefore(wrapper.firstChild, wrapper)
-                        removeElement(wrapper)
-                        return
-                    }
-                    wrapper = createDiv("navigation-wrapper")
-                    slider.container.parentNode.appendChild(wrapper)
-                    wrapper.appendChild(slider.container)
-                }
+//                 function wrapperMarkup(remove) {
+//                     if (remove) {
+//                         var parent = wrapper.parentNode
+//                         while (wrapper.firstChild)
+//                             parent.insertBefore(wrapper.firstChild, wrapper)
+//                         removeElement(wrapper)
+//                         return
+//                     }
+//                     wrapper = createDiv("navigation-wrapper")
+//                     slider.container.parentNode.appendChild(wrapper)
+//                     wrapper.appendChild(slider.container)
+//                 }
     
-                function dotMarkup(remove) {
-                    if (remove) {
-                        removeElement(dots)
-                        return
-                    }
-                    dots = createDiv("dots")
-                    slider.track.details.slides.forEach((_e, idx) => {
-                        var dot = createDiv("dot")
-                        dot.addEventListener("click", () => slider.moveToIdx(idx))
-                        dots.appendChild(dot)
-                    })
-                    wrapper.appendChild(dots)
-                }
+//                 function dotMarkup(remove) {
+//                     if (remove) {
+//                         removeElement(dots)
+//                         return
+//                     }
+//                     dots = createDiv("dots")
+//                     slider.track.details.slides.forEach((_e, idx) => {
+//                         var dot = createDiv("dot")
+//                         dot.addEventListener("click", () => slider.moveToIdx(idx))
+//                         dots.appendChild(dot)
+//                     })
+//                     wrapper.appendChild(dots)
+//                 }
     
-                function updateClasses() {
-                    var slide = slider.track.details.rel
-                    if (arrowLeft) {
-                        slide === 0
-                            ? arrowLeft.classList.add("arrow--disabled")
-                            : arrowLeft.classList.remove("arrow--disabled")
-                    }
-                    if (arrowRight) {
-                        slide === slider.track.details.slides.length - 1
-                            ? arrowRight.classList.add("arrow--disabled")
-                            : arrowRight.classList.remove("arrow--disabled")
-                    }
+//                 function updateClasses() {
+//                     var slide = slider.track.details.rel
+//                     if (arrowLeft) {
+//                         slide === 0
+//                             ? arrowLeft.classList.add("arrow--disabled")
+//                             : arrowLeft.classList.remove("arrow--disabled")
+//                     }
+//                     if (arrowRight) {
+//                         slide === slider.track.details.slides.length - 1
+//                             ? arrowRight.classList.add("arrow--disabled")
+//                             : arrowRight.classList.remove("arrow--disabled")
+//                     }
     
-                    if (dots) {
-                        Array.from(dots.children).forEach(function (dot, idx) {
-                            idx === slide
-                                ? dot.classList.add("dot--active")
-                                : dot.classList.remove("dot--active")
-                        })
-                    }
+//                     if (dots) {
+//                         Array.from(dots.children).forEach(function (dot, idx) {
+//                             idx === slide
+//                                 ? dot.classList.add("dot--active")
+//                                 : dot.classList.remove("dot--active")
+//                         })
+//                     }
     
-                }
+//                 }
     
-                slider.on("created", () => {
-                    markup()
-                    updateClasses()
-                })
-                slider.on("optionsChanged", () => {
-                    markup(true)
-                    markup()
-                    updateClasses()
-                })
-                slider.on("slideChanged", () => {
-                    updateClasses()
-                })
-                slider.on("destroyed", () => {
-                    markup(true)
-                })
-            }
+//                 slider.on("created", () => {
+//                     markup()
+//                     updateClasses()
+//                 })
+//                 slider.on("optionsChanged", () => {
+//                     markup(true)
+//                     markup()
+//                     updateClasses()
+//                 })
+//                 slider.on("slideChanged", () => {
+//                     updateClasses()
+//                 })
+//                 slider.on("destroyed", () => {
+//                     markup(true)
+//                 })
+//             }
     
-        ]
-    );
-}
+//         ]
+//     );
+// }
 
 
 
@@ -28551,6 +28619,153 @@ function gitNav() {
     };
     gitNav();
 
+/***/ }),
+/* 70 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   getSubMenuDesk: () => (/* binding */ getSubMenuDesk)
+/* harmony export */ });
+function getSubMenuDesk(){
+let menuItems = document.querySelectorAll(".nav .nav-list .nav-item");
+let arrItems = []
+let subMenu = {}
+let navItem = {}
+// let wrap = document.querySelector(".sub-menu-wrap");
+
+if(menuItems){
+menuItems.forEach(el => {
+    if(el.querySelector(".sub-menu")){
+        arrItems.push(el);
+    }
+});
+
+arrItems.forEach(el=>{
+    console.log(el)
+    el.addEventListener("mouseenter", cloneSubMenu)
+    el.addEventListener("mouseleave", test)
+    
+})
+// wrap.addEventListener("mouseleave", test)
+}
+
+function cloneSubMenu() {
+    let test = document.querySelector(".nav .nav-list");
+    test.classList.add("show")
+     
+    // navItem = event.target
+    // subMenu = event.target.querySelector(".sub-menu")
+    // let item = subMenu
+
+    // if(item) {
+    // wrap.innerHTML = '';
+    // wrap.insertAdjacentElement("beforeend",item);
+   
+    // }
+
+    
+}
+
+function test() {
+    let test = document.querySelector(".nav .nav-list");
+    test.classList.remove("show")
+    // console.log("ok")
+    //  navItem.insertAdjacentElement("beforeend",subMenu);
+    }
+};
+getSubMenuDesk();
+
+/***/ }),
+/* 71 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   mobMenuSlider: () => (/* binding */ mobMenuSlider)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+
+
+function mobMenuSlider(){
+    let mobSlider = document.querySelector(".mob-slider");
+    let width = mobSlider.clientWidth
+    let btnCatalog = document.querySelector(".mob-nav-catalog__btn");
+    let sliderTrack = document.querySelector(".mob-slider-wrap");
+    let countSlide = sliderTrack.querySelectorAll(".mob-slide")
+    let position = 0;
+    let closeBtn = document.querySelectorAll(".navi-box__close");
+    let backBtn = document.querySelectorAll(".navi-box__arrow");
+    let btnOpenMenuStiky = document.querySelector(".menu-open_second-sticky");
+    let arrMenuItems = document.querySelectorAll(".mob-nav-list-products .mob-nav-item")
+    let thirtSlide = document.querySelector(".mob-menu-thirt-slide")
+    let thirtSlideWrap = thirtSlide.querySelector(".mob-menu-thirt-slide__munu-wrap")
+ 
+    
+    btnOpenMenuStiky.addEventListener("click", function(event) {
+        let mob = document.querySelector(".mob-nav")
+        mob.classList.add("active")
+    })
+
+    sliderTrack.style.width = `${width * 3}px`;
+    countSlide.forEach(el=>{
+        el.style.minWidth = `${width}px`;
+    })
+
+    btnCatalog.addEventListener("click", nextSlide)
+
+    closeBtn.forEach(el=>{
+        el.addEventListener("click", closeMenu)
+        
+    })
+
+    backBtn.forEach(el=>{
+        el.addEventListener("click", prevSlide)
+    })
+
+    arrMenuItems.forEach(el=>{
+        if(el.querySelector(".sub-menu")) {
+            el.addEventListener("click", function(event){
+                getThirtSlide(event)
+                nextSlide()
+            })
+        }
+    })
+
+    function nextSlide() {
+        sliderTrack.style.transform = `translateX(${position-width}px)`
+        position = position-width
+
+    }
+
+    function prevSlide() {
+        if(position != 0) {
+            sliderTrack.style.transform = `translateX(${position+width}px)`
+            position = position+width
+        }
+
+    }
+
+    function closeMenu() {
+        let exit = document.querySelector('.mob-menu-close');
+        exit.click();
+        position = 0
+        sliderTrack.style.transform = `translateX(${position})`
+    }
+
+    function getThirtSlide(event) {
+        let menu = event.currentTarget.querySelector(".sub-menu");
+        let menuСlone = menu.cloneNode(true);
+        thirtSlideWrap.innerHTML="";
+        thirtSlideWrap.insertAdjacentElement("beforeend", menuСlone)
+
+    }
+    
+};
+mobMenuSlider();
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -28670,6 +28885,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libs_keenSlider_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(64);
 /* harmony import */ var _components_modalSearch_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(68);
 /* harmony import */ var _components_gitNav_js__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(69);
+/* harmony import */ var _components_getSubMenuDesk_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(70);
+/* harmony import */ var _components_mobMenuSlider_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(71);
 //------------------------Спойлеры-----------------------
 
 
@@ -28721,6 +28938,12 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //---------------Навигация для гита---------------
+
+
+//---------------Подменю десктоп---------------
+
+
+//---------------Слайдер мобильного меню---------------
 
 
 
