@@ -125,6 +125,8 @@ body {
 }
 
 
+
+
 //==================================
 
 
@@ -159,6 +161,7 @@ body {
 @import "./components/map";
 @import "./components/_second-form";
 @import "./components/brands-prev";
+@import "./components/advantages-second";
 
 
 @import "./components/plastic-windows";
@@ -171,3 +174,32 @@ body {
 @import "./components/double-windows-advantages";
 @import "./components/color-solutions";
 @import "./components/git-nav";
+@import "./components/profile-systems";
+
+
+.bg-grey {
+    background-color: var(--bg-3);
+}
+
+.bg-white {
+    background-color: var(--bg-3);
+    background: var(--white);
+}
+
+.border-t {
+    border-radius: 48px 48px 0 0;
+}
+
+.border-b {
+    border-radius: 0 0 48px 48px;
+}
+
+.mb-pb {
+    margin-bottom: 0;
+    padding-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem) !important;
+
+}
+
+.pt {
+    padding-top: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem) !important;
+}

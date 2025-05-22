@@ -1,0 +1,133 @@
+.advantages-second {
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.advantages__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.advantages-second__header {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    margin-bottom: clamp-px(24, 48);
+
+    @include respond-to("tab") {
+        flex-direction: column;
+    }
+
+}
+
+.advantages-second__title {
+    font-size: clamp-px(32, 56);
+    flex: 0 1 calc((100% - 20px * 1) / 2);
+
+    @include respond-to("tab") {
+        flex: 0 1 100%;
+    }
+}
+
+.advantages-second__subtitle {
+    flex: 0 1 calc((100% - 20px * 1) / 2);
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp-px(15, 20);
+    line-height: 150%;
+    color: var(--black);
+
+    @include respond-to("tab") {
+        flex: 0 1 100%;
+    }
+}
+
+.advantages-second__card-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &>.guarantees-prev__card:first-child {
+        // background: var(--bg-3);
+        flex: 1 1 calc((100% - 20px * 3) / 4);
+        max-width: 740px;
+
+        @include respond-to("pc-old") {
+            flex: 1 1 calc((100% - 20px * 2) / 3);
+        }
+
+        @include respond-to("nout") {
+            flex: 0 1 calc((100% - 20px * 1) / 2);
+            max-width: 100%;
+        }
+
+        @include respond-to("tab") {
+            flex: 0 1 100%;
+            max-width: 100%;
+        }
+
+        & .advantages-second__icon-wrap {
+            background: rgba(255, 255, 255, 0.08);
+
+            &>svg>path {
+                stroke: var(--white);
+            }
+        }
+    }
+
+    &>.guarantees-prev__card:not(:first-child) {
+        background: var(--bg-3);
+        flex: 0 1 calc((100% - 20px * 3) / 4);
+        max-width: 360px;
+
+        @include respond-to("pc-old") {
+            flex: 0 1 calc((100% - 20px * 2) / 3);
+        }
+
+        @include respond-to("nout") {
+            flex: 1 1 calc((100% - 20px * 1) / 2);
+            max-width: 100%;
+        }
+
+        @include respond-to("tab") {
+            flex: 0 1 100%;
+            max-width: 100%;
+        }
+
+    }
+
+    &>.guarantees-prev__card:last-child {
+        background: var(--bg-3);
+        flex: 1 1 calc((100% - 20px * 3) / 4);
+        max-width: 740px;
+
+        @include respond-to("pc-old") {
+            flex: 0 1 calc((100% - 20px * 2) / 3);
+            max-width: 100%;
+        }
+
+        @include respond-to("nout") {
+            flex: 0 1 calc((100% - 20px * 1) / 2);
+            max-width: 100%;
+        }
+
+        @include respond-to("tab") {
+            flex: 0 1 100%;
+            max-width: 100%;
+        }
+    }
+}
+
+.advantages-second__icon-wrap {
+    border-radius: 16px;
+    width: 64px;
+    height: 64px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: clamp-px(24, 50);
+
+    &>svg>path {
+        stroke: var(--orange);
+    }
+}

@@ -440,7 +440,17 @@
     height: fit-content;
     background-color: green($color: #000000);
     position: absolute;
-    bottom: 0;
+    top: 100%;
+    z-index: 2;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s;
+
+    &.show {
+        opacity: 1;
+        visibility: visible;
+        transition: 0.3s;
+    }
 }
 
 .nav-list li {
