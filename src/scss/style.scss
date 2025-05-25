@@ -175,6 +175,9 @@ body {
 @import "./components/color-solutions";
 @import "./components/git-nav";
 @import "./components/profile-systems";
+@import "./components/profile-page";
+@import "./components/grid-left-col";
+@import "./components/hardware-prev";
 
 
 .bg-grey {
@@ -182,7 +185,6 @@ body {
 }
 
 .bg-white {
-    background-color: var(--bg-3);
     background: var(--white);
 }
 
@@ -202,4 +204,12 @@ body {
 
 .pt {
     padding-top: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem) !important;
+}
+
+.mt_0 {
+    margin-top: 0;
+}
+
+.pt_32 {
+    padding-top: 32px !important;
 }

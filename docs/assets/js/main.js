@@ -27,6 +27,13 @@ const faqSpoiler = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Spoilers({
     firstOpen: true    /*Первый элемент всегда открыт*/
 })
 
+const profileSpoiler = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Spoilers({
+    item: 'profile_spoiler-js', /*класс споилера*/
+    timeAnimation: 300, /*время анимации*/
+    accordion: true,    /*Режим аккордиона*/
+    firstOpen: true    /*Первый элемент всегда открыт*/
+})
+
 
 
 

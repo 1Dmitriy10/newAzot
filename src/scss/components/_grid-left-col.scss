@@ -1,0 +1,30 @@
+.grid-left-col {
+    display: grid;
+    // grid-template-columns: clamp-px(320, 580) clamp-px(600, 872);
+    grid-template-columns: minmax(320px, 580px) minmax(600px, 872px);
+    gap: clamp-px(20, 48);
+    justify-content: space-between;
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem) !important;
+
+    @include respond-to("nout") {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.left-aside {
+    height: 100%;
+}
+
+.aside-wrap {
+    position: sticky;
+    top: 115px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.right-content {
+    display: flex;
+    flex-direction: column;
+}
