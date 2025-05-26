@@ -1,0 +1,44 @@
+.related-products {
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.related-products__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.card-box-second {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+
+    &>.our-products-prev__card-item {
+        background: var(--white);
+        flex: 0 1 calc((100% - 40px) / 3);
+        flex-direction: column;
+
+        @include respond-to("pc-old") {
+            flex: 0 1 calc((100% - 20px * 1) / 2);
+        }
+
+        @include respond-to("nout") {
+            flex: 0 1 100%;
+        }
+
+        & .our-products-prev__card-item-text-btn {
+            position: absolute;
+            top: 28px;
+            right: 28px;
+        }
+
+        & .our-products-prev__card-item-img-wrap {
+            -webkit-box-flex: 0;
+            -ms-flex: 0 1 254px;
+            flex: 0 1 254px;
+            width: 100%;
+            max-width: 100%;
+            min-height: 246px;
+
+        }
+    }
+}
