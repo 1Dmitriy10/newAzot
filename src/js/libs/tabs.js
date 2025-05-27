@@ -20,3 +20,4 @@ cтруктура
 import {Tabs} from "../vendor.js"
 
 let tabs = new Tabs({class: "_tabs-js"})
+let windowInsulationTabs = new Tabs({class: "window-insulation-tabs"})

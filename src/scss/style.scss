@@ -179,6 +179,7 @@ body {
 @import "./components/grid-left-col";
 @import "./components/hardware-prev";
 @import "./components/related-products";
+@import "./components/window-insulation";
 
 
 .bg-grey {
@@ -213,4 +214,8 @@ body {
 
 .pt_32 {
     padding-top: 32px !important;
+}
+
+.mb_120 {
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
 }

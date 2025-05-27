@@ -14813,19 +14813,25 @@ class Tabs {
         let titleBox = this.item.querySelector(".tabs__title-box")
         titleBox.addEventListener("click", (e) => {
             if (e.target.classList.contains("tabs__title")) {
-                this.changeActiveTab(e)
+                this.changeActiveTab(e.target)
+            }
+            else if(e.target.parentElement && e.target.parentElement.classList.contains("tabs__title")) {
+                 this.changeActiveTab(e.target.parentElement)
+            }
+            else if(e.target.parentElement.parentElement && e.target.parentElement.parentElement.classList.contains("tabs__title")) {
+                 this.changeActiveTab(e.target.parentElement.parentElement)
             }
         })
     }
 
     changeActiveTab(e) {
-        let number = e.target.dataset.number
+        let number = e.dataset.number
 
         for (const el of this.title) {
             el.classList.remove("active");
         }
 
-        e.target.classList.add("active")
+        e.classList.add("active")
 
 
         for (const el of this.content) {
