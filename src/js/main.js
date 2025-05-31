@@ -57,6 +57,9 @@ import { getSubMenuDesk } from "./components/getSubMenuDesk.js";
 //---------------Слайдер мобильного меню---------------
 import { mobMenuSlider } from "./components/mobMenuSlider.js";
 
+//---------------Мой masonry---------------
+import { myMasonry } from "./libs/myMasonry.js";
+
 
 
 

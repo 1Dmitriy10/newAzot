@@ -1,0 +1,119 @@
+.right-content__title {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp-px(28, 40);
+    line-height: 120%;
+    color: var(--black);
+    margin-bottom: clamp-px(20, 32);
+}
+
+.payment-delivery__info-box {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: clamp-px(56, 100);
+
+    border-radius: clamp-px(16, 24);
+    padding: clamp-px(20, 36);
+    background: var(--white);
+}
+
+.payment-delivery__info-box-header {
+    & p {
+        font-weight: 400;
+        font-size: clamp-px(16, 20);
+        line-height: 160%;
+        color: var(--black);
+    }
+}
+
+.payment-delivery__info-box-up {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    & .guarantees-prev__card {
+        min-height: 218px;
+
+        @include respond-to("pc-old") {
+            flex: 0 1 100%;
+        }
+
+        &:not(:first-child) {
+            background: var(--bg-3);
+        }
+    }
+}
+
+.payment-delivery__info-box__down {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+
+    & .product-advantages__card {
+        min-height: 344px;
+
+        @include respond-to("pc") {
+            flex: 0 1 calc((100% - 16px * 1) / 2);
+        }
+
+        @include respond-to("pc-old") {
+            flex: 0 1 100%;
+            min-height: 212px;
+        }
+    }
+}
+
+.payment-delivery__steps {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    counter-reset: count;
+
+    & .steps__card {
+        flex: 0 1 100%;
+        max-width: 100%;
+        min-height: auto;
+
+        &:nth-child(4) {
+            background: var(--white);
+
+            & .steps__card-count::before {
+                color: var(--orange);
+            }
+
+            & .steps__card-title {
+                color: var(--black);
+            }
+
+            & .steps__card-text {
+                color: var(--grey-1);
+            }
+        }
+    }
+
+    & .steps__card-title {
+        max-width: 100%;
+    }
+}
+
+.steps__card-header {
+    display: flex;
+    // align-items: ;
+    gap: 16px;
+}
+
+.steps__card-subtitle {
+    margin-bottom: 16px;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp-px(16, 18);
+    line-height: 156%;
+    color: var(--black);
+}
+
+.steps__card-btn-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: clamp-px(12, 23);
+}
