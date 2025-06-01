@@ -1,0 +1,107 @@
+.main-form-ter {
+    margin-bottom: 16px;
+
+    &>.main-form__container {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+
+        border-radius: clamp-px(16, 24);
+        padding: clamp-px(20, 32);
+        background: var(--black);
+    }
+}
+
+.main-form-ter__left-box {
+    flex: 0 1 calc((100% - 20px * 1) / 2);
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    @include respond-to("pc-old") {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+}
+
+.main-form-ter__title {
+    font-family: var(--font4);
+    font-weight: 500;
+    font-size: clamp-px(28, 48);
+    line-height: 117%;
+    color: var(--white);
+}
+
+.main-form-ter__subtitle {
+    margin-top: auto;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp-px(16, 20);
+    line-height: 140%;
+    color: var(--white);
+}
+
+.main-form-ter__right-box {
+    flex: 0 1 calc((100% - 20px * 1) / 2);
+    max-width: 500px;
+
+    @include respond-to("pc-old") {
+        flex: 0 1 100%;
+        max-width: 100%;
+    }
+}
+
+.third-form {
+    background: var(--white);
+    border-radius: clamp-px(10, 20);
+    padding: clamp-px(14, 32);
+
+    & .form-agree-box {
+        margin-top: 20px;
+        margin-bottom: 0;
+    }
+}
+
+.services-prev__card-content-box {
+    margin-top: 20px;
+}
+
+.garant-blocl-2col {
+    & .services-prev__card-header {
+        margin-bottom: 0;
+    }
+}
+
+.guarantees-service__steps-card-box.cols_2 {
+    & .steps__card {
+        @include cols(2, 16px);
+
+        &:nth-child(4) {
+            background: var(--white);
+
+            & .steps__card-count::before {
+                color: var(--orange);
+            }
+        }
+    }
+
+
+}
+
+.right-content__subtitle {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp-px(16, 18);
+    line-height: 156%;
+    color: var(--grey-2);
+    margin-bottom: clamp-px(24, 32);
+}
+
+.garant-blocl-2col.cols-3 {
+    & .services-prev__card {
+        @include cols(3, 16px);
+        min-height: auto;
+    }
+}

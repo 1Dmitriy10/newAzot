@@ -1,0 +1,37 @@
+.garant-blocl-2col {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 16px;
+    margin-bottom: clamp-px(56, 100);
+
+    &>.services-prev__card {
+        @include cols(2, 16px)
+    }
+}
+
+.guarantees-service__steps-card-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    counter-reset: count;
+
+    & .steps__card {
+        @include cols(3, 16px);
+        min-height: auto;
+        max-width: 100%;
+
+        & .steps__card-title {
+            max-width: 100%;
+            font-family: var(--second-family);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 122%;
+            color: var(--black);
+        }
+    }
+}
+
+.steps__card-count {
+    min-width: 37px;
+}

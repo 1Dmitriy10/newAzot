@@ -124,6 +124,62 @@ body {
     }
 }
 
+.content {
+    & img {
+        max-width: 100%;
+        border-radius: clamp-px(12, 24);
+    }
+
+    & p {
+        font-weight: 400;
+        font-size: clamp-px(16, 20);
+        line-height: 160%;
+        color: var(--black);
+
+        &:not(:last-child) {
+            margin-bottom: clamp-px(12, 16);
+        }
+    }
+}
+
+ol {
+    display: flex;
+    flex-direction: column;
+    counter-reset: dec;
+    gap: 16px;
+    margin-bottom: 20px;
+
+    &>li {
+        position: relative;
+        padding-left: 30px;
+        counter-increment: dec;
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp-px(16, 20);
+        line-height: 160%;
+        color: var(--black);
+
+        &::before {
+            position: absolute;
+            left: 0;
+            content: counter(dec)".";
+            font-family: var(--second-family);
+            font-weight: 500;
+            font-size: 18px;
+            line-height: 156%;
+            color: var(--orange);
+            margin-right: 10px;
+            // margin-top: -2px;
+        }
+
+
+    }
+
+    & ul {
+        margin-top: 10px;
+    }
+
+}
 
 
 
@@ -182,6 +238,11 @@ body {
 @import "./components/window-insulation";
 @import "./components/_reviews";
 @import "./components/payment-delivery";
+@import "./components/contacts";
+@import "./components/guarantees-service";
+@import "./components/_about";
+@import "./components/_dealers";
+@import "./components/_news";
 
 
 .bg-grey {
@@ -220,4 +281,16 @@ body {
 
 .mb_120 {
     margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.mb_100 {
+    margin-bottom: clamp-px(56, 100)
+}
+
+.mt_56 {
+    margin-top: clamp-px(24, 56);
+}
+
+.fs_20 {
+    font-size: clamp-px(18, 20);
 }
