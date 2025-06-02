@@ -128,6 +128,19 @@ body {
     & img {
         max-width: 100%;
         border-radius: clamp-px(12, 24);
+
+        &:not(:last-child) {
+            margin-bottom: clamp-px(20, 40);
+        }
+    }
+
+    & h2 {
+        font-family: var(--second-family);
+        font-weight: 500;
+        font-size: clamp-px(28, 40);
+        line-height: 120%;
+        color: var(--black);
+        margin-bottom: clamp-px(16, 24);
     }
 
     & p {
@@ -139,8 +152,23 @@ body {
         &:not(:last-child) {
             margin-bottom: clamp-px(12, 16);
         }
+
+        &.strong {
+            font-family: var(--second-family);
+            font-weight: 500;
+        }
+    }
+
+    & ul.circle {
+        margin-left: clamp-px(0, 24);
+
+        &>li {
+            flex-direction: column;
+        }
     }
 }
+
+
 
 ol {
     display: flex;
@@ -244,6 +272,7 @@ ol {
 @import "./components/_dealers";
 @import "./components/_news";
 @import "./components/news-detail";
+@import "./components/blog";
 
 
 .bg-grey {

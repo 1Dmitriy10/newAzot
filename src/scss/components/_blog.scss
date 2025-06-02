@@ -1,0 +1,126 @@
+.blog {
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.blog__container {
+    &>.filter-box {
+        margin-bottom: clamp-px(32, 40);
+    }
+}
+
+.blog__card-box {
+    margin-bottom: clamp-px(32, 64);
+}
+
+.blog__card {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog__card-img {
+    width: 100%;
+    height: 260px;
+    border-radius: clamp-px(16, 24);
+    position: relative;
+    margin-bottom: clamp-px(16, 24);
+    overflow: hidden;
+
+    @include respond-to("tab") {
+        height: 180px;
+    }
+
+    &>img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: clamp-px(16, 24);
+    }
+}
+
+.blog__card-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog__card-tag-box {
+    display: flex;
+    gap: 16px;
+    margin-bottom: clamp-px(12, 20);
+}
+
+.blog__card-tag {
+    font-family: var(--third-family);
+    font-weight: 400;
+    font-size: clamp-px(14, 16);
+    line-height: 150%;
+    text-transform: uppercase;
+    color: var(--orange);
+}
+
+.blog__card-date {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp-px(14, 16);
+    line-height: 150%;
+    color: var(--grey-1);
+}
+
+.blog__card-title {
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp-px(17, 24);
+    line-height: 133%;
+    color: var(--black);
+    margin-bottom: clamp-px(8, 12);
+}
+
+.blog__card-text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp-px(16, 18);
+    line-height: 156%;
+    color: var(--grey-1);
+}
+
+.card-box-grid.span_7 {
+    &>.card:nth-child(7n +1) {
+        grid-column: span 3;
+
+        @include respond-to('tab') {
+            grid-column: span 2;
+        }
+
+        @include respond-to("tel") {
+            grid-column: span 1;
+        }
+
+        &>.blog__card {
+            flex-direction: row;
+
+            @include respond-to("tel") {
+                flex-direction: column;
+            }
+
+            & .blog__card-img {
+                height: 360px;
+                margin-bottom: 0;
+                margin-right: 32px;
+
+                @include respond-to("tab") {
+                    height: 200px;
+                }
+
+                @include respond-to("tel") {
+                    height: 180px;
+                }
+            }
+
+            & .blog__card-content {
+                margin-top: 24px;
+            }
+        }
+    }
+}
