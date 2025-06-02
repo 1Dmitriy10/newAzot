@@ -243,6 +243,7 @@ ol {
 @import "./components/_about";
 @import "./components/_dealers";
 @import "./components/_news";
+@import "./components/news-detail";
 
 
 .bg-grey {
@@ -289,6 +290,10 @@ ol {
 
 .mt_56 {
     margin-top: clamp-px(24, 56);
+}
+
+.mt_24 {
+    margin-top: clamp-px(16, 24);
 }
 
 .fs_20 {

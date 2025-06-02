@@ -1,0 +1,21 @@
+.news-detail__date {
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 156%;
+    color: var(--grey-1);
+}
+
+.grid-right-col-wrap {
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.grid-right-col {
+    display: grid;
+    grid-template-columns: minmax(600px, 928px) minmax(280px, 440px);
+    gap: clamp(1.25rem, 0.7071960298rem + 2.3159636063vw, 3rem);
+    justify-content: space-between;
+}
+
+.left-content {}
+
+.aside-wrap {}
