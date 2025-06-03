@@ -60,6 +60,9 @@ import { mobMenuSlider } from "./components/mobMenuSlider.js";
 //---------------Мой masonry---------------
 import { myMasonry } from "./libs/myMasonry.js";
 
+//------------Навигация(содержание) для блога---------------
+import { blogNavigation } from "./libs/blogNavigation.js";
+
 
 
 

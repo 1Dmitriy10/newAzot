@@ -1,0 +1,30 @@
+.stock {}
+
+.stock__container {}
+
+.stock__card-box {}
+
+.card-box.span_1_5 {
+    &>.card:nth-child(5n +1) {
+        flex: 0 1 calc((100% - 24px*1) /2);
+
+        @include respond-to("tel") {
+            @include respond-to("tel") {
+                flex: 0 1 100%;
+            }
+        }
+
+    }
+
+}
+
+.card-box.span_2_5 {
+    &>.card:nth-child(5n +2) {
+        flex: 0 1 calc((100% - 24px*1) /2);
+
+        @include respond-to("tel") {
+            flex: 0 1 100%;
+        }
+
+    }
+}

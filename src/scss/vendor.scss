@@ -534,46 +534,218 @@ summary {
 
 }
 
+.card-box {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.cols-f_1 {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .card {
+        flex: 0 1 100%;
+    }
+}
+
+.cols-f_2 {
+    display: flex;
+    flex-wrap: wrap;
+
+    & .card {
+        flex: 0 1 calc((100% - var(--gap) * 1) / 2);
+
+        @include respond-to("tel") {
+            flex: 0 1 100%;
+        }
+    }
 
 
-// -----------колличество колонок
-// .cols4 {
-//     flex: 0 1 calc((100% - 3 * var(--whycardColGap)) / 4);
+}
 
-//     @include respond-to("pc-old") {
-//         flex: 0 1 calc((100% - 2 * var(--whycardColGap)) / 3);
-//     }
+.cols-f_3 {
+    display: flex;
+    flex-wrap: wrap;
 
-//     @include respond-to("tab") {
-//         flex: 0 1 calc((100% - 1 * var(--whycardColGap)) / 2);
-//     }
+    & .card {
+        flex: 0 1 calc((100% - var(--gap) * 2) / 3);
 
-//     @include respond-to("tel") {
-//         flex: 0 1 100%;
-//     }
-// }
+        @include respond-to("nout") {
+            flex: 0 1 calc((100% - var(--gap) * 1) / 2);
+        }
 
-// .cols3 {
-//     flex: 0 1 calc((100% - 2 * var(--whycardColGap)) / 3);
+        @include respond-to("tel") {
+            flex: 0 1 100%;
+        }
+    }
+}
 
-//     @include respond-to("tab") {
-//         flex: 0 1 calc((100% - 1 * var(--whycardColGap)) / 2);
-//     }
+.cols-f_4 {
+    display: flex;
+    flex-wrap: wrap;
 
-//     @include respond-to("tel") {
-//         flex: 0 1 100%;
-//     }
-// }
+    & .card {
+        flex: 0 1 calc((100% - var(--gap) * 3) / 4);
 
-// .cols2 {
-//     flex: 0 1 calc((100% - 1 * var(--whycardColGap)) / 2);
+        @include respond-to("pc-old") {
+            flex: 0 1 calc((100% - var(--gap) * 2) / 3);
+        }
 
-//     @include respond-to("tab") {
-//         flex: 0 1 100%;
-//     }
+        @include respond-to("nout") {
+            flex: 0 1 calc((100% - var(--gap) * 1) / 2);
+        }
 
-// }
+        @include respond-to("tel") {
+            flex: 0 1 100%;
+        }
+    }
+}
 
-// .cols1 {
-//     flex: 0 1 100%;
-// }
+
+
+
+// ---gap---
+.gap_15 {
+    --gap: 15px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 15px;
+    }
+}
+
+.gap_16 {
+    --gap: 16px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 16px;
+    }
+}
+
+.gap_17 {
+    --gap: 17px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 17px;
+    }
+}
+
+.gap_18 {
+    --gap: 18px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 18px;
+    }
+}
+
+.gap_19 {
+    --gap: 19px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 19px;
+    }
+}
+
+.gap_20 {
+    --gap: 20px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 20px;
+    }
+}
+
+.gap_21 {
+    --gap: 21px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 21px;
+    }
+}
+
+.gap_22 {
+    --gap: 22px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 22px;
+    }
+}
+
+.gap_23 {
+    --gap: 23px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 23px;
+    }
+}
+
+.gap_24 {
+    --gap: 24px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 24px;
+    }
+}
+
+.gap_25 {
+    --gap: 25px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 25px;
+    }
+}
+
+.gap_26 {
+    --gap: 26px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 26px;
+    }
+}
+
+.gap_27 {
+    --gap: 27px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 27px;
+    }
+}
+
+.gap_28 {
+    --gap: 28px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 28px;
+    }
+}
+
+.gap_29 {
+    --gap: 29px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 29px;
+    }
+}
+
+.gap_30 {
+    --gap: 30px;
+    gap: var(--gap);
+
+    & .card {
+        --gap: 30px;
+    }
+}
