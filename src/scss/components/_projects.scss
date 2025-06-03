@@ -1,0 +1,46 @@
+.projects {
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.projects__container {
+    display: flex;
+    flex-direction: column;
+
+    & .filter-box {
+        margin-bottom: clamp-px(32, 39);
+    }
+}
+
+.projects__card-box {
+    margin-bottom: clamp(2rem, 1.3796526055rem + 2.64681555vw, 4rem);
+
+    & .portfolio-prev__card {
+        max-width: clamp-px(140, 738);
+
+        @include respond-to("tel") {
+            max-width: clamp-px(375, 580);
+        }
+
+        @media (width<425px) {
+            max-width: clamp-px(335, 500);
+        }
+    }
+}
+
+.card_span_2 {
+    grid-column: span 2;
+
+    @include respond-to('tel') {
+        grid-column: span 1;
+    }
+}
+
+.card {
+    & .main-form__container {
+        padding-bottom: 0;
+    }
+
+    & .main-form__img-col {
+        height: auto;
+    }
+}

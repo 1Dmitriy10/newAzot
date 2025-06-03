@@ -5,7 +5,7 @@
 .stock__container {}
 
 .stock__card-box {
-    margin-bottom:  clamp-px(32,40);
+    margin-bottom: clamp-px(32, 40);
 }
 
 .card-box.span_1_5 {
@@ -31,4 +31,9 @@
         }
 
     }
+}
+
+.stock-btn {
+    width: 100%;
+    max-width: 100%
 }
