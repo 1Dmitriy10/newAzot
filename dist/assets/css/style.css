@@ -10574,10 +10574,32 @@ select {
 }
 
 .content-article {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   border-radius: clamp(1rem, 0.8449131514rem + 0.6617038875vw, 1.5rem);
   padding: clamp(1.25rem, 1.0949131514rem + 0.6617038875vw, 1.75rem);
   background: var(--bg-3);
   margin-bottom: 16px;
+}
+@media (max-width: 992px) {
+  .content-article.hidden {
+    display: none;
+  }
+}
+.content-article.mob-show {
+  display: none;
+}
+@media (max-width: 992px) {
+  .content-article.mob-show {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .content-article__title {
@@ -10609,6 +10631,14 @@ select {
 .content-article__list > li > a.active {
   font-weight: 500;
   color: var(--black);
+}
+
+.stock {
+  margin-bottom: clamp(3.5rem, 2.2447698745rem + 5.3556485356vw, 7.5rem);
+}
+
+.stock__card-box {
+  margin-bottom: clamp(2rem, 1.8449131514rem + 0.6617038875vw, 2.5rem);
 }
 
 .card-box.span_1_5 > .card:nth-child(5n+1) {

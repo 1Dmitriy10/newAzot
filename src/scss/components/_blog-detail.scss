@@ -1,8 +1,21 @@
 .content-article {
+    display: flex;
+    flex-direction: column;
     border-radius: clamp-px(16, 24);
     padding: clamp-px(20, 28);
     background: var(--bg-3);
     margin-bottom: 16px;
+    &.hidden{
+        @include respond-to("nout"){
+            display: none;
+        }
+    }
+    &.mob-show{
+        display: none;
+        @include respond-to("nout"){
+            display: flex;
+        }
+    }
 }
 
 .content-article__title {

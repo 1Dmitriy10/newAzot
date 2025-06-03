@@ -28939,6 +28939,103 @@ class Masonry {
 
 
 
+/***/ }),
+/* 74 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   blogNavigation: () => (/* binding */ blogNavigation)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(5);
+
+function blogNavigation() {
+    function getLinkSidbar() {
+    
+        let pageUrl = window.location.href;
+        let media = window.matchMedia('(max-width: 992px)')
+
+
+        if (pageUrl.includes('/blog-detail')) {
+            let block = jquery__WEBPACK_IMPORTED_MODULE_0__(".content-article__list");
+            let arrLink = jquery__WEBPACK_IMPORTED_MODULE_0__(".left-content.content>h2");
+
+            arrLink.each(function () {
+                if (jquery__WEBPACK_IMPORTED_MODULE_0__(this).attr("id") != "") {
+                    let name = jquery__WEBPACK_IMPORTED_MODULE_0__(this).text();
+                    if (name != "") {
+                        let id = translit(name);
+                        jquery__WEBPACK_IMPORTED_MODULE_0__(this).attr("id", `${id}`)
+                    }
+                }
+            })
+
+
+
+
+            arrLink.each(function () {
+                block.append(`
+                        <li class="aside__list-item">
+                        <a href="#${jquery__WEBPACK_IMPORTED_MODULE_0__(this).attr("id")}" class="aside__list-link">${jquery__WEBPACK_IMPORTED_MODULE_0__(this).text()}</a>
+                        </li>
+                        `)
+            })
+
+            jquery__WEBPACK_IMPORTED_MODULE_0__(".aside__list-link").on("click", function (event) {
+                event.preventDefault();
+                let id = jquery__WEBPACK_IMPORTED_MODULE_0__(this).attr('href')
+                jquery__WEBPACK_IMPORTED_MODULE_0__(`${id}`)[0].scrollIntoView();
+            })
+        }
+
+        if (media.match) {
+
+        } else {
+            jquery__WEBPACK_IMPORTED_MODULE_0__(".nav_show").on("click", function () {
+                jquery__WEBPACK_IMPORTED_MODULE_0__(".news-aside__title-wrap").toggleClass("active")
+                jquery__WEBPACK_IMPORTED_MODULE_0__(".news-aside").toggleClass("show");
+            })
+        }
+
+
+
+    };
+    getLinkSidbar();
+
+    function translit(word) {
+        var answer = '';
+        var converter = {
+            'а': 'a', 'б': 'b', 'в': 'v', 'г': 'g', 'д': 'd',
+            'е': 'e', 'ё': 'e', 'ж': 'zh', 'з': 'z', 'и': 'i',
+            'й': 'y', 'к': 'k', 'л': 'l', 'м': 'm', 'н': 'n',
+            'о': 'o', 'п': 'p', 'р': 'r', 'с': 's', 'т': 't',
+            'у': 'u', 'ф': 'f', 'х': 'h', 'ц': 'c', 'ч': 'ch',
+            'ш': 'sh', 'щ': 'sch', 'ь': '_', 'ы': 'y', 'ъ': '_',
+            'э': 'e', 'ю': 'yu', 'я': 'ya', ' ': '_',
+
+            'А': 'A', 'Б': 'B', 'В': 'V', 'Г': 'G', 'Д': 'D',
+            'Е': 'E', 'Ё': 'E', 'Ж': 'Zh', 'З': 'Z', 'И': 'I',
+            'Й': 'Y', 'К': 'K', 'Л': 'L', 'М': 'M', 'Н': 'N',
+            'О': 'O', 'П': 'P', 'Р': 'R', 'С': 'S', 'Т': 'T',
+            'У': 'U', 'Ф': 'F', 'Х': 'H', 'Ц': 'C', 'Ч': 'Ch',
+            'Ш': 'Sh', 'Щ': 'Sch', 'Ь': '_', 'Ы': 'Y', 'Ъ': '_',
+            'Э': 'E', 'Ю': 'Yu', 'Я': 'Ya'
+        };
+
+        for (var i = 0; i < word.length; ++i) {
+            if (converter[word[i]] == undefined) {
+                answer += word[i];
+            } else {
+                answer += converter[word[i]];
+            }
+        }
+
+        return answer;
+    }
+};
+blogNavigation();
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -29061,6 +29158,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_getSubMenuDesk_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(70);
 /* harmony import */ var _components_mobMenuSlider_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(71);
 /* harmony import */ var _libs_myMasonry_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(72);
+/* harmony import */ var _libs_blogNavigation_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(74);
 //------------------------Спойлеры-----------------------
 
 
@@ -29121,6 +29219,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //---------------Мой masonry---------------
+
+
+//------------Навигация(содержание) для блога---------------
 
 
 

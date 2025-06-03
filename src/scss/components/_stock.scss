@@ -1,8 +1,12 @@
-.stock {}
+.stock {
+    margin-bottom: clamp(3.5rem, 2.2447698745rem + 5.3556485356vw, 7.5rem);
+}
 
 .stock__container {}
 
-.stock__card-box {}
+.stock__card-box {
+    margin-bottom:  clamp-px(32,40);
+}
 
 .card-box.span_1_5 {
     &>.card:nth-child(5n +1) {
