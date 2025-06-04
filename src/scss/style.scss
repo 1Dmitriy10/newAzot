@@ -209,6 +209,12 @@ ol {
 
 }
 
+.card-box-grid {
+    &>.card>div {
+        height: 100%;
+    }
+}
+
 
 
 //==================================
@@ -277,6 +283,8 @@ ol {
 @import "./components/_stock";
 @import "./components/projects";
 @import "./components/project-detail";
+@import "./components/_services";
+@import "./components/services-detail";
 
 
 .bg-grey {
@@ -293,6 +301,10 @@ ol {
 
 .border-b {
     border-radius: 0 0 48px 48px;
+}
+
+.border-r {
+    border-radius: 48px;
 }
 
 .mb-pb {

@@ -15688,6 +15688,69 @@ const nestedSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('
 
 });
 
+const projectDetailSlider = new swiper_bundle__WEBPACK_IMPORTED_MODULE_0__["default"]('.project-detail__slider', {
+    // Стрелки
+    // navigation: {
+    //     nextEl: '.portfolio-prev__slider-next',
+    //     prevEl: '.portfolio-prev__slider-prev',
+    // },
+    pagination:{
+        el: ".project-detail__slider-pagination"
+    },
+    nested: true,
+
+    
+
+    /*Отступ у карточек*/
+    spaceBetween: 12,
+    /*Показывать по n карточек*/
+    slidesPerView: 1,
+    /* При достижении конца, перепрыгнуть в начало */
+    // rewind: true,
+    /*Увеличение при наведении курсора мыши */
+    // zoom: true,
+    /*Ленивая подгрузка */
+    // lazy: true,
+    /*Бесконечная прокрутка */
+    // loop: true,
+    /*Ориентация */
+    // direction: 'vertical',
+    /*Авто высота*/
+    // autoHeight: true,
+    /*иконка захвата при наведении на слайд*/
+    // grabCursor: true,
+    /*Автоматическое перелистывание*/
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    /*Брек-поинты*/
+    // breakpoints: {
+    //     1400: {
+    //         slidesPerView: 2.8,
+    //         spaceBetween: 20,
+    //     },
+    //     1200: {
+    //         slidesPerView: 2.3,
+    //         spaceBetween: 15,
+    //     },
+    //     900: {
+    //         slidesPerView: 2,
+    //         spaceBetween: 15,
+    //     },
+    //     768: {
+    //         slidesPerView: 1.8,
+    //         spaceBetween: 15,
+    //     },
+    //     500: {
+    //         slidesPerView: 1.5,
+    //         spaceBetween: 15,
+    //     },
+       
+    // },
+
+});
+
+
 
 
 
@@ -29036,6 +29099,37 @@ function blogNavigation() {
 };
 blogNavigation();
 
+/***/ }),
+/* 75 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   galleryProject: () => (/* binding */ galleryProject)
+/* harmony export */ });
+function galleryProject() {
+    let mainImg = document.querySelector(".project-detail__gallery-main-img");
+    let arrImg = document.querySelectorAll(".project-detail__gallery-prev-item")
+
+    arrImg.forEach(el=>{
+        el.addEventListener("click", changSrc)
+    })
+
+    function changSrc() {
+        let item = event.currentTarget;
+        let itemSrc = event.currentTarget.querySelector("img").src;
+        let mainSrc = mainImg.querySelector("img");
+
+        mainSrc.src = itemSrc;
+        arrImg.forEach(el=>{
+            el.classList.remove("active")
+        })
+        item.classList.add("active")
+    }
+};
+galleryProject();
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -29159,6 +29253,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_mobMenuSlider_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(71);
 /* harmony import */ var _libs_myMasonry_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(72);
 /* harmony import */ var _libs_blogNavigation_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(74);
+/* harmony import */ var _components_galleryProject_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(75);
 //------------------------Спойлеры-----------------------
 
 
@@ -29222,6 +29317,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //------------Навигация(содержание) для блога---------------
+
+
+//------------Галлерея проектов---------------
 
 
 

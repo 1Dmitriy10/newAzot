@@ -442,6 +442,69 @@ const nestedSlider = new Swiper('.nested-slider-child', {
 
 });
 
+const projectDetailSlider = new Swiper('.project-detail__slider', {
+    // Стрелки
+    // navigation: {
+    //     nextEl: '.portfolio-prev__slider-next',
+    //     prevEl: '.portfolio-prev__slider-prev',
+    // },
+    pagination:{
+        el: ".project-detail__slider-pagination"
+    },
+    nested: true,
+
+    
+
+    /*Отступ у карточек*/
+    spaceBetween: 12,
+    /*Показывать по n карточек*/
+    slidesPerView: 1,
+    /* При достижении конца, перепрыгнуть в начало */
+    // rewind: true,
+    /*Увеличение при наведении курсора мыши */
+    // zoom: true,
+    /*Ленивая подгрузка */
+    // lazy: true,
+    /*Бесконечная прокрутка */
+    // loop: true,
+    /*Ориентация */
+    // direction: 'vertical',
+    /*Авто высота*/
+    // autoHeight: true,
+    /*иконка захвата при наведении на слайд*/
+    // grabCursor: true,
+    /*Автоматическое перелистывание*/
+    // autoplay: {
+    //     delay: 5000,
+    //   },
+    /*Брек-поинты*/
+    // breakpoints: {
+    //     1400: {
+    //         slidesPerView: 2.8,
+    //         spaceBetween: 20,
+    //     },
+    //     1200: {
+    //         slidesPerView: 2.3,
+    //         spaceBetween: 15,
+    //     },
+    //     900: {
+    //         slidesPerView: 2,
+    //         spaceBetween: 15,
+    //     },
+    //     768: {
+    //         slidesPerView: 1.8,
+    //         spaceBetween: 15,
+    //     },
+    //     500: {
+    //         slidesPerView: 1.5,
+    //         spaceBetween: 15,
+    //     },
+       
+    // },
+
+});
+
+
 
 
 

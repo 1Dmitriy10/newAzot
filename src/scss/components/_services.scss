@@ -1,0 +1,70 @@
+.services {
+    margin-bottom: clamp(3.5rem, 2.2447698745rem + 5.3556485356vw, 7.5rem);
+}
+
+.services__card-box {
+    & .services-prev__card {
+        height: 100%;
+    }
+}
+
+.trust {
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.trust__title {
+    margin-bottom: clamp(1.5rem, 1.0292887029rem + 2.0083682008vw, 3rem);
+}
+
+.trust__subtitle {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp-px(16, 20);
+    line-height: 150%;
+    color: var(--grey-2);
+    margin-bottom: clamp-px(24, 40);
+}
+
+.div-style-b3d518c1 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 auto;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: center;
+    padding: clamp-px(12, 24);
+    overflow: hidden;
+    background: var(--white);
+    border-radius: clamp-px(12, 24);
+}
+
+.p-style-cf51d65f {
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font4);
+    font-weight: 500;
+    font-size: clamp-px(28, 48);
+    line-height: 117%;
+    color: var(--orange);
+}
+
+.p-style-7ae597bf {
+    flex: 0 0 auto;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    font-weight: 400;
+    font-size: clamp-px(13, 18);
+    line-height: 156%;
+    color: var(--black);
+    text-align: left;
+}
+
+.trust__card-box {
+    @include respond-to("tel") {
+        grid-template-columns: 1fr 1fr;
+        gap: 6px;
+    }
+}
