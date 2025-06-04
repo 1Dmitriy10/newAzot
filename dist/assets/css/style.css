@@ -10724,6 +10724,11 @@ select {
   height: auto;
 }
 
+.grid-left-col.percent_50 {
+  -ms-grid-columns: minmax(300px, 726px) minmax(300px, 726px);
+  grid-template-columns: minmax(300px, 726px) minmax(300px, 726px);
+}
+
 .project-detail__gallery-box {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -10737,7 +10742,7 @@ select {
 
 .project-detail__gallery-main-img {
   width: 100%;
-  height: 520px;
+  aspect-ratio: 1/0.78;
   border-radius: 24px;
   position: relative;
   overflow: hidden;
@@ -10763,8 +10768,8 @@ select {
 }
 
 .project-detail__gallery-prev-item {
-  width: 120px;
-  height: 120px;
+  width: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+  height: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
   border-radius: 12px;
   position: relative;
   overflow: hidden;

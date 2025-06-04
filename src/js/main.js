@@ -63,6 +63,9 @@ import { myMasonry } from "./libs/myMasonry.js";
 //------------Навигация(содержание) для блога---------------
 import { blogNavigation } from "./libs/blogNavigation.js";
 
+//------------Галлерея проектов---------------
+import { galleryProject } from "./components/galleryProject.js";
+
 
 
 
