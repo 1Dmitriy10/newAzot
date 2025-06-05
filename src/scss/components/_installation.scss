@@ -1,0 +1,143 @@
+.installation-cost {
+    margin-bottom: clamp(3.5rem, 2.2593052109rem + 5.2936311001vw, 7.5rem);
+}
+
+.installation-cost__container {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.installation-cost__title {
+    margin-top: clamp(0.5rem, 0.3430962343rem + 0.6694560669vw, 1rem);
+    margin-bottom: clamp(1.5rem, 1.0292887029rem + 2.0083682008vw, 3rem);
+}
+
+.installation-cost__card-box {
+    @include respond-to("pc-old") {
+        grid-template-columns: 1fr;
+    }
+}
+
+.div-style-974cd564 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    gap: 32px;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    height: 450px;
+    padding: clamp-px(12, 16);
+    background: var(--white);
+    border-radius: clamp-px(16, 24);
+
+    @include respond-to("tab") {
+        flex-direction: column-reverse;
+    }
+}
+
+.div-style-420814c0 {
+    box-sizing: border-box;
+    display: flex;
+    flex: 1 1 auto;
+    max-width: 340px;
+    flex-direction: column;
+    align-items: flex-start;
+    align-self: stretch;
+    justify-content: space-between;
+    padding: 12px;
+}
+
+.div-style-239fd72f {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 16px;
+    align-items: flex-start;
+    align-self: stretch;
+    justify-content: flex-start;
+}
+
+.p-style-66df5f8d {
+    flex: 0 0 auto;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp-px(20, 32);
+    line-height: 112%;
+    color: var(--black);
+    text-align: left;
+}
+
+.p-style-877eca73 {
+    flex: 0 0 auto;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp-px(16, 20);
+    line-height: 140%;
+    color: var(--grey-2);
+    text-align: left;
+}
+
+.p-style-4fa33569 {
+    flex: 0 0 auto;
+    align-self: stretch;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: clamp-px(14, 18);
+    line-height: 156%;
+    color: var(--grey);
+    text-align: left;
+}
+
+.div-style-5e54d0cb {
+    box-sizing: border-box;
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: column;
+    gap: 24px;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.p-style-8a93d10e {
+    flex: 0 0 auto;
+    padding: 0;
+    margin: 0;
+    font-family: var(--second-family);
+    font-weight: 500;
+    font-size: clamp-px(20, 24);
+    line-height: 133%;
+    text-align: center;
+    color: var(--black);
+}
+
+
+
+.img-style-f7409b32 {
+    box-sizing: border-box;
+    display: block;
+    flex: 1 1 auto;
+    max-width: 338px;
+    align-self: stretch;
+    max-width: initial;
+    height: 418px;
+    overflow: hidden;
+    border: none;
+    border-radius: 16px;
+    object-fit: cover;
+
+    @include respond-to("tab") {
+        height: 196px
+    }
+}

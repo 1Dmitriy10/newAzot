@@ -1,0 +1,79 @@
+.structural-repairs__card-box {
+    counter-reset: count;
+
+    & .steps__card {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+        min-height: auto;
+
+
+    }
+
+    &>.card:last-child>.steps__card {
+        background: linear-gradient(135deg, #ff8259 0%, #f46f43 100%);
+
+        & div {
+            color: var(--white);
+        }
+
+        & ::before {
+            color: var(--white);
+        }
+
+
+    }
+
+
+}
+
+.structural-repairs__cost-card-box {
+    margin-bottom: clamp-px(24, 40);
+
+    @include respond-to("nout") {
+        grid-template-columns: 1fr;
+    }
+
+    & .profile-details-container {
+
+        & .profile-info-card {
+            gap: 20px;
+            justify-content: space-between;
+
+            &:nth-child(odd) {
+                background: var(--white);
+            }
+
+            &:nth-child(even) {
+                background: var(--bg-3);
+            }
+        }
+
+        & .profile-details-heading {
+            flex: 0 1 auto;
+        }
+
+        & .profile-details-text-style {
+            flex: 0 1 auto;
+            font-family: var(--second-family);
+            font-weight: 500;
+            font-size: clamp-px(14, 18);
+            line-height: 156%;
+            color: var(--black);
+
+            &>span {
+                font-family: var(--font-family);
+                font-weight: 400;
+                color: var(--grey);
+            }
+        }
+    }
+}
+
+.structural-repairs__btn {
+    align-self: flex-start;
+
+    @include respond-to("tel") {
+        width: 100%;
+    }
+}

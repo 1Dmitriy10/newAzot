@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/libs/head.html',{
+"title": "Корзина"
+})
+
+<body>
+    @@include('html/libs/header.html')
+    <main class="bg-grey">
+        <section class="breadcrambs mb-pb mt_0 pt_32">
+            <div class="container breadcrambs__container">
+                <ul class="breadcrambs__list">
+                    <li class="breadcrambs__list-item">
+                        <a class="breadcrambs__item-link">
+                            Главная
+                        </a>
+
+                    </li>
+
+                    <li class="breadcrambs__list-item">
+                        Корзина
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="title">
+            <div class="container title__container ">
+                <div class="basket-title">
+                    <h1>
+                        Корзина
+                    </h1>
+                    <span>3</span>
+                </div>
+
+            </div>
+        </section>
+
+        <section class='grid-aside-basket-wrap'>
+            <div class='container grid-aside-basket-wrap__container'>
+
+                <div class="main-col">
+
+                    <div class="basket__product-box">
+
+                        <div class="basket__product-item">
+                            <div class="basket__product-item-img">
+                                <img src="@img/basket/basket-img.png" alt="">
+                            </div>
+
+                            <div class="basket__product-item-text-box">
+                                <div class="basket__product-item-title">
+                                    Одностворчатое окно, ПВХ
+                                </div>
+
+                                <div class="basket__product-item-properties-box">
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Размер
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            800 х 1 400 мм
+                                        </div>
+                                    </div>
+
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Профиль
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            DECEUNINCK Favorit Space, 60 мм
+                                        </div>
+                                    </div>
+
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Стеклопакет
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            2-камерный, 32 мм
+                                        </div>
+                                    </div>
+
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Фурнитура
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            SoftOPENTM PREMIUM
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="basket__product-item-price-box">
+                                <div class="basket__product-item-price">
+                                    32 800 ₽
+                                </div>
+
+                                <div class="basket__product-item-sale">
+                                    -50%
+                                </div>
+
+                                <div class="basket__product-item-price-old">
+                                    62 800 ₽
+                                </div>
+                            </div>
+
+                            <button class="del">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.33203 5.83334L16.6654 5.83334" stroke="#979797" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M4.16797 5.83334L5.0013 15.8333C5.0013 16.2754 5.1769 16.6993 5.48946 17.0119C5.80202 17.3244 6.22594 17.5 6.66797 17.5H13.3346C13.7767 17.5 14.2006 17.3244 14.5131 17.0119C14.8257 16.6993 15.0013 16.2754 15.0013 15.8333L15.8346 5.83334"
+                                        stroke="#979797" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M7.5 5.83333V3.33333C7.5 3.11232 7.5878 2.90036 7.74408 2.74408C7.90036 2.5878 8.11232 2.5 8.33333 2.5L11.6667 2.5C11.8877 2.5 12.0996 2.5878 12.2559 2.74408C12.4122 2.90036 12.5 3.11232 12.5 3.33333V5.83333"
+                                        stroke="#979797" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8.33203 10L11.6654 13.3333M11.6654 10L8.33203 13.3333" stroke="#979797"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="basket__product-item">
+                            <div class="basket__product-item-img">
+                                <img src="@img/basket/basket-img.png" alt="">
+                            </div>
+
+                            <div class="basket__product-item-text-box">
+                                <div class="basket__product-item-title">
+                                    Одностворчатое окно, ПВХ
+                                </div>
+
+                                <div class="basket__product-item-properties-box">
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Размер
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            800 х 1 400 мм
+                                        </div>
+                                    </div>
+
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Профиль
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            DECEUNINCK Favorit Space, 60 мм
+                                        </div>
+                                    </div>
+
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Стеклопакет
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            2-камерный, 32 мм
+                                        </div>
+                                    </div>
+
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Фурнитура
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            SoftOPENTM PREMIUM
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="basket__product-item-price-box">
+                                <div class="basket__product-item-price">
+                                    32 800 ₽
+                                </div>
+
+                                <div class="basket__product-item-sale">
+                                    -50%
+                                </div>
+
+                                <div class="basket__product-item-price-old">
+                                    62 800 ₽
+                                </div>
+                            </div>
+
+                            <button class="del">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.33203 5.83334L16.6654 5.83334" stroke="#979797" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M4.16797 5.83334L5.0013 15.8333C5.0013 16.2754 5.1769 16.6993 5.48946 17.0119C5.80202 17.3244 6.22594 17.5 6.66797 17.5H13.3346C13.7767 17.5 14.2006 17.3244 14.5131 17.0119C14.8257 16.6993 15.0013 16.2754 15.0013 15.8333L15.8346 5.83334"
+                                        stroke="#979797" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M7.5 5.83333V3.33333C7.5 3.11232 7.5878 2.90036 7.74408 2.74408C7.90036 2.5878 8.11232 2.5 8.33333 2.5L11.6667 2.5C11.8877 2.5 12.0996 2.5878 12.2559 2.74408C12.4122 2.90036 12.5 3.11232 12.5 3.33333V5.83333"
+                                        stroke="#979797" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8.33203 10L11.6654 13.3333M11.6654 10L8.33203 13.3333" stroke="#979797"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="basket__product-item">
+                            <div class="basket__product-item-img">
+                                <img src="@img/basket/basket-img.png" alt="">
+                            </div>
+
+                            <div class="basket__product-item-text-box">
+                                <div class="basket__product-item-title">
+                                    Одностворчатое окно, ПВХ
+                                </div>
+
+                                <div class="basket__product-item-properties-box">
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Размер
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            800 х 1 400 мм
+                                        </div>
+                                    </div>
+
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Профиль
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            DECEUNINCK Favorit Space, 60 мм
+                                        </div>
+                                    </div>
+
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Стеклопакет
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            2-камерный, 32 мм
+                                        </div>
+                                    </div>
+
+                                    <div class="basket__product-item-properties-row">
+                                        <div class="basket__product-item-properties-name">
+                                            Фурнитура
+                                        </div>
+
+                                        <div class="basket__product-item-properties-val">
+                                            SoftOPENTM PREMIUM
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="basket__product-item-price-box">
+                                <div class="basket__product-item-price">
+                                    32 800 ₽
+                                </div>
+
+                                <div class="basket__product-item-sale">
+                                    -50%
+                                </div>
+
+                                <div class="basket__product-item-price-old">
+                                    62 800 ₽
+                                </div>
+                            </div>
+
+                            <button class="del">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.33203 5.83334L16.6654 5.83334" stroke="#979797" stroke-width="1.5"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                    <path
+                                        d="M4.16797 5.83334L5.0013 15.8333C5.0013 16.2754 5.1769 16.6993 5.48946 17.0119C5.80202 17.3244 6.22594 17.5 6.66797 17.5H13.3346C13.7767 17.5 14.2006 17.3244 14.5131 17.0119C14.8257 16.6993 15.0013 16.2754 15.0013 15.8333L15.8346 5.83334"
+                                        stroke="#979797" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path
+                                        d="M7.5 5.83333V3.33333C7.5 3.11232 7.5878 2.90036 7.74408 2.74408C7.90036 2.5878 8.11232 2.5 8.33333 2.5L11.6667 2.5C11.8877 2.5 12.0996 2.5878 12.2559 2.74408C12.4122 2.90036 12.5 3.11232 12.5 3.33333V5.83333"
+                                        stroke="#979797" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                    <path d="M8.33203 10L11.6654 13.3333M11.6654 10L8.33203 13.3333" stroke="#979797"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <aside class="aside">
+                    <div class="aside-block">
+                        <div class="personal-row">
+                            <div class="personal-name">
+                                Александр
+                            </div>
+
+                            <a href="#" class="personal-link">
+                                +7 950 335 49 16
+                            </a>
+                        </div>
+
+                        <div class="my-orders">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 3C8.134 3 5 6.272 5 10V20C5 20.2652 5.10536 20.5196 5.29289 20.7071C5.48043 20.8946 5.73478 21 6 21H18C18.2652 21 18.5196 20.8946 18.7071 20.7071C18.8946 20.5196 19 20.2652 19 20V10C19 6.272 15.866 3 12 3Z"
+                                    stroke="#979797" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 13H19" stroke="#979797" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 3V21" stroke="#979797" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                            <span>
+                                Мои заказы
+                            </span>
+                        </div>
+
+                        <div class="my-reviews">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.2896 17.9984C18.0965 17.9343 21 15.9189 21 11C21 6 18 4 12 4C6 4 3 6 3 11C3 14.0771 4.13623 16.018 6.40868 17.0557L5 21L12.2896 17.9984Z"
+                                    stroke="#979797" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <span>
+                                Отзывы
+                            </span>
+                        </div>
+                    </div>
+                </aside>
+
+
+
+            </div>
+        </section>
+
+    </main>
+    @@include('html/libs/footer.html')
+</body>
+
+</html>
