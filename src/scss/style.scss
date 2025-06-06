@@ -345,6 +345,15 @@ ol {
     margin-top: clamp-px(16, 24);
 }
 
+.mb_24 {
+    margin-bottom: clamp-px(16, 24);
+}
+
 .fs_20 {
     font-size: clamp-px(18, 20);
+}
+
+.w_100 {
+    width: 100%;
+    max-width: 100%;
 }
