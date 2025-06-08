@@ -15234,6 +15234,8 @@ cтруктура
 
 let tabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "_tabs-js"})
 let windowInsulationTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "window-insulation-tabs"})
+let orderAddressTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "order-address-tab"})
+let orderPaymentTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "order-payment-tab"})
 
 
 /***/ }),
@@ -29130,6 +29132,133 @@ function galleryProject() {
 };
 galleryProject();
 
+/***/ }),
+/* 76 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   hiddenBasketStickyBlock: () => (/* binding */ hiddenBasketStickyBlock)
+/* harmony export */ });
+function hiddenBasketStickyBlock() {
+      // Настройки (можно менять под свои нужды)
+    const STICKY_SELECTOR = '.basket-sticky-block'; // Селектор прилипающего блока
+    const TARGET_ID = 'aside-block-basket';       // ID целевого блока
+    const HIDE_CLASS = 'hidden';      // Класс для скрытия
+    const OFFSET = 20;                       // Отступ в пикселях
+
+    // Получаем элементы
+    const stickyElement = document.querySelector(STICKY_SELECTOR);
+    const targetElement = document.getElementById(TARGET_ID);
+
+    // Проверяем наличие элементов
+    if (!stickyElement || !targetElement) return;
+
+    // Основная функция проверки позиции
+    const checkStickyPosition = () => {
+        // Получаем координаты элементов
+        const stickyRect = stickyElement.getBoundingClientRect();
+        const targetRect = targetElement.getBoundingClientRect();
+        
+        // Вычисляем позицию, когда нужно скрывать
+        const shouldHide = stickyRect.bottom + OFFSET >= targetRect.top;
+        
+        // Добавляем/удаляем класс
+        stickyElement.classList.toggle(HIDE_CLASS, shouldHide);
+    };
+
+    // Оптимизация производительности
+    let isTicking = false;
+    const updateOnScroll = () => {
+        if (!isTicking) {
+            requestAnimationFrame(() => {
+                checkStickyPosition();
+                isTicking = false;
+            });
+            isTicking = true;
+        }
+    };
+
+    // Слушаем события
+    window.addEventListener('scroll', updateOnScroll);
+    window.addEventListener('resize', updateOnScroll);
+};
+hiddenBasketStickyBlock()
+
+/***/ }),
+/* 77 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+function pincode() {
+  //var pinContainer = document.getElementsByClassName("pin-code")[0];
+var pinContainer = document.querySelector(".pin-code");
+console.log('There is ' + pinContainer.length + ' Pin Container on the page.');
+
+pinContainer.addEventListener('keyup', function (event) {
+    var target = event.srcElement;
+    
+    var maxLength = parseInt(target.attributes["maxlength"].value, 10);
+    var myLength = target.value.length;
+
+    if (myLength >= maxLength) {
+        var next = target;
+        while (next = next.nextElementSibling) {
+            if (next == null) break;
+            if (next.tagName.toLowerCase() == "input") {
+                next.focus();
+                break;
+            }
+        }
+    }
+
+    if (myLength === 0) {
+        var next = target;
+        while (next = next.previousElementSibling) {
+            if (next == null) break;
+            if (next.tagName.toLowerCase() == "input") {
+                next.focus();
+                break;
+            }
+        }
+    }
+}, false);
+
+pinContainer.addEventListener('keydown', function (event) {
+    var target = event.srcElement;
+    target.value = "";
+}, false);
+};
+pincode();
+
+
+/***/ }),
+/* 78 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   starRating: () => (/* binding */ starRating)
+/* harmony export */ });
+function starRating() {
+    let ratingBox = document.querySelector("#starRating");
+    if(!ratingBox) return null
+    let arrItems = ratingBox.querySelectorAll("svg");
+
+    arrItems.forEach(el => {
+     el.addEventListener("click", changeRating)   
+    })
+
+    function changeRating() {
+        let item = event.currentTarget;
+        item.classList.toggle("active")
+    }
+};
+starRating();
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -29254,6 +29383,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _libs_myMasonry_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(72);
 /* harmony import */ var _libs_blogNavigation_js__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(74);
 /* harmony import */ var _components_galleryProject_js__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(75);
+/* harmony import */ var _components_hiddenBasketStickyBlock_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(76);
+/* harmony import */ var _components_getPincode_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(77);
+/* harmony import */ var _components_starRating_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(78);
 //------------------------Спойлеры-----------------------
 
 
@@ -29320,6 +29452,17 @@ __webpack_require__.r(__webpack_exports__);
 
 
 //------------Галлерея проектов---------------
+
+
+//------------Скрытие липкого плока в корзине---------------
+
+
+//------------Ввод одноразового кода из смс---------------
+
+
+//------------Звездный рейтинг---------------
+
+
 
 
 

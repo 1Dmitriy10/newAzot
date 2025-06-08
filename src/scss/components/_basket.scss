@@ -8,6 +8,11 @@
     grid-template-columns: minmax(1px, 975px) minmax(1px, 465px);
     gap: 20px;
     justify-content: space-between;
+
+    @include respond-to("nout") {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .basket__product-box {
@@ -15,6 +20,18 @@
     flex-direction: column;
     gap: 16px;
     margin-bottom: clamp-px(48, 80);
+
+    @include respond-to("nout") {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        scroll-snap-type: x mandatory;
+        overflow-x: auto;
+        // -----цвет скрола
+        scrollbar-color: var(--orange) transparent;
+        scrollbar-width: thin;
+        padding-bottom: 10px;
+    }
 }
 
 .basket__product-item {
@@ -25,6 +42,11 @@
     display: flex;
     flex-wrap: wrap;
     position: relative;
+
+    @include respond-to("nout") {
+        flex: 0 0 280px;
+        scroll-snap-align: start;
+    }
 
 }
 
@@ -39,15 +61,21 @@
     align-items: center;
     justify-content: center;
 
-    // &>img {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     width: 100%;
-    //     height: 100%;
-    //     object-fit: contain;
+    @include respond-to("nout") {
+        margin-bottom: 16px;
 
-    // }
+        &>img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+
+        }
+    }
+
+
 }
 
 .basket__product-item-text-box {
@@ -57,6 +85,12 @@
     flex-direction: column;
     margin-left: clamp-px(10, 36);
     margin-right: 20px;
+
+    @include respond-to("nout") {
+        margin-left: 0;
+        margin-right: 0;
+        padding-bottom: 20px;
+    }
 }
 
 .basket__product-item-title {
@@ -77,6 +111,11 @@
 .basket__product-item-properties-row {
     display: flex;
     gap: 12px;
+
+    @include respond-to("nout") {
+        flex-direction: column;
+        gap: 2px;
+    }
 }
 
 .basket__product-item-properties-name {
@@ -103,6 +142,15 @@
     flex-direction: column;
     margin-left: auto;
     text-align: right;
+
+    @include respond-to("nout") {
+        margin-left: 0;
+        flex-direction: row;
+        padding-top: 20px;
+        border-top: 1px solid var(--bg);
+        align-items: center;
+        gap: 8px;
+    }
 }
 
 .basket__product-item-price {
@@ -112,6 +160,10 @@
     line-height: 133%;
     color: #111827;
     margin-bottom: 10px;
+
+    @include respond-to("nout") {
+        margin-bottom: 0;
+    }
 }
 
 .basket__product-item-sale {
@@ -121,6 +173,10 @@
     line-height: 150%;
     color: var(--orange);
     margin-bottom: 10px;
+
+    @include respond-to("nout") {
+        margin-bottom: 0;
+    }
 }
 
 .basket__product-item-price-old {
@@ -136,6 +192,12 @@
     position: absolute;
     bottom: 26px;
     right: 26px;
+
+    @include respond-to("nout") {
+        bottom: auto;
+        right: 16px;
+        top: 16px;
+    }
 }
 
 .basket-title {
@@ -372,7 +434,7 @@
         border: none;
         font-family: var(--font-family);
         font-weight: 400;
-        font-size: 18px;
+        font-size: clamp-px(15, 18);
         line-height: 156%;
         color: var(--black);
 
@@ -437,7 +499,7 @@ p.strong {
 
 .order-extra__row {
     display: flex;
-    gap: 24px;
+    gap: clamp-px(12, 24);
 }
 
 .order-extra__item-price {
@@ -446,4 +508,41 @@ p.strong {
     font-size: clamp-px(15, 20);
     line-height: 150%;
     color: var(--orange);
+}
+
+.basket-sticky-block {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    box-shadow: 0 -8px 16px 0 rgba(35, 14, 7, 0.06);
+    background: var(--white);
+
+    &.hidden {
+        opacity: 0;
+        overflow: hidden;
+    }
+
+    @include respond-to("nout") {
+        display: flex;
+
+    }
+}
+
+.basket-sticky-block__container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    & .basket-reference__header {
+        padding-bottom: 0;
+        border: none;
+        margin-bottom: 12px;
+    }
+
+    & .basket-reference__btn {
+        margin-bottom: 0;
+    }
 }

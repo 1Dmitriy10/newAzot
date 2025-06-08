@@ -36,9 +36,10 @@ body {
 
     &>span {
         font-weight: 400;
-        font-size: 16px;
+        font-size: clamp-px(15, 20);
         line-height: 150%;
         color: var(--black);
+        flex: 1 1 100%;
     }
 
     &>.check-box {
@@ -47,6 +48,7 @@ body {
         border-radius: 15px;
         background-color: var(--stroke);
         width: 36px;
+        min-width: 36px;
         height: 20px;
         transition: 0.3s;
 
@@ -289,6 +291,7 @@ ol {
 @import "./components/installation";
 @import "./components/structural-repairs";
 @import "./components/basket";
+@import "./components/modal";
 
 
 .bg-grey {

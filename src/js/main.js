@@ -66,6 +66,17 @@ import { blogNavigation } from "./libs/blogNavigation.js";
 //------------Галлерея проектов---------------
 import { galleryProject } from "./components/galleryProject.js";
 
+//------------Скрытие липкого плока в корзине---------------
+import { hiddenBasketStickyBlock } from "./components/hiddenBasketStickyBlock.js";
+
+//------------Ввод одноразового кода из смс---------------
+import { pincode } from "./components/getPincode.js";
+
+//------------Звездный рейтинг---------------
+import { starRating } from "./components/starRating.js";
+
+
+
 
 
 
