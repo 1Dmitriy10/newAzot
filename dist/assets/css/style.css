@@ -12649,6 +12649,30 @@ p.strong {
   right: 5px;
 }
 
+.popup-thanks-rating.fancybox__content,
+.popup-error-rating.fancybox__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.popup-thanks-rating,
+.popup-error-rating {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  text-align: center;
+  width: 100%;
+}
+.popup-thanks-rating .btn,
+.popup-error-rating .btn {
+  width: 100%;
+}
+
 .bg-grey {
   background-color: var(--bg-3);
 }
