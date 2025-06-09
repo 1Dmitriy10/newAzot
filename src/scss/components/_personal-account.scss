@@ -5,10 +5,15 @@
 
 .grid-aside__container {
     display: grid;
-    grid-template-columns: clamp-px(280, 377) clamp-px(700, 1059);
+    grid-template-columns: minmax(280px, 377px) minmax(700px, 1059px);
     gap: 20px;
     justify-content: space-between;
     padding: clamp-px(20, 40) 0;
+
+    @include respond-to("nout") {
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .aside {}
@@ -88,6 +93,7 @@
 
 .personal-main-up-row__name-box {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     gap: 20px;
     margin-bottom: 20px;
@@ -95,7 +101,7 @@
 
 .personal-main-up-row__name {
     font-weight: 500;
-    font-size: 32px;
+    font-size: clamp-px(24, 32);
     line-height: 112%;
     color: #111827;
 }
@@ -112,7 +118,8 @@
 
 .personal-main-up-row__contact-box {
     display: flex;
-    gap: 30px;
+    flex-wrap: wrap;
+    gap: clamp-px(15, 30);
 }
 
 .personal-main-up-row__contact-box__item {
@@ -121,7 +128,7 @@
 
     &>a {
         font-weight: 400;
-        font-size: 18px;
+        font-size: clamp-px(16, 18);
         line-height: 156%;
         color: var(--grey-2);
     }
@@ -142,23 +149,31 @@
     align-items: center;
     gap: 10px;
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp-px(16, 18);
     line-height: 156%;
     color: var(--grey-2);
 }
 
 .personal-main-down-row-title {
     font-weight: 500;
-    font-size: 24px;
+    font-size: clamp-px(20, 24);
     line-height: 133%;
     color: #111827;
-    margin-bottom: 24px;
+    margin-bottom: clamp-px(20, 24);
 }
 
 .personal-main-down-row-box {
     display: flex;
-    gap: 12;
+    flex-wrap: wrap;
+    gap: 12px;
     justify-content: space-between;
+
+    @include respond-to("tab") {
+        flex-direction: column;
+        // gap: ;
+    }
+
+
 }
 
 .personal-main-down-row-list {
@@ -169,12 +184,144 @@
 
 .personal-main-down-row-list-title {
     font-weight: 400;
-    font-size: 18px;
+    font-size: clamp-px(16, 18);
     line-height: 156%;
     color: #000;
     margin-bottom: 8px;
 }
 
-.custom-checkbox {}
+.custom-checkbox {
+    cursor: pointer;
+}
 
-.check-box {}
+.check-box {
+    cursor: pointer;
+}
+
+.main-col {
+    & .filter-box {
+        margin-bottom: 24px;
+
+        & .filter-item {
+            background: var(--white);
+
+            &.active {
+                background: var(--black);
+            }
+        }
+    }
+}
+
+.order-product-header {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+    justify-content: space-between;
+    padding-bottom: 28px;
+    border-bottom: 1px solid #ebedf1;
+    margin-bottom: clamp-px(24, 34);
+
+    & .form__feedback-order-block-article {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .basket__product-item-title {
+        margin-bottom: 0;
+    }
+}
+
+// .order-product-header__left-col {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+.basket__product-item-price {
+    & span {
+        font-family: var(--font-family);
+        font-weight: 400;
+        font-size: clamp-px(15, 18);
+        line-height: 156%;
+        color: var(--grey);
+        margin-right: 16px;
+    }
+}
+
+.order__product-item__status {
+    border-radius: 6px;
+    padding: 8px 10px;
+    background: var(--bg-3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 157%;
+    color: var(--grey-2);
+}
+
+// .order-product-header__left-col-text {
+//     display: flex;
+//     flex-wrap: wrap;
+// }
+
+.order-product-header__left-col-text-col {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap-reverse;
+}
+
+.order-product-main {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.order-product-main-info-box {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    margin-bottom: clamp-px(28, 48);
+}
+
+.order-product-main-name {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    text-align: right;
+    color: var(--grey-2);
+    text-align: left;
+}
+
+.order-product-main-type {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--grey);
+}
+
+.order-product-main__bottom {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-between;
+
+    & .form__feedback-order-block-info-img {
+        background: var(--bg-3);
+    }
+}
+
+
+.order-product-main {
+    & .reviews-prev__card-rating {
+        margin-bottom: 24px;
+    }
+}
