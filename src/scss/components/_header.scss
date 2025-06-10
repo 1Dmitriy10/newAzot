@@ -447,12 +447,49 @@
     visibility: hidden;
     transition: 0.3s;
 
+    &>.sub-menu {
+        width: max-content;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 85px;
+        row-gap: 12px;
+        flex-direction: column;
+        max-height: 372px;
+        transition: 0.3s;
+        padding: 24px !important;
+
+        & li {
+            background: transparent;
+            font-family: var(--font-family);
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 150%;
+            color: var(--grey);
+
+            &>a {
+                font-family: var(--font-family);
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 156%;
+                color: var(--black);
+                transition: 0.3s;
+
+                &:hover {
+                    color: var(--orange);
+                    transition: 0.3s;
+                }
+            }
+        }
+    }
+
     &.show {
         opacity: 1;
         visibility: visible;
         transition: 0.3s;
     }
 }
+
+
 
 .nav-list li {
     border-radius: clamp-px(7, 10);

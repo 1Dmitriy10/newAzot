@@ -16,8 +16,8 @@
 
 .calculator-col {
     flex: 0 1 50%;
-    border-radius: 32px;
-    padding: 40px;
+    border-radius: clamp-px(16, 32);
+    padding: clamp-px(20, 40);
     max-width: 746px;
     background: var(--white);
 

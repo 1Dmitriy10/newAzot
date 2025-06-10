@@ -27,6 +27,7 @@
     border-radius: clamp-px(16, 24);
     display: flex;
     flex-direction: column;
+
 }
 
 .portfolio-prev__card-title {
@@ -35,6 +36,7 @@
     line-height: 112%;
     color: var(--black);
     margin-bottom: clamp-px(10, 16);
+    padding: 0 clamp-px(8, 16);
 }
 
 .portfolio-prev__card-text {
@@ -47,6 +49,7 @@
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
     overflow: hidden;
+    padding: 0 clamp-px(8, 16);
 }
 
 .portfolio-prev__card-gallery {}
@@ -79,6 +82,22 @@
     &>.btn {
         width: 100%;
         max-width: 100%;
+
+        &>.mob {
+            display: none;
+
+            @include respond-to("tab") {
+                display: block;
+            }
+        }
+
+        &>.desc {
+            display: block;
+
+            @include respond-to("tab") {
+                display: none;
+            }
+        }
     }
 
     @include respond-to("tab") {}
