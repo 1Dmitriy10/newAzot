@@ -124,6 +124,7 @@
 }
 
 .main-banner__slider-btn-box {
+    position: absolute !important;
     bottom: 32px;
     right: 32px;
 
@@ -145,4 +146,12 @@
     border-radius: 8px !important;
     width: 8px !important;
     height: 4px !important;
+}
+
+.banner__swiper-pagination {
+    display: none;
+
+    @include respond-to("tab") {
+        display: block;
+    }
 }

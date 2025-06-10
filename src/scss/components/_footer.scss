@@ -52,10 +52,13 @@
     margin-bottom: clamp-px(24, 40);
 }
 
-.social-box {
-    display: flex;
-    gap: 6px;
+.footer__contact-col {
+    & .social-box {
+        display: flex;
+        gap: 6px;
+    }
 }
+
 
 .social-link_bg {
     display: flex;

@@ -44,6 +44,12 @@
     gap: clamp-px(24, 32);
     position: relative;
 
+    &:nth-child(1n +3) {
+        & .our-products-prev__card-item-title {
+            font-size: clamp-px(18, 28);
+        }
+    }
+
     &:hover .our-products-prev__card-item-text-btn {
         background: var(--orange);
         -webkit-transition: 0.3s;
@@ -145,6 +151,11 @@
     color: var(--black);
     margin-bottom: 20px;
     opacity: 0.8;
+    max-width: 80%;
+
+    @include respond-to("tab") {
+        max-width: 100%;
+    }
 }
 
 .our-products-prev__card-item-text-btn {
