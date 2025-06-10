@@ -66,7 +66,7 @@ import { blogNavigation } from "./libs/blogNavigation.js";
 //------------Галлерея проектов---------------
 import { galleryProject } from "./components/galleryProject.js";
 
-//------------Скрытие липкого плока в корзине---------------
+//------------Скрытие липкого блока в корзине---------------
 import { hiddenBasketStickyBlock } from "./components/hiddenBasketStickyBlock.js";
 
 //------------Ввод одноразового кода из смс---------------
