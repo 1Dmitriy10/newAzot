@@ -19,6 +19,10 @@ body {
     // overflow: hidden;
 }
 
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
 .custom-checkbox {
     display: flex;
     gap: 12px;
