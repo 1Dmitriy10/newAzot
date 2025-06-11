@@ -71,7 +71,7 @@
 .main-form__img-col {
     flex: 0 1 calc((100% - 8px * 1) / 2);
     position: relative;
-    height: 484px;
+    // height: 484px;
     border-radius: 24px;
 
     @include respond-to("pc-old") {

@@ -161,6 +161,18 @@
 .our-products-prev__card-item-text-btn {
     transform: rotate(-90deg);
     margin-top: auto;
+
+    @include respond-to("tab") {
+        border-radius: 8px;
+        padding: 8px;
+        width: 36px;
+        height: 36px;
+
+        &>svg {
+            width: 16px;
+            height: 16px;
+        }
+    }
 }
 
 .our-products-prev__card-item-img-wrap {

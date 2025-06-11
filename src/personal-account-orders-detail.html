@@ -1,0 +1,593 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+@@include('html/libs/head.html',{
+"title": "Личный кабинет"
+})
+
+<body>
+    @@include('html/libs/header.html')
+    <main>
+
+        <section class='grid-aside'>
+            <div class='container grid-aside__container'>
+
+                <aside class="aside">
+                    <div class="aside-block">
+                        <div class="personal-row">
+                            <div class="personal-name">
+                                Александр
+                            </div>
+
+                            <a href="#" class="personal-link">
+                                +7 950 335 49 16
+                            </a>
+                        </div>
+
+                        <div class="my-orders">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12 3C8.134 3 5 6.272 5 10V20C5 20.2652 5.10536 20.5196 5.29289 20.7071C5.48043 20.8946 5.73478 21 6 21H18C18.2652 21 18.5196 20.8946 18.7071 20.7071C18.8946 20.5196 19 20.2652 19 20V10C19 6.272 15.866 3 12 3Z"
+                                    stroke="#979797" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M5 13H19" stroke="#979797" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M12 3V21" stroke="#979797" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                            <span>
+                                Мои заказы
+                            </span>
+                        </div>
+
+                        <div class="my-reviews">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M12.2896 17.9984C18.0965 17.9343 21 15.9189 21 11C21 6 18 4 12 4C6 4 3 6 3 11C3 14.0771 4.13623 16.018 6.40868 17.0557L5 21L12.2896 17.9984Z"
+                                    stroke="#979797" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            <span>
+                                Отзывы
+                            </span>
+                        </div>
+                    </div>
+                </aside>
+
+                <div class="main-col">
+
+                    <a class="back-link account__back-link" href="#">
+                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M15.8307 10L4.16406 10M4.16406 10L9.16406 15M4.16406 10L9.16406 5" stroke="#484848"
+                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+
+                        Вернуться к списку заказов
+                    </a>
+
+                    <div class="order-title-box">
+                        <h2 class="basket-main-col__title">
+                            Заказ от 5 марта
+
+                        </h2>
+
+                        <div class="order__product-item__status">
+                            Изготовление
+                        </div>
+                    </div>
+
+                    <div class="form__feedback-order-block-article mb_24">
+                        № 339625
+
+                        <button>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M6.66406 8.33329C6.66406 7.89127 6.83966 7.46734 7.15222 7.15478C7.46478 6.84222 7.8887 6.66663 8.33073 6.66663L14.9974 6.66663C15.4394 6.66663 15.8633 6.84222 16.1759 7.15478C16.4885 7.46734 16.6641 7.89127 16.6641 8.33329V15C16.6641 15.442 16.4885 15.8659 16.1759 16.1785C15.8633 16.491 15.4394 16.6666 14.9974 16.6666H8.33073C7.8887 16.6666 7.46478 16.491 7.15222 16.1785C6.83966 15.8659 6.66406 15.442 6.66406 15L6.66406 8.33329Z"
+                                    stroke="#484848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                                <path
+                                    d="M13.3359 6.66671V5.00004C13.3359 4.55801 13.1603 4.13409 12.8478 3.82153C12.5352 3.50897 12.1113 3.33337 11.6693 3.33337L5.0026 3.33337C4.56058 3.33337 4.13665 3.50897 3.82409 3.82153C3.51153 4.13409 3.33594 4.55801 3.33594 5.00004L3.33594 11.6667C3.33594 12.1087 3.51153 12.5327 3.82409 12.8452C4.13665 13.1578 4.56058 13.3334 5.0026 13.3334H6.66927"
+                                    stroke="#484848" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                                </path>
+                            </svg>
+                        </button>
+                    </div>
+
+                    <div class="order-action-box">
+
+                        <a class="img-link img-link_second action-box__link" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M3.33594 14.1665L3.33594 15.8332C3.33594 16.2752 3.51153 16.6991 3.82409 17.0117C4.13665 17.3242 4.56058 17.4998 5.0026 17.4998H15.0026C15.4446 17.4998 15.8686 17.3242 16.1811 17.0117C16.4937 16.6991 16.6693 16.2752 16.6693 15.8332V14.1665"
+                                    stroke="#484848" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                                <path d="M5.83594 9.1665L10.0026 13.3332L14.1693 9.1665" stroke="#484848"
+                                    stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                <path d="M10 3.3335L10 13.3335" stroke="#484848" stroke-width="1.5"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+
+                            Скачать счет
+                        </a>
+
+                        <a class="img-link img-link_second action-box__link" href="#">
+                            <svg width="14" height="18" viewBox="0 0 14 18" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M7.83073 1.5L3.16406 1.5C2.05949 1.5 1.16406 2.39543 1.16406 3.5L1.16406 14.5C1.16406 15.6046 2.05949 16.5 3.16406 16.5H10.8307C11.9353 16.5 12.8307 15.6046 12.8307 14.5L12.8307 6.5M7.83073 1.5L12.8307 6.5M7.83073 1.5L7.83073 5.5C7.83073 6.05228 8.27844 6.5 8.83073 6.5L12.8307 6.5M4.4974 9.83333L9.4974 9.83333M4.4974 13.1667L9.4974 13.1667"
+                                    stroke="#484848" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                            Скачать архив с сертификатами
+                        </a>
+
+                        <a class="img-link img-link_second ml_auto" href="#">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M16.6693 15.8332H15.3359C14.2314 15.8332 13.3359 14.9377 13.3359 13.8332V12.8332C13.3359 11.7286 14.2314 10.8332 15.3359 10.8332H16.6693M16.6693 15.8332V10.8332M16.6693 15.8332V15.8332C16.6693 17.2139 15.55 18.3332 14.1693 18.3332H9.16927M3.33594 10.8332L3.33594 14.1665C3.33594 15.087 4.08213 15.8332 5.0026 15.8332V15.8332C5.92308 15.8332 6.66927 15.087 6.66927 14.1665V12.8332C6.66927 11.7286 5.77384 10.8332 4.66927 10.8332H3.33594ZM3.33594 10.8332L3.33594 8.33317C3.33594 4.65127 6.32071 1.6665 10.0026 1.6665V1.6665C13.6845 1.6665 16.6693 4.65127 16.6693 8.33317V10.8332"
+                                    stroke="#F46F43" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" />
+                            </svg>
+
+                            Связаться с менеджером
+                        </a>
+                    </div>
+
+                    <div class="commercial-proposal-box">
+                        <div class="commercial-proposal-left-col">
+                            <div class="commercial-proposal__icon">
+                                <svg width="28" height="28" viewBox="0 0 28 28" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M15.1693 3.5L7.83594 3.5C6.73137 3.5 5.83594 4.39543 5.83594 5.5L5.83594 22.5C5.83594 23.6046 6.73137 24.5 7.83594 24.5H20.1693C21.2738 24.5 22.1693 23.6046 22.1693 22.5L22.1693 10.5M15.1693 3.5L22.1693 10.5M15.1693 3.5V9.5C15.1693 10.0523 15.617 10.5 16.1693 10.5L22.1693 10.5M10.5026 15.1667L17.5026 15.1667M10.5026 19.8333H17.5026"
+                                        stroke="#484848" stroke-width="1.5" stroke-linecap="round"
+                                        stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <div class="commercial-proposal__text-box">
+                                <div class="commercial-proposal__title">
+                                    Коммерческое предложение
+                                </div>
+
+                                <div class="commercial-proposal__subtitle">
+                                    Заказ от 23 декабря: 222 500 ₽
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="commercial-proposal__btn-box">
+                            <button class="commercial-proposal__btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12 5V19M12 19L6 13M12 19L18 13" stroke="#979797" stroke-width="2"
+                                        stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </button>
+
+                            <button class="commercial-proposal__btn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <g clip-path="url(#clip0_2140_60693)">
+                                        <path
+                                            d="M8 9H7C6.46957 9 5.96086 9.21071 5.58579 9.58579C5.21071 9.96086 5 10.4696 5 11L5 19C5 19.5304 5.21071 20.0391 5.58579 20.4142C5.96086 20.7893 6.46957 21 7 21H17C17.5304 21 18.0391 20.7893 18.4142 20.4142C18.7893 20.0391 19 19.5304 19 19V11C19 10.4696 18.7893 9.96086 18.4142 9.58579C18.0391 9.21071 17.5304 9 17 9H16"
+                                            stroke="#979797" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M12 14L12 3" stroke="#979797" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round" />
+                                        <path d="M9 6L12 3L15 6" stroke="#979797" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_2140_60693">
+                                            <rect width="24" height="24" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="order-status-box slider">
+                        <div class="order-status__item active slide">
+                            <div class="order-status__item-icon">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M13.0026 4.6665L6.0026 11.6665L3.33594 8.99984" stroke="white"
+                                        stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" />
+                                </svg>
+                            </div>
+
+                            <div class="order-status__item-name">
+                                Принят в обработку
+                            </div>
+
+                            <div class="order-status__item-date">
+                                12.05.25
+                            </div>
+                        </div>
+
+                        <div class="order-status__item slide">
+                            <div class="order-status__item-icon">
+
+                            </div>
+
+                            <div class="order-status__item-name">
+                                Выезд замерщика
+                            </div>
+
+                            <div class="order-status__item-date">
+                                12.05.25
+                            </div>
+                        </div>
+
+                        <div class="order-status__item slide">
+                            <div class="order-status__item-icon">
+
+                            </div>
+
+                            <div class="order-status__item-name">
+                                Изготовление окон
+                            </div>
+
+                            <div class="order-status__item-date">
+                                12.05.25
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="basket__product-box">
+
+                        <div class="basket__product-item">
+                            <div class="order-product-header">
+
+                                <div class="order-product-header__left-col">
+                                    <div class="order-product-header__left-col-text">
+                                        <div class="order-product-header__left-col-text-col">
+                                            <div class="basket__product-item-title">
+                                                Доставлен 23 декабря
+                                            </div>
+
+                                            <div class="order__product-item__status">
+                                                Доставлен
+                                            </div>
+                                        </div>
+
+                                        <div class="order-product-header__left-col-text-col">
+                                            <div class="form__feedback-order-block-article">
+                                                № 339625
+
+                                                <button>
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.66406 8.33329C6.66406 7.89127 6.83966 7.46734 7.15222 7.15478C7.46478 6.84222 7.8887 6.66663 8.33073 6.66663L14.9974 6.66663C15.4394 6.66663 15.8633 6.84222 16.1759 7.15478C16.4885 7.46734 16.6641 7.89127 16.6641 8.33329V15C16.6641 15.442 16.4885 15.8659 16.1759 16.1785C15.8633 16.491 15.4394 16.6666 14.9974 16.6666H8.33073C7.8887 16.6666 7.46478 16.491 7.15222 16.1785C6.83966 15.8659 6.66406 15.442 6.66406 15L6.66406 8.33329Z"
+                                                            stroke="#484848" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M13.3359 6.66671V5.00004C13.3359 4.55801 13.1603 4.13409 12.8478 3.82153C12.5352 3.50897 12.1113 3.33337 11.6693 3.33337L5.0026 3.33337C4.56058 3.33337 4.13665 3.50897 3.82409 3.82153C3.51153 4.13409 3.33594 4.55801 3.33594 5.00004L3.33594 11.6667C3.33594 12.1087 3.51153 12.5327 3.82409 12.8452C4.13665 13.1578 4.56058 13.3334 5.0026 13.3334H6.66927"
+                                                            stroke="#484848" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="order-product-header__left-col-text-status"></div>
+                                </div>
+
+                                <div class="order-product-header__right-col">
+                                    <div class="basket__product-item-price">
+                                        <span>Итого</span> 32 800 ₽
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="order-product-main">
+                                <div class="order-product-main-info-box">
+                                    <div class="order-product-main-name">
+                                        Получатель Алексей Фролов, +7 950 654 34 56
+                                    </div>
+
+                                    <div class="order-product-main-type">
+                                        Самовывоз со склада
+                                    </div>
+                                </div>
+
+                                <div class="order-product-main__bottom">
+                                    <div class="form__feedback-order-block-info-img-box">
+
+                                        <div class="form__feedback-order-block-info-img">
+                                            <svg width="14" height="24" viewBox="0 0 14 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="path-1-inside-1_2104_65987" fill="white">
+                                                    <rect y="-6.10352e-05" width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect y="-6.10352e-05" width="14" height="24" rx="1" stroke="#484848"
+                                                    stroke-width="4" mask="url(#path-1-inside-1_2104_65987)"></rect>
+                                            </svg>
+                                        </div>
+
+                                        <div class="form__feedback-order-block-info-img">
+                                            <svg width="26" height="24" viewBox="0 0 26 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="path-2-inside-1_2104_65990" fill="white">
+                                                    <rect width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect width="14" height="24" rx="1" stroke="#484848" stroke-width="4"
+                                                    mask="url(#path-2-inside-1_2104_65990)"></rect>
+                                                <mask id="path-3-inside-2_2104_65990" fill="white">
+                                                    <rect x="12" width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect x="12" width="14" height="24" rx="1" stroke="#484848"
+                                                    stroke-width="4" mask="url(#path-3-inside-2_2104_65990)"></rect>
+                                            </svg>
+                                        </div>
+
+                                        <div class="form__feedback-order-block-info-img">
+                                            <svg width="14" height="24" viewBox="0 0 14 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="path-1-inside-1_2104_65994" fill="white">
+                                                    <rect y="-6.10352e-05" width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect y="-6.10352e-05" width="14" height="24" rx="1" stroke="#484848"
+                                                    stroke-width="4" mask="url(#path-1-inside-1_2104_65994)"></rect>
+                                            </svg>
+                                        </div>
+
+                                    </div>
+
+                                    <button class="btn">
+                                        Оставить отзыв
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="basket__product-item">
+                            <div class="order-product-header">
+
+                                <div class="order-product-header__left-col">
+                                    <div class="order-product-header__left-col-text">
+                                        <div class="order-product-header__left-col-text-col">
+                                            <div class="basket__product-item-title">
+                                                Доставлен 23 декабря
+                                            </div>
+
+                                            <div class="order__product-item__status">
+                                                Доставлен
+                                            </div>
+                                        </div>
+
+                                        <div class="order-product-header__left-col-text-col">
+                                            <div class="form__feedback-order-block-article">
+                                                № 339625
+
+                                                <button>
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.66406 8.33329C6.66406 7.89127 6.83966 7.46734 7.15222 7.15478C7.46478 6.84222 7.8887 6.66663 8.33073 6.66663L14.9974 6.66663C15.4394 6.66663 15.8633 6.84222 16.1759 7.15478C16.4885 7.46734 16.6641 7.89127 16.6641 8.33329V15C16.6641 15.442 16.4885 15.8659 16.1759 16.1785C15.8633 16.491 15.4394 16.6666 14.9974 16.6666H8.33073C7.8887 16.6666 7.46478 16.491 7.15222 16.1785C6.83966 15.8659 6.66406 15.442 6.66406 15L6.66406 8.33329Z"
+                                                            stroke="#484848" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M13.3359 6.66671V5.00004C13.3359 4.55801 13.1603 4.13409 12.8478 3.82153C12.5352 3.50897 12.1113 3.33337 11.6693 3.33337L5.0026 3.33337C4.56058 3.33337 4.13665 3.50897 3.82409 3.82153C3.51153 4.13409 3.33594 4.55801 3.33594 5.00004L3.33594 11.6667C3.33594 12.1087 3.51153 12.5327 3.82409 12.8452C4.13665 13.1578 4.56058 13.3334 5.0026 13.3334H6.66927"
+                                                            stroke="#484848" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="order-product-header__left-col-text-status"></div>
+                                </div>
+
+                                <div class="order-product-header__right-col">
+                                    <div class="basket__product-item-price">
+                                        <span>Итого</span> 32 800 ₽
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="order-product-main">
+                                <div class="order-product-main-info-box">
+                                    <div class="order-product-main-name">
+                                        Получатель Алексей Фролов, +7 950 654 34 56
+                                    </div>
+
+                                    <div class="order-product-main-type">
+                                        Самовывоз со склада
+                                    </div>
+                                </div>
+
+                                <div class="order-product-main__bottom">
+                                    <div class="form__feedback-order-block-info-img-box">
+
+                                        <div class="form__feedback-order-block-info-img">
+                                            <svg width="14" height="24" viewBox="0 0 14 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="path-1-inside-1_2104_65987" fill="white">
+                                                    <rect y="-6.10352e-05" width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect y="-6.10352e-05" width="14" height="24" rx="1" stroke="#484848"
+                                                    stroke-width="4" mask="url(#path-1-inside-1_2104_65987)"></rect>
+                                            </svg>
+                                        </div>
+
+                                        <div class="form__feedback-order-block-info-img">
+                                            <svg width="26" height="24" viewBox="0 0 26 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="path-2-inside-1_2104_65990" fill="white">
+                                                    <rect width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect width="14" height="24" rx="1" stroke="#484848" stroke-width="4"
+                                                    mask="url(#path-2-inside-1_2104_65990)"></rect>
+                                                <mask id="path-3-inside-2_2104_65990" fill="white">
+                                                    <rect x="12" width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect x="12" width="14" height="24" rx="1" stroke="#484848"
+                                                    stroke-width="4" mask="url(#path-3-inside-2_2104_65990)"></rect>
+                                            </svg>
+                                        </div>
+
+                                        <div class="form__feedback-order-block-info-img">
+                                            <svg width="14" height="24" viewBox="0 0 14 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="path-1-inside-1_2104_65994" fill="white">
+                                                    <rect y="-6.10352e-05" width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect y="-6.10352e-05" width="14" height="24" rx="1" stroke="#484848"
+                                                    stroke-width="4" mask="url(#path-1-inside-1_2104_65994)"></rect>
+                                            </svg>
+                                        </div>
+
+                                    </div>
+
+                                    <button class="btn">
+                                        Оставить отзыв
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="basket__product-item">
+                            <div class="order-product-header">
+
+                                <div class="order-product-header__left-col">
+                                    <div class="order-product-header__left-col-text">
+                                        <div class="order-product-header__left-col-text-col">
+                                            <div class="basket__product-item-title">
+                                                Доставлен 23 декабря
+                                            </div>
+
+                                            <div class="order__product-item__status">
+                                                Доставлен
+                                            </div>
+                                        </div>
+
+                                        <div class="order-product-header__left-col-text-col">
+                                            <div class="form__feedback-order-block-article">
+                                                № 339625
+
+                                                <button>
+                                                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M6.66406 8.33329C6.66406 7.89127 6.83966 7.46734 7.15222 7.15478C7.46478 6.84222 7.8887 6.66663 8.33073 6.66663L14.9974 6.66663C15.4394 6.66663 15.8633 6.84222 16.1759 7.15478C16.4885 7.46734 16.6641 7.89127 16.6641 8.33329V15C16.6641 15.442 16.4885 15.8659 16.1759 16.1785C15.8633 16.491 15.4394 16.6666 14.9974 16.6666H8.33073C7.8887 16.6666 7.46478 16.491 7.15222 16.1785C6.83966 15.8659 6.66406 15.442 6.66406 15L6.66406 8.33329Z"
+                                                            stroke="#484848" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                        <path
+                                                            d="M13.3359 6.66671V5.00004C13.3359 4.55801 13.1603 4.13409 12.8478 3.82153C12.5352 3.50897 12.1113 3.33337 11.6693 3.33337L5.0026 3.33337C4.56058 3.33337 4.13665 3.50897 3.82409 3.82153C3.51153 4.13409 3.33594 4.55801 3.33594 5.00004L3.33594 11.6667C3.33594 12.1087 3.51153 12.5327 3.82409 12.8452C4.13665 13.1578 4.56058 13.3334 5.0026 13.3334H6.66927"
+                                                            stroke="#484848" stroke-width="1.5" stroke-linecap="round"
+                                                            stroke-linejoin="round" />
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+
+                                    <div class="order-product-header__left-col-text-status"></div>
+                                </div>
+
+                                <div class="order-product-header__right-col">
+                                    <div class="basket__product-item-price">
+                                        <span>Итого</span> 32 800 ₽
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="order-product-main">
+                                <div class="order-product-main-info-box">
+                                    <div class="order-product-main-name">
+                                        Получатель Алексей Фролов, +7 950 654 34 56
+                                    </div>
+
+                                    <div class="order-product-main-type">
+                                        Самовывоз со склада
+                                    </div>
+                                </div>
+
+                                <div class="order-product-main__bottom">
+                                    <div class="form__feedback-order-block-info-img-box">
+
+                                        <div class="form__feedback-order-block-info-img">
+                                            <svg width="14" height="24" viewBox="0 0 14 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="path-1-inside-1_2104_65987" fill="white">
+                                                    <rect y="-6.10352e-05" width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect y="-6.10352e-05" width="14" height="24" rx="1" stroke="#484848"
+                                                    stroke-width="4" mask="url(#path-1-inside-1_2104_65987)"></rect>
+                                            </svg>
+                                        </div>
+
+                                        <div class="form__feedback-order-block-info-img">
+                                            <svg width="26" height="24" viewBox="0 0 26 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="path-2-inside-1_2104_65990" fill="white">
+                                                    <rect width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect width="14" height="24" rx="1" stroke="#484848" stroke-width="4"
+                                                    mask="url(#path-2-inside-1_2104_65990)"></rect>
+                                                <mask id="path-3-inside-2_2104_65990" fill="white">
+                                                    <rect x="12" width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect x="12" width="14" height="24" rx="1" stroke="#484848"
+                                                    stroke-width="4" mask="url(#path-3-inside-2_2104_65990)"></rect>
+                                            </svg>
+                                        </div>
+
+                                        <div class="form__feedback-order-block-info-img">
+                                            <svg width="14" height="24" viewBox="0 0 14 24" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <mask id="path-1-inside-1_2104_65994" fill="white">
+                                                    <rect y="-6.10352e-05" width="14" height="24" rx="1"></rect>
+                                                </mask>
+                                                <rect y="-6.10352e-05" width="14" height="24" rx="1" stroke="#484848"
+                                                    stroke-width="4" mask="url(#path-1-inside-1_2104_65994)"></rect>
+                                            </svg>
+                                        </div>
+
+                                    </div>
+
+                                    <button class="btn">
+                                        Оставить отзыв
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+    </main>
+    @@include('html/libs/footer.html')
+</body>
+
+</html>
