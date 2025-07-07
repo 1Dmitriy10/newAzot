@@ -18,6 +18,24 @@ export const img = () => {
         })
         )
         .pipe(app.gulp.dest(app.path.build.img)) // в какой файл выгрузить
+
+        .pipe(app.plugins.sharpResponsive({
+            
+                formats: [
+            
+                // smallOrigin
+                { width: 768, rename: { suffix: "-sm" } },
+                // webp
+                { width: 1024, format: "webp"},
+                // avif
+                { width: 1024, format: "avif"},
+                ]
+        }))
+
+        
+
+        .pipe(app.gulp.dest(app.path.build.img))
+
         //формат webp
         // .pipe(webp())
         .pipe(app.gulp.dest(app.path.build.img))

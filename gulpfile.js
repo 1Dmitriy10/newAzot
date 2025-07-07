@@ -6,7 +6,7 @@ import { path } from "./gulp/config/path.js"
 //Передаем значение в глобальную переменную
 global.app = {
     isBuild: process.argv.includes('--build'),
-    isDev: !process.argv.includes('--build'),
+    isDev: process.argv.includes('--dev'),
     path: path,
     gulp: gulp,
     plugins: plugins
@@ -21,7 +21,6 @@ import { server } from "./gulp/tasks/server.js"
 import { scss } from "./gulp/tasks/scss.js"
 import { vendorCss } from "./gulp/tasks/scss.js"
 import { js } from "./gulp/tasks/js.js"
-import { vendorJs } from "./gulp/tasks/js.js"
 import { img } from "./gulp/tasks/img.js"
 import { otfToTtf, ttfToWoff, fontsStyle } from "./gulp/tasks/fonts.js"
 import { zip } from "./gulp/tasks/zip.js"
@@ -36,11 +35,10 @@ function watcher() {
     gulp.watch(path.watch.html, html)
     gulp.watch(path.watch.scss, scss, vendorCss)
     gulp.watch(path.watch.js, js)
-    gulp.watch(path.watch.vendorJs, vendorJs)
     gulp.watch(path.watch.img, img)
 }
 
-const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, vendorCss, js, vendorJs, img))
+const mainTasks = gulp.series(fonts, gulp.parallel(copy, html, scss, vendorCss, js, img))
 
 //Построение сценариев выполнения задач
 const dev = gulp.series(reset, mainTasks, gulp.parallel(watcher, server))

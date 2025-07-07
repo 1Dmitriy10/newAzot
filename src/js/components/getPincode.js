@@ -1,6 +1,7 @@
 function pincode() {
   //var pinContainer = document.getElementsByClassName("pin-code")[0];
 var pinContainer = document.querySelector(".pin-code");
+if(!pinContainer){return null} 
 console.log('There is ' + pinContainer.length + ' Pin Container on the page.');
 
 pinContainer.addEventListener('keyup', function (event) {

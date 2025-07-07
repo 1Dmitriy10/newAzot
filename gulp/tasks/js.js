@@ -1,52 +1,55 @@
 import webpack from "webpack-stream"
+import sourcemaps from "gulp-sourcemaps"
+import ifPlugin from "gulp-if"
+import uglify from "gulp-uglify"
 
 export const js = () => {
-    return app.gulp.src(app.path.src.js, { sourcemaps: app.isDev }) // путь к папке со скриптами
-        .pipe(app.plugins.plumber(                      //Ошибки в виндоус
+    // путь к папке со скриптами
+    return app.gulp.src(app.path.src.js, { sourcemaps: app.isDev }) 
+
+    //Ошибки в виндоус
+        .pipe(app.plugins.plumber(                      
             app.plugins.notify.onError({
                 title: "js",
                 message: "Error: <%= error.message %>"
             })
         ))
-        .pipe(webpack({
-            mode: app.isBuild ? "production" : "none",
-            optimization: {
-                // minimize: false
-            },
-            output: {
-                filename: 'main.js'
-            },
-            module: {
-                rules: [
-                    {
-                        test: /\.(sass|less|css)$/,
-                        use: ["style-loader", "css-loader", 'sass-loader'],
-                    },
-                ],
-            },
-        }))
-        .pipe(app.gulp.dest(app.path.build.js)) // в какой файл выгрузить
-        .pipe(app.plugins.browserSync.stream())
-}
 
-//===============================
-
-export const vendorJs = () => {
-    return app.gulp.src(app.path.src.vendorJs, { sourcemaps: app.isDev }) // путь к папке со скриптами
-        .pipe(app.plugins.plumber(                      //Ошибки в виндоус
-            app.plugins.notify.onError({
-                title: "vendorJs",
-                message: "Error: <%= error.message %>"
+        //если на продакшен
+        .pipe(ifPlugin(app.isBuild, 
+            webpack({
+                mode: app.isBuild ? "production" : "none",
+                    optimization: {
+                                minimize: true
+                            },
+                            output: {
+                    filename: 'main.js'
+                },
+                
+                module: {
+                    rules: [
+                        {
+                            test: /\.(sass|less|css)$/,
+                            use: ["style-loader", "css-loader", 'sass-loader'],
+                        },
+                    ],
+                }
+                
+                
             })
         ))
-        .pipe(webpack({
+
+        //если на разработку
+        .pipe(ifPlugin(app.isDev, 
+            webpack({
             mode: app.isBuild ? "production" : "none",
-            optimization: {
-                // minimize: false
+                optimization: {
+                            minimize: false
+                        },
+                        output: {
+                filename: 'main.js'
             },
-            output: {
-                filename: 'vendor.js'
-            },
+            
             module: {
                 rules: [
                     {
@@ -55,8 +58,17 @@ export const vendorJs = () => {
                     },
                 ],
             },
-        }))
-        .pipe(app.gulp.dest(app.path.build.vendorJs)) // в какой файл выгрузить
+            
+            })
+        ))
+
+        //карта для минифицированного js
+        .pipe(sourcemaps.init("/"))
+        .pipe(sourcemaps.write("/"))
+
+        // в какой файл выгрузить
+        .pipe(app.gulp.dest(app.path.build.js))
+        // Следить за изменениями 
         .pipe(app.plugins.browserSync.stream())
 }
 
