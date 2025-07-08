@@ -8,7 +8,7 @@
     "dev": "gulp --dev",
     "build": "gulp build --build",
     "zip": "gulp deployZIP --build",
-    "deploy": "gulp deployFTP",
+    "deploy": "gulp deployFTP --dev",
     "deployMin": "gulp deployFTP --build"
   },
   "author": "dz",

@@ -75,6 +75,9 @@ import { pincode } from "./components/getPincode.js";
 //------------Звездный рейтинг---------------
 import { starRating } from "./components/starRating.js";
 
+//------------Пункты меню срабатывают со 2го раза---------------
+import { mainMenuLink } from "./components/mainMenuLink.js";
+
 
 
 

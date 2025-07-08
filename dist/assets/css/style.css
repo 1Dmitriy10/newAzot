@@ -5048,6 +5048,20 @@ select {
 .prices-prev__slider {
   width: calc(50% + 50vw);
 }
+.prices-prev__slider .swiper-wrapper {
+  -webkit-box-align: stretch !important;
+  -ms-flex-align: stretch !important;
+  align-items: stretch !important;
+}
+.prices-prev__slider .prices-prev__slide {
+  height: auto !important;
+}
+.prices-prev__slider .prices-prev__card {
+  height: 100%;
+}
+.prices-prev__slider .btn {
+  margin-top: auto;
+}
 
 .prices-prev__slider-btn-box {
   position: relative;
@@ -5071,6 +5085,7 @@ select {
 .prices-prev__card-img-wrap {
   border-radius: 24px;
   height: 320px;
+  min-height: 320px;
   background: var(--bg-3);
   position: relative;
   margin-bottom: 24px;
@@ -5143,6 +5158,7 @@ select {
   -ms-flex-direction: column;
   flex-direction: column;
   padding: 0px clamp(0.5rem, 0.3449131514rem + 0.6617038875vw, 1rem);
+  height: 100%;
 }
 
 .prices-prev__card_profile .prices-prev__card-img-wrap {

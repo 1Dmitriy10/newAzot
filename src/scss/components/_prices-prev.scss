@@ -44,6 +44,22 @@
 .prices-prev__slider {
     width: calc(50% + 50vw);
 
+    & .swiper-wrapper {
+        align-items: stretch !important;
+    }
+
+    & .prices-prev__slide {
+        height: auto !important;
+    }
+
+    & .prices-prev__card {
+        height: 100%;
+    }
+
+    & .btn {
+        margin-top: auto;
+    }
+
 }
 
 .prices-prev__slider-btn-box {
@@ -62,6 +78,7 @@
 .prices-prev__card-img-wrap {
     border-radius: 24px;
     height: 320px;
+    min-height: 320px;
     background: var(--bg-3);
     position: relative;
     margin-bottom: 24px;
@@ -123,4 +140,5 @@
     display: flex;
     flex-direction: column;
     padding: 0px clamp-px(8, 16);
+    height: 100%;
 }
