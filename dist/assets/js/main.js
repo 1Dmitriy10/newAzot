@@ -15236,6 +15236,9 @@ let tabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "_tabs-js"})
 let windowInsulationTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "window-insulation-tabs"})
 let orderAddressTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "order-address-tab"})
 let orderPaymentTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "order-payment-tab"})
+let productsWindowTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "products-window-tabs"})
+
+
 
 
 /***/ }),

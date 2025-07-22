@@ -23,3 +23,6 @@ let tabs = new Tabs({class: "_tabs-js"})
 let windowInsulationTabs = new Tabs({class: "window-insulation-tabs"})
 let orderAddressTabs = new Tabs({class: "order-address-tab"})
 let orderPaymentTabs = new Tabs({class: "order-payment-tab"})
+let productsWindowTabs = new Tabs({class: "products-window-tabs"})
+
+

@@ -47,6 +47,11 @@
         width: 320px;
     }
 
+    @include respond-to("tel") {
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
 }
 
 .profile__card-link {
@@ -63,6 +68,12 @@
     max-width: 276px;
     height: 324px;
     position: relative;
+
+    @include respond-to("tel") {
+        flex: 0 1 160px;
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .profile__card-img {
@@ -75,7 +86,7 @@
 }
 
 .profile__card-text-box {
-    flex: 0 1 calc((100% - 20px * 1) / 2);
+    flex: 1 1 calc((100% - 20px * 1) / 2);
     display: flex;
     flex-direction: column;
 
@@ -111,6 +122,10 @@
     @include cols(2, 16px);
     display: flex;
     flex-direction: column;
+
+    @include respond-to("tel") {
+        flex: 0 1 calc((100% - 16px) / 2);
+    }
 }
 
 .profile__card-params-item-val {
