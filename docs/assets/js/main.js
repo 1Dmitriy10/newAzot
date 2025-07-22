@@ -15236,6 +15236,9 @@ let tabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "_tabs-js"})
 let windowInsulationTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "window-insulation-tabs"})
 let orderAddressTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "order-address-tab"})
 let orderPaymentTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "order-payment-tab"})
+let productsWindowTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "products-window-tabs"})
+
+
 
 
 /***/ }),
@@ -29301,6 +29304,7 @@ __webpack_require__.r(__webpack_exports__);
 function pincode() {
   //var pinContainer = document.getElementsByClassName("pin-code")[0];
 var pinContainer = document.querySelector(".pin-code");
+if(!pinContainer){return null} 
 console.log('There is ' + pinContainer.length + ' Pin Container on the page.');
 
 pinContainer.addEventListener('keyup', function (event) {
@@ -29364,6 +29368,42 @@ function starRating() {
     }
 };
 starRating();
+
+/***/ }),
+/* 79 */
+/***/ ((__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   mainMenuLink: () => (/* binding */ mainMenuLink)
+/* harmony export */ });
+function mainMenuLink(){
+    let arrMenuLinks = document.querySelectorAll(".nav-list .nav-link");
+    let arrItems = [];
+    let count = 0;
+    let item = {};
+
+    arrMenuLinks.forEach(el=>{
+        if(el.parentElement.querySelector(".sub-menu-container")) {
+            // arrItems.push(el)
+            el.addEventListener("click", ()=>{prevent(el)} )
+        }
+    })
+
+    function prevent(el) {
+        
+        if(count == 0 && item != el) {
+            event.preventDefault()
+            item = el;
+        }else{
+            count++
+        }
+        
+        
+    }
+};
+mainMenuLink();
 
 /***/ })
 /******/ 	]);
@@ -29492,6 +29532,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_hiddenBasketStickyBlock_js__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(76);
 /* harmony import */ var _components_getPincode_js__WEBPACK_IMPORTED_MODULE_17__ = __webpack_require__(77);
 /* harmony import */ var _components_starRating_js__WEBPACK_IMPORTED_MODULE_18__ = __webpack_require__(78);
+/* harmony import */ var _components_mainMenuLink_js__WEBPACK_IMPORTED_MODULE_19__ = __webpack_require__(79);
 //------------------------Спойлеры-----------------------
 
 
@@ -29569,6 +29610,9 @@ __webpack_require__.r(__webpack_exports__);
 //------------Звездный рейтинг---------------
 
 
+//------------Пункты меню срабатывают со 2го раза---------------
+
+
 
 
 
@@ -29587,3 +29631,4 @@ __webpack_require__.r(__webpack_exports__);
 
 /******/ })()
 ;
+//# sourceMappingURL=main.js.map

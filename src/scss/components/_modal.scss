@@ -430,3 +430,28 @@
         width: 100%;
     }
 }
+
+.popup-responsibility {
+    display: none;
+    max-width: 800px;
+    border-radius: clamp-px(16, 24);
+    padding: clamp-px(24, 40);
+
+    & .is-close-btn {
+        top: 15px;
+        right: 24px;
+        opacity: 1;
+        color: #979797;
+    }
+
+    & p {
+        &:first-child {
+            color: var(--grey-1);
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 16px;
+        }
+
+    }
+}

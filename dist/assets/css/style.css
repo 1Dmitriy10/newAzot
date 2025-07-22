@@ -13375,6 +13375,25 @@ p.strong {
   width: 100%;
 }
 
+.popup-responsibility {
+  display: none;
+  max-width: 800px;
+  border-radius: clamp(1rem, 0.8449131514rem + 0.6617038875vw, 1.5rem);
+  padding: clamp(1.5rem, 1.1898263027rem + 1.323407775vw, 2.5rem);
+}
+.popup-responsibility .is-close-btn {
+  top: 15px;
+  right: 24px;
+  opacity: 1;
+  color: #979797;
+}
+.popup-responsibility p:first-child {
+  color: var(--grey-1);
+}
+.popup-responsibility p:not(:last-child) {
+  margin-bottom: 16px;
+}
+
 .plug {
   margin: auto 0;
   padding: 0 15px;
