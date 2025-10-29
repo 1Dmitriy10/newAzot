@@ -1,0 +1,122 @@
+.commercial-proposal {
+    display: none;
+    position: fixed;
+    top: 255px;
+    right: 40px;
+    z-index: 5;
+    flex-direction: column;
+    border-radius: 24px;
+    padding: 20px;
+    max-width: 450px;
+    box-shadow: 0 4px 17px 0 rgba(0, 0, 0, 0.08);
+    background: var(--white);
+
+    @include respond-to("tab") {
+        top: auto;
+        bottom: 0;
+        right: auto;
+        left: 8px;
+        width: calc(100% - 16px);
+    }
+
+    &.active {
+        display: flex;
+    }
+}
+
+.commercial-proposal__top {
+    display: flex;
+    gap: 16px;
+
+}
+
+.commercial-proposal__link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    width: clamp-px(40, 48);
+    height: clamp-px(40, 48);
+    background: var(--bg-4);
+
+    &>svg {
+        width: 24px;
+        height: 24px;
+    }
+}
+
+.commercial-proposal__text-box {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: clamp-px(16, 24);
+}
+
+.commercial-proposal__title {
+    font-weight: 500;
+    font-size: clamp-px(16, 20);
+    line-height: 140%;
+    color: var(--black);
+    margin-bottom: 8px;
+}
+
+.commercial-proposal__text {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--grey-2);
+}
+
+.commercial-proposal__bottom {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.commercial-proposal__btn {
+    width: 182px;
+    padding: 12px 24px;
+    min-width: 164px;
+
+}
+
+.commercial-proposal__timer {
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    padding: clamp-px(12, 14) clamp-px(12, 24);
+    background: var(--bg-4);
+
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 150%;
+    color: var(--orange);
+
+    @include respond-to("tab") {
+        width: 100%;
+    }
+}
+
+.commercial-proposal__timer-icon {
+    display: none;
+
+    @include respond-to("tab") {
+        display: block;
+        width: 24px;
+        height: 24px;
+        margin-right: 8px;
+
+        &>svg {
+            width: 24px;
+            height: 24px;
+        }
+    }
+}
+
+.commercial-proposal__timer-text {
+    margin-right: 8px;
+
+    @include respond-to("tab") {
+        display: none;
+    }
+}
