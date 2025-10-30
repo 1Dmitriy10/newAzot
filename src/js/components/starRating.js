@@ -1,15 +1,52 @@
 export function starRating() {
-    let ratingBox = document.querySelector("#starRating");
-    if(!ratingBox) return null
-    let arrItems = ratingBox.querySelectorAll("svg");
+    let ratingBoxes = document.querySelectorAll(".star-rating");
+    if(!ratingBoxes.length) return null;
+    
+    ratingBoxes.forEach(ratingBox => {
+        let arrItems = ratingBox.querySelectorAll("svg");
+        let currentRating = 0;
 
-    arrItems.forEach(el => {
-     el.addEventListener("click", changeRating)   
-    })
+        arrItems.forEach((el, index) => {
+            el.addEventListener("click", () => changeRating(index, ratingBox));
+            el.addEventListener("mouseenter", () => highlightStars(index, ratingBox));
+            el.addEventListener("mouseleave", () => resetStars(ratingBox));
+        });
 
-    function changeRating() {
-        let item = event.currentTarget;
-        item.classList.toggle("active")
-    }
-};
+        function changeRating(index, box) {
+            currentRating = index + 1;
+            updateStars(box);
+            
+        }
+
+        function highlightStars(index, box) {
+            let stars = box.querySelectorAll("svg");
+            stars.forEach((star, i) => {
+                if (i <= index) {
+                    star.classList.add("hover");
+                } else {
+                    star.classList.remove("hover");
+                }
+            });
+        }
+
+        function resetStars(box) {
+            let stars = box.querySelectorAll("svg");
+            stars.forEach(star => {
+                star.classList.remove("hover");
+            });
+            updateStars(box);
+        }
+
+        function updateStars(box) {
+            let stars = box.querySelectorAll("svg");
+            stars.forEach((star, i) => {
+                if (i < currentRating) {
+                    star.classList.add("active");
+                } else {
+                    star.classList.remove("active");
+                }
+            });
+        }
+    });
+}
 starRating();
