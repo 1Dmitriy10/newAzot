@@ -78,6 +78,11 @@ import { starRating } from "./components/starRating.js";
 //------------Пункты меню срабатывают со 2го раза---------------
 import { mainMenuLink } from "./components/mainMenuLink.js";
 
+//------------Обратный отсчет до конца акции---------------
+import { actionTimer } from "./components/actionTimer.js";
+
+
+
 
 
 
