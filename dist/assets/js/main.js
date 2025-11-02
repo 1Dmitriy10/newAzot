@@ -15237,6 +15237,7 @@ let windowInsulationTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({cla
 let orderAddressTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "order-address-tab"})
 let orderPaymentTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "order-payment-tab"})
 let productsWindowTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "products-window-tabs"})
+let accountTabs = new _vendor_js__WEBPACK_IMPORTED_MODULE_0__.Tabs({class: "account-tabs"})
 
 
 
@@ -26959,6 +26960,8 @@ __webpack_require__.r(__webpack_exports__);
 
 function fancybox() {
     _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox.bind()
+
+    window.Fancybox = _fancyapps_ui__WEBPACK_IMPORTED_MODULE_0__.Fancybox;
 }
 fancybox()
 
